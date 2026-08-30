@@ -1847,6 +1847,7 @@
             playSFX('pop');
         }
 
+        // FUNGSI MULAI PRESENTASI DENGAN OTOMATIS FULLSCREEN
         function startIFPPresentation() {
             const deck = PAUD_THEMES[currentThemeKey].deck;
             if (deck.length === 0) {
@@ -1855,14 +1856,42 @@
             }
             currentSlideIndex = 0;
             playSFX('success');
-            document.getElementById('ifp-presentation-modal').classList.remove('hidden');
+            
+            const presentationModal = document.getElementById('ifp-presentation-modal');
+            presentationModal.classList.remove('hidden');
             renderIFPSlide();
+
+            // Pemicu Mode Fullscreen Browser
+            const elem = document.documentElement;
+            if (elem.requestFullscreen) {
+                elem.requestFullscreen().catch(err => {
+                    console.log("Gagal masuk mode fullscreen: ", err);
+                });
+            } else if (elem.webkitRequestFullscreen) { /* Safari */
+                elem.webkitRequestFullscreen();
+            } else if (elem.msRequestFullscreen) { /* IE11 */
+                elem.msRequestFullscreen();
+            }
         }
 
+        // FUNGSI TUTUP PRESENTASI DENGAN KELUAR FULLSCREEN
         function closeIFPPresentation() {
             playSFX('click');
             document.getElementById('ifp-presentation-modal').classList.add('hidden');
             closeWhiteboardModal();
+
+            // Keluar dari Mode Fullscreen jika sedang aktif
+            if (document.fullscreenElement || document.webkitFullscreenElement || document.msFullscreenElement) {
+                if (document.exitFullscreen) {
+                    document.exitFullscreen().catch(err => {
+                        console.log("Gagal keluar mode fullscreen: ", err);
+                    });
+                } else if (document.webkitExitFullscreen) {
+                    document.webkitExitFullscreen();
+                } else if (document.msExitFullscreen) {
+                    document.msExitFullscreen();
+                }
+            }
         }
 
         function toggleAudioMute() {
