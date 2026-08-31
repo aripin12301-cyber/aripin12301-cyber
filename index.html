@@ -1445,7 +1445,7 @@
                 title: 'Panca Indera dan Fungsinya 👀👂',
                 domain: 'KOGNITIF',
                 type: 'organ_tubuh',
-                desc: 'Sentuh organ tubuh di bawah untuk mengetahui kegunaannya!',
+                desc: 'Sentuh organ tubuh di bawah untuk紀tahui kegunaannya!',
                 organs: [
                     { icon: 'fa-eye', label: 'Mata 👀', desc: 'Untuk Melihat keindahan dunia' },
                     { icon: 'fa-ear-listen', label: 'Telinga 👂', desc: 'Untuk Mendengar musik & cerita' },
@@ -1841,42 +1841,22 @@
                 const encTitle = encodeURIComponent(slide.title);
                 const encUrl = encodeURIComponent(slide.videoUrl);
 
-                if (slide.title.includes('Tahapan Siklus Terjadinya Hujan')) {
-                    container.innerHTML = `
-                        <div class="text-center space-y-2">
-                            <span class="px-4 py-1.5 rounded-full bg-sky-400/20 text-sky-300 font-display font-black text-xs tracking-wider uppercase border border-sky-400/30">${slide.domain}</span>
-                            <h2 class="font-display font-black text-2xl sm:text-4xl text-amber-300">${slide.title}</h2>
-                            <p class="text-xs sm:text-sm text-slate-300 font-medium">${slide.desc}</p>
-                        </div>
+                container.innerHTML = `
+                    <div class="text-center space-y-2">
+                        <span class="px-4 py-1.5 rounded-full bg-sky-400/20 text-sky-300 font-display font-black text-xs tracking-wider uppercase border border-sky-400/30">${slide.domain}</span>
+                        <h2 class="font-display font-black text-2xl sm:text-4xl text-amber-300">${slide.title}</h2>
+                        <p class="text-xs sm:text-sm text-slate-300 font-medium">${slide.desc}</p>
+                    </div>
 
-                        <div class="flex-1 flex flex-col items-center justify-center py-10">
-                            <button onclick="openVideoPopup('${encTitle}', '${encUrl}')" class="ifp-btn group flex flex-col items-center justify-center gap-5 p-8 sm:p-12 rounded-[2.5rem] bg-gradient-to-tr from-amber-400 via-orange-500 to-amber-500 text-slate-950 font-display font-black text-xl sm:text-3xl border-4 border-amber-200 shadow-2xl hover:scale-105 transition transform">
-                                <div class="w-24 h-24 sm:w-32 sm:h-32 rounded-full bg-white text-amber-500 flex items-center justify-center text-4xl sm:text-6xl shadow-2xl pl-2 group-hover:scale-110 transition animate-bounce-gentle">
-                                    <i class="fa-solid fa-play"></i>
-                                </div>
-                                <span class="tracking-wide text-white drop-shadow-md">Putar Video Full Screen 🎬</span>
-                            </button>
-                        </div>
-                    `;
-                } else {
-                    container.innerHTML = `
-                        <div class="text-center space-y-2">
-                            <span class="px-4 py-1.5 rounded-full bg-sky-400/20 text-sky-300 font-display font-black text-xs tracking-wider uppercase border border-sky-400/30">${slide.domain}</span>
-                            <h2 class="font-display font-black text-2xl sm:text-4xl text-amber-300">${slide.title}</h2>
-                            <p class="text-xs sm:text-sm text-slate-300 font-medium">${slide.desc}</p>
-                        </div>
-
-                        <div class="relative w-full aspect-video rounded-3xl overflow-hidden border-4 border-amber-400 shadow-2xl bg-black">
-                            <iframe src="${slide.videoUrl}" class="w-full h-full border-0" allow="autoplay" allowfullscreen></iframe>
-                        </div>
-
-                        <div class="flex items-center justify-center gap-4">
-                            <button onclick="openVideoPopup('${encTitle}', '${encUrl}')" class="ifp-btn px-6 py-3 rounded-2xl bg-amber-400 hover:bg-amber-300 text-slate-950 font-display font-black text-sm flex items-center gap-2 border-2 border-white shadow-lg">
-                                <i class="fa-solid fa-expand text-lg"></i> Putar Pop-up Layar Penuh 🎬
-                            </button>
-                        </div>
-                    `;
-                }
+                    <div class="flex-1 flex flex-col items-center justify-center py-10">
+                        <button onclick="openVideoPopup('${encTitle}', '${encUrl}')" class="ifp-btn group flex flex-col items-center justify-center gap-5 p-8 sm:p-12 rounded-[2.5rem] bg-gradient-to-tr from-amber-400 via-orange-500 to-amber-500 text-slate-950 font-display font-black text-xl sm:text-3xl border-4 border-amber-200 shadow-2xl hover:scale-105 transition transform">
+                            <div class="w-24 h-24 sm:w-32 sm:h-32 rounded-full bg-white text-amber-500 flex items-center justify-center text-4xl sm:text-6xl shadow-2xl pl-2 group-hover:scale-110 transition animate-bounce-gentle">
+                                <i class="fa-solid fa-play"></i>
+                            </div>
+                            <span class="tracking-wide text-white drop-shadow-md">Putar Video Full Screen 🎬</span>
+                        </button>
+                    </div>
+                `;
             } else if (slide.type === 'sains_proses') {
                 container.innerHTML = `
                     <div class="text-center space-y-2">
