@@ -620,15 +620,11 @@
                 badgeText: 'TEMA AKTIF: AIR, UDARA & API',
                 deck: [
                     {
-                        type: 'sains_proses',
-                        title: 'Manfaat Elemen Air, Udara & Api 🔥',
+                        type: 'video_embed',
+                        title: 'MANFAAT DAN BAHAYA ELEMEN AIR',
                         domain: 'SAINS & KOGNITIF',
-                        desc: 'Sentuh setiap elemen untuk mempelajari manfaat dan kegunaannya!',
-                        steps: [
-                            { icon: 'fa-droplet', label: '1. Air 💧', desc: 'Digunakan untuk minum, membersihkan diri, dan menyiram tanaman.' },
-                            { icon: 'fa-wind', label: '2. Udara 💨', desc: 'Dibutuhkan untuk bernapas, menerbangkan layang-layang & menggelembungkan balon.' },
-                            { icon: 'fa-fire-flame-curved', label: '3. Api 🔥', desc: 'Memberikan kehangatan dan memasak makanan, tetapi jangan dimainkan!' }
-                        ]
+                        desc: 'Saksikan video interaktif lagu manfaat elemen air, udara, dan api!',
+                        videoUrl: 'https://drive.google.com/file/d/1sgHRBrZSJqqJmvRlFzgNKcWH5X34KuT7/preview'
                     },
                     {
                         type: 'video_embed',
@@ -1253,13 +1249,9 @@
                 title: 'Mengenal Benda Langit Siang & Malam 🌤️🌙',
                 domain: 'BAHASA',
                 type: 'organ_tubuh',
+                imageUrl: 'https://lh3.googleusercontent.com/d/1p9Zb0KUw-TiPNWzjTdwIBY5ZMoEp3wIe',
                 desc: 'Sentuh benda langit di bawah ini untuk mengenal namanya!',
-                organs: [
-                    { icon: 'fa-sun', label: 'Matahari ☀️', desc: 'Bersinar terang di siang hari' },
-                    { icon: 'fa-moon', label: 'Bulan 🌙', desc: 'Menerangi malam hari' },
-                    { icon: 'fa-cloud-rain', label: 'Awan ☁️', desc: 'Tempat berkumpulnya tetes air hujan' },
-                    { icon: 'fa-star', label: 'Bintang ✨', desc: 'Hiasi langit malam yang indah' }
-                ]
+                organs: []
             },
             {
                 id: 'act_alam_6',
@@ -1268,12 +1260,9 @@
                 title: 'Senam Gerak Angin & Hujan 🌬️',
                 domain: 'MOTORIK',
                 type: 'sains_proses',
+                imageUrl: 'https://lh3.googleusercontent.com/d/1HawokAWZocbXmJ64IADRLXpxZNgKXEKF',
                 desc: 'Mari ikuti gerakan alami bersama-sama di kelas!',
-                steps: [
-                    { icon: 'fa-wind', label: '1. Angin Sepoi 🍃', desc: 'Lambaikan kedua tangan meliuk-liuk pelan ke kiri dan kanan.' },
-                    { icon: 'fa-cloud-showers-heavy', label: '2. Hujan Rintik 🌧️', desc: 'Jentikkan jari-jari tanganmu dari atas ke bawah!' },
-                    { icon: 'fa-bolt-lightning', label: '3. Petir Menggelegar ⚡', desc: 'Tepuk tangan keras 1 kali lalu berdiri tegak!' }
-                ]
+                steps: []
             },
             {
                 id: 'act_alam_7',
@@ -1323,15 +1312,11 @@
                 id: 'act_air_1',
                 themeKey: 'air_udara_api',
                 badge: 'TEMA: AIR, UDARA & API',
-                title: 'Manfaat Elemen Air, Udara & Api 🔥',
+                title: 'MANFAAT DAN BAHAYA ELEMEN AIR',
                 domain: 'KOGNITIF',
-                type: 'sains_proses',
-                desc: 'Sentuh setiap elemen untuk mempelajari manfaat dan kegunaannya!',
-                steps: [
-                    { icon: 'fa-droplet', label: '1. Air 💧', desc: 'Digunakan untuk minum, membersihkan diri, dan menyiram tanaman.' },
-                    { icon: 'fa-wind', label: '2. Udara 💨', desc: 'Dibutuhkan untuk bernapas, menerbangkan layang-layang & menggelembungkan balon.' },
-                    { icon: 'fa-fire-flame-curved', label: '3. Api 🔥', desc: 'Memberikan kehangatan dan memasak makanan, tetapi jangan dimainkan!' }
-                ]
+                type: 'video_embed',
+                desc: 'Saksikan video interaktif lagu manfaat elemen air, udara, dan api!',
+                videoUrl: 'https://drive.google.com/file/d/1sgHRBrZSJqqJmvRlFzgNKcWH5X34KuT7/preview'
             },
             {
                 id: 'act_air_2',
@@ -1831,6 +1816,12 @@
                         <h2 class="font-display font-black text-2xl sm:text-4xl text-amber-300">${slide.title}</h2>
                         <p class="text-xs sm:text-sm text-slate-300 font-medium">${slide.desc}</p>
                     </div>
+                    ${slide.imageUrl ? `
+                        <div class="flex justify-center my-3">
+                            <img src="${slide.imageUrl}" alt="${slide.title}" class="max-h-60 sm:max-h-72 object-contain rounded-3xl border-4 border-amber-300 shadow-xl bg-slate-950" onerror="this.onerror=null; this.src='https://drive.google.com/uc?export=view&id=1HawokAWZocbXmJ64IADRLXpxZNgKXEKF';">
+                        </div>
+                    ` : ''}
+                    ${slide.steps && slide.steps.length > 0 ? `
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
                         ${slide.steps.map((st, i) => `
                             <div onclick="playSFX('pop')" class="ifp-btn bg-slate-800/90 border-2 border-slate-700 p-6 rounded-3xl hover:border-amber-400 transition flex flex-col items-center text-center group shadow-md">
@@ -1842,6 +1833,7 @@
                             </div>
                         `).join('')}
                     </div>
+                    ` : ''}
                 `;
             } else if (slide.type === 'kuis_interaktif') {
                 container.innerHTML = `
