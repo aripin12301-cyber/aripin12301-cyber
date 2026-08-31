@@ -2244,9 +2244,12 @@
             currentThemeKey = themeKey;
             const theme = PAUD_THEMES[themeKey];
             
+            // Kosongkan rangkaian bahan ajar ketika tema dipilih
+            theme.deck = [];
+            
             document.getElementById('dashboard-lesson-title').innerText = theme.title;
             document.getElementById('dashboard-theme-badge').innerText = theme.badgeText;
-            document.getElementById('deck-count-badge').innerText = theme.deck.length;
+            document.getElementById('deck-count-badge').innerText = 0;
 
             const bankLabel = document.getElementById('bank-active-theme-label');
             if (bankLabel) bankLabel.innerText = theme.title;
