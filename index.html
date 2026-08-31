@@ -1309,33 +1309,87 @@
 
         // BANK DATA SEMUA REFERENSI KEGIATAN LENGKAP
         const BANK_ACTIVITIES = [
+            // --- TEMA: ALAM SEMESTA ---
             {
-                id: 'act_alam_vid1',
+                id: 'act_alam_1',
                 themeKey: 'alam_semesta',
+                badge: 'TEMA: ALAM SEMESTA',
                 title: 'Tahapan Siklus Terjadinya Hujan 🌧️',
                 domain: 'KOGNITIF',
                 type: 'video_embed',
-                badge: 'TEMA: ALAM SEMESTA',
                 desc: 'Saksikan video interaktif proses terjadinya air hujan!',
                 videoUrl: 'https://drive.google.com/file/d/16adoVKV808Gy3TRi8KToaB0XD7VikZZ0/preview'
             },
             {
-                id: 'act_alam_vid2',
+                id: 'act_alam_2',
                 themeKey: 'alam_semesta',
+                badge: 'TEMA: ALAM SEMESTA',
+                title: 'Eksplorasi Warna Pelangi Indah 🌈',
+                domain: 'KOGNITIF',
+                type: 'kuis_interaktif',
+                desc: 'Pilih warna yang muncul saat cahaya matahari menyinari titik-titik air hujan!',
+                question: 'Apa saja warna utama yang membentuk Pelangi?',
+                options: [
+                    { label: '🔴 Merah, 🟡 Kuning, 🟢 Hijau, 🔵 Biru', correct: true, feedback: 'Hebat sekali! Pelangi terdiri dari spektrum warna-warni yang indah!' },
+                    { label: '⬛ Hitam, 🩶 Abu-abu, 🤎 Cokelat', correct: false, feedback: 'Kurang tepat. Pelangi berisi warna-warni cerah!' }
+                ]
+            },
+            {
+                id: 'act_alam_3',
+                themeKey: 'alam_semesta',
+                badge: 'TEMA: ALAM SEMESTA',
                 title: 'Gerak & Lagu "Tik Tik Bunyi Hujan" 🎵',
                 domain: 'SENI',
                 type: 'video_embed',
-                badge: 'TEMA: ALAM SEMESTA',
                 desc: 'Bernyanyi dan bergerak bersama mendengarkan lagu hujan!',
                 videoUrl: 'https://drive.google.com/file/d/1Z8Wv6wD5P76VTvR4gAXtWs1-9AM1t6BC/preview'
             },
             {
-                id: 'act_alam_coding',
+                id: 'act_alam_4',
                 themeKey: 'alam_semesta',
+                badge: 'TEMA: ALAM SEMESTA',
+                title: 'Menghitung Titik Air Hujan 💧',
+                domain: 'KOGNITIF',
+                type: 'hitung_titik',
+                desc: 'Sentuh setiap tetes air hujan di bawah ini untuk menghitung totalnya!',
+                countTarget: 5
+            },
+            {
+                id: 'act_alam_5',
+                themeKey: 'alam_semesta',
+                badge: 'TEMA: ALAM SEMESTA',
+                title: 'Mengenal Benda Langit Siang & Malam 🌤️🌙',
+                domain: 'BAHASA',
+                type: 'organ_tubuh',
+                desc: 'Sentuh benda langit di bawah ini untuk mengenal namanya!',
+                organs: [
+                    { icon: 'fa-sun', label: 'Matahari ☀️', desc: 'Bersinar terang di siang hari' },
+                    { icon: 'fa-moon', label: 'Bulan 🌙', desc: 'Menerangi malam hari' },
+                    { icon: 'fa-cloud-rain', label: 'Awan ☁️', desc: 'Tempat berkumpulnya tetes air hujan' },
+                    { icon: 'fa-star', label: 'Bintang ✨', desc: 'Hiasi langit malam yang indah' }
+                ]
+            },
+            {
+                id: 'act_alam_6',
+                themeKey: 'alam_semesta',
+                badge: 'TEMA: ALAM SEMESTA',
+                title: 'Senam Gerak Angin & Hujan 🌬️',
+                domain: 'MOTORIK',
+                type: 'sains_proses',
+                desc: 'Mari ikuti gerakan alami bersama-sama di kelas!',
+                steps: [
+                    { icon: 'fa-wind', label: '1. Angin Sepoi 🍃', desc: 'Lambaikan kedua tangan meliuk-liuk pelan ke kiri dan kanan.' },
+                    { icon: 'fa-cloud-showers-heavy', label: '2. Hujan Rintik 🌧️', desc: 'Jentikkan jari-jari tanganmu dari atas ke bawah!' },
+                    { icon: 'fa-bolt-lightning', label: '3. Petir Menggelegar ⚡', desc: 'Tepuk tangan keras 1 kali lalu berdiri tegak!' }
+                ]
+            },
+            {
+                id: 'act_alam_7',
+                themeKey: 'alam_semesta',
+                badge: 'TEMA: ALAM SEMESTA',
                 title: '🎮 Coding Roket Ke Bintang 🚀⭐',
                 domain: 'CODING',
                 type: 'game_coding',
-                badge: 'TEMA: ALAM SEMESTA',
                 desc: 'Susun urutan panah petunjuk jalan agar Roket dapat mencapai Bintang!',
                 gridSize: 3,
                 startPos: { r: 2, c: 0 },
@@ -1345,12 +1399,113 @@
                 obstacles: [{ r: 1, c: 1, icon: '🪐' }]
             },
             {
-                id: 'act_air_coding',
+                id: 'act_alam_8',
+                themeKey: 'alam_semesta',
+                badge: 'TEMA: ALAM SEMESTA',
+                title: '🎮 Game Cocokkan Benda Langit & Waktunya ☀️🌙',
+                domain: 'GAME',
+                type: 'game_cocok_pasangan',
+                desc: 'Sentuh benda langit lalu sentuh waktu yang tepat di sebelah kanan!',
+                pairs: [
+                    { left: 'Matahari ☀️', right: 'Siang Hari 🌅', id: 1 },
+                    { left: 'Bulan 🌙', right: 'Malam Hari 🌌', id: 2 },
+                    { left: 'Awan Hujan 🌧️', right: 'Saat Mendung ☁️', id: 3 }
+                ]
+            },
+            {
+                id: 'act_alam_9',
+                themeKey: 'alam_semesta',
+                badge: 'TEMA: ALAM SEMESTA',
+                title: '🎮 Game Tangkap Tetes Air Hujan 💧',
+                domain: 'GAME',
+                type: 'game_tangkap_benda',
+                desc: 'Sentuh setiap tetes air hujan yang muncul untuk mengumpulkan poin!',
+                targetIcon: 'fa-droplet',
+                targetColor: 'bg-sky-400',
+                targetCount: 6,
+                targetName: 'Tetes Hujan'
+            },
+
+            // --- TEMA: AIR, UDARA & API ---
+            {
+                id: 'act_air_1',
                 themeKey: 'air_udara_api',
+                badge: 'TEMA: AIR, UDARA & API',
+                title: 'Manfaat Elemen Air, Udara & Api 🔥',
+                domain: 'KOGNITIF',
+                type: 'sains_proses',
+                desc: 'Sentuh setiap elemen untuk mempelajari manfaat dan kegunaannya!',
+                steps: [
+                    { icon: 'fa-droplet', label: '1. Air 💧', desc: 'Digunakan untuk minum, membersihkan diri, dan menyiram tanaman.' },
+                    { icon: 'fa-wind', label: '2. Udara 💨', desc: 'Dibutuhkan untuk bernapas, menerbangkan layang-layang & menggelembungkan balon.' },
+                    { icon: 'fa-fire-flame-curved', label: '3. Api 🔥', desc: 'Memberikan kehangatan dan memasak makanan, tetapi jangan dimainkan!' }
+                ]
+            },
+            {
+                id: 'act_air_2',
+                themeKey: 'air_udara_api',
+                badge: 'TEMA: AIR, UDARA & API',
+                title: 'Aturan Keselamatan Bermain Api 🛑',
+                domain: 'KOGNITIF',
+                type: 'kuis_interaktif',
+                desc: 'Tebak sikap aman saat menemukan pemantik api!',
+                question: 'Apa yang harus dilakukan jika melihat api membara atau korek api?',
+                options: [
+                    { label: '✅ Tidak Menyentuhnya & Lapor Orang Tua/Guru', correct: true, feedback: 'Pintar! Api sangat panas dan berbahaya jika dimainkan.' },
+                    { label: '❌ Mendekat dan Bermain Api', correct: false, feedback: 'Bahaya! Api bisa membakar dan melukai jari.' }
+                ]
+            },
+            {
+                id: 'act_air_3',
+                themeKey: 'air_udara_api',
+                badge: 'TEMA: AIR, UDARA & API',
+                title: 'Lagu "Air Untuk Minum" 🎵',
+                domain: 'SENI',
+                type: 'musik_lagu',
+                desc: 'Mari bernyanyi bersama tentang pentingnya air bagi kehidupan!',
+                lyrics: [
+                    "Mengalir mengalir air mengalir...",
+                    "Ke sungai ke laut dan ke tanaman...",
+                    "Kalau kita haus kita minum air 🥛",
+                    "Air ciptaan Tuhan yang sangat berguna! ✨"
+                ]
+            },
+            {
+                id: 'act_air_4',
+                themeKey: 'air_udara_api',
+                badge: 'TEMA: AIR, UDARA & API',
+                title: 'Mengenal Benda Berisi Udara 🎈',
+                domain: 'BAHASA',
+                type: 'organ_tubuh',
+                desc: 'Sentuh benda-benda yang memerlukan udara di bawah ini!',
+                organs: [
+                    { icon: 'fa-balloon', label: 'Balon Terbang 🎈', desc: 'Mengembang besar bila diisi udara' },
+                    { icon: 'fa-futbol', label: 'Bola Sepak ⚽', desc: 'Membal tinggi bila ada udaranya' },
+                    { icon: 'fa-ring', label: 'Ban Pelampung 🛟', desc: 'Membantu kita berenang aman' },
+                    { icon: 'fa-paper-plane', label: 'Layang-Layang 🪁', desc: 'Terbang tinggi tertiup angin' }
+                ]
+            },
+            {
+                id: 'act_air_5',
+                themeKey: 'air_udara_api',
+                badge: 'TEMA: AIR, UDARA & API',
+                title: 'Gerak Nafas & Tiuptan Balon 💨',
+                domain: 'MOTORIK',
+                type: 'sains_proses',
+                desc: 'Mari berlatih olah pernapasan sehat bersama!',
+                steps: [
+                    { icon: 'fa-lungs', label: '1. Tarik Napas 🌬️', desc: 'Tarik napas dalam-dalam lewat hidungmu.' },
+                    { icon: 'fa-wind', label: '2. Tahan 2 Detik ⏱️', desc: 'Tahan napas sebentar di dalam dada.' },
+                    { icon: 'fa-face-smile', label: '3. Hembuskan Pelan 💨', desc: 'Tiuplah keluar seperti meniup balon sampai kempis!' }
+                ]
+            },
+            {
+                id: 'act_air_6',
+                themeKey: 'air_udara_api',
+                badge: 'TEMA: AIR, UDARA & API',
                 title: '🎮 Coding Pemadam Padamkan Api 🚒🔥',
                 domain: 'CODING',
                 type: 'game_coding',
-                badge: 'TEMA: AIR, UDARA & API',
                 desc: 'Bantu Mobil Pemadam menyusun jalur panah menuju lokasi Api!',
                 gridSize: 3,
                 startPos: { r: 2, c: 0 },
@@ -1360,12 +1515,86 @@
                 obstacles: [{ r: 1, c: 0, icon: '🚧' }]
             },
             {
-                id: 'act_diriku_coding',
+                id: 'act_air_7',
+                themeKey: 'air_udara_api',
+                badge: 'TEMA: AIR, UDARA & API',
+                title: '🎮 Game Pasangkan Elemen & Fungsinya 💧💨🔥',
+                domain: 'GAME',
+                type: 'game_cocok_pasangan',
+                desc: 'Pasangkan elemen alam dengan benda atau fungsinya yang sesuai!',
+                pairs: [
+                    { left: 'Air 💧', right: 'Gelas Minum 🥛', id: 1 },
+                    { left: 'Udara 💨', right: 'Balon Terbang 🎈', id: 2 },
+                    { left: 'Api 🔥', right: 'Korek Kayu 🪵', id: 3 }
+                ]
+            },
+
+            // --- TEMA: DIRIKU ---
+            {
+                id: 'act_diriku_1',
                 themeKey: 'diriku',
+                badge: 'TEMA: DIRIKU',
+                title: 'Panca Indera dan Fungsinya 👀👂',
+                domain: 'KOGNITIF',
+                type: 'organ_tubuh',
+                desc: 'Sentuh organ tubuh di bawah untuk mengetahui kegunaannya!',
+                organs: [
+                    { icon: 'fa-eye', label: 'Mata 👀', desc: 'Untuk Melihat keindahan dunia' },
+                    { icon: 'fa-ear-listen', label: 'Telinga 👂', desc: 'Untuk Mendengar musik & cerita' },
+                    { icon: 'fa-nose', label: 'Hidung 👃', desc: 'Untuk Mencium aroma harum' },
+                    { icon: 'fa-hands', label: 'Tangan ✋', desc: 'Untuk Memegang & Berkreasi' }
+                ]
+            },
+            {
+                id: 'act_diriku_2',
+                themeKey: 'diriku',
+                badge: 'TEMA: DIRIKU',
+                title: 'Lagu "Dua Mata Saya" 🎵',
+                domain: 'SENI',
+                type: 'musik_lagu',
+                desc: 'Bernyanyi dan tunjuk anggota tubuhmu!',
+                lyrics: [
+                    "Dua mata saya, hidung saya satu... 👀👃",
+                    "Dua kaki saya pakai sepatu baru... 👟",
+                    "Dua telinga saya yang kiri dan kanan... 👂👂",
+                    "Satu mulut saya tidak berhenti makan! 👄"
+                ]
+            },
+            {
+                id: 'act_diriku_3',
+                themeKey: 'diriku',
+                badge: 'TEMA: DIRIKU',
+                title: 'Gerak Senam Olahraga Pagi 🏃‍♂️',
+                domain: 'MOTORIK',
+                type: 'sains_proses',
+                desc: 'Gerakkan tubuhmu agar sehat dan kuat!',
+                steps: [
+                    { icon: 'fa-person-walking', label: '1. Jalan di Tempat 🚶‍♂️', desc: 'Angkat paha bergantian 10 kali.' },
+                    { icon: 'fa-child-reaching', label: '2. Rentangkan Tangan 👐', desc: 'Rentangkan tangan lebar-lebar ke samping.' },
+                    { icon: 'fa-hands-clapping', label: '3. Tepuk Semangat 👏', desc: 'Tepuk tangan gembira di atas kepala!' }
+                ]
+            },
+            {
+                id: 'act_diriku_4',
+                themeKey: 'diriku',
+                badge: 'TEMA: DIRIKU',
+                title: 'Mengenal Ragam Emosi Wajah 😊😢',
+                domain: 'KOGNITIF',
+                type: 'kuis_interaktif',
+                desc: 'Pilihlah raut muka gembira pada kuis di bawah!',
+                question: 'Gambar ekspresi manakah yang menunjukkan perasaan gembira?',
+                options: [
+                    { label: '😊 Tersenyum Ceria & Tertawa', correct: true, feedback: 'Benar! Senyum ceria menandakan hati bersuka cita!' },
+                    { label: '😢 Menangis Cemberut', correct: false, feedback: 'Kurang tepat. Coba perhatikan lagi senyuman di wajah!' }
+                ]
+            },
+            {
+                id: 'act_diriku_5',
+                themeKey: 'diriku',
+                badge: 'TEMA: DIRIKU',
                 title: '🎮 Coding Tangan Ambil Buah Apel ✋🍎',
                 domain: 'CODING',
                 type: 'game_coding',
-                badge: 'TEMA: DIRIKU',
                 desc: 'Arahkan Tangan menuju Buah Apel Merah melalui papan petunjuk panah!',
                 gridSize: 3,
                 startPos: { r: 0, c: 0 },
@@ -1375,12 +1604,85 @@
                 obstacles: [{ r: 1, c: 1, icon: '🪨' }]
             },
             {
-                id: 'act_tanaman_coding',
+                id: 'act_diriku_6',
+                themeKey: 'diriku',
+                badge: 'TEMA: DIRIKU',
+                title: '🎮 Game Basmi Kuman di Tangan 🧼',
+                domain: 'GAME',
+                type: 'game_tangkap_benda',
+                desc: 'Sentuh kuman-kuman jahat dengan sabun pembersih!',
+                targetIcon: 'fa-bacteria',
+                targetColor: 'bg-rose-500',
+                targetCount: 6,
+                targetName: 'Kuman Bersih'
+            },
+
+            // --- TEMA: TANAMAN ---
+            {
+                id: 'act_tanaman_1',
                 themeKey: 'tanaman',
+                badge: 'TEMA: TANAMAN',
+                title: 'Cara Tanaman Tumbuh dari Biji 🪴',
+                domain: 'KOGNITIF',
+                type: 'sains_proses',
+                desc: 'Sentuh langkah bertanam di bawah ini!',
+                steps: [
+                    { icon: 'fa-seedling', label: '1. Biji di Tanah 🌰', desc: 'Biji ditanam di dalam tanah yang subur.' },
+                    { icon: 'fa-faucet-drip', label: '2. Menyiram Air 💧', desc: 'Disiram air dan disinari matahari pagi.' },
+                    { icon: 'fa-tree', label: '3. Tumbuh Pohon 🌳', desc: 'Biji tumbuh menjadi pohon berbuah manis!' }
+                ]
+            },
+            {
+                id: 'act_tanaman_2',
+                themeKey: 'tanaman',
+                badge: 'TEMA: TANAMAN',
+                title: 'Lagu "Lihat Kebunku" 🎵',
+                domain: 'SENI',
+                type: 'musik_lagu',
+                desc: 'Nyanyikan lagu kebun bunga indah!',
+                lyrics: [
+                    "Lihat kebunku penuh dengan bunga... 🌸🌻",
+                    "Ada yang putih dan ada yang merah... 🤍❤️",
+                    "Setiap hari kusiram semua... 💧",
+                    "Mawar melati semuanya indah! 🌹✨"
+                ]
+            },
+            {
+                id: 'act_tanaman_3',
+                themeKey: 'tanaman',
+                badge: 'TEMA: TANAMAN',
+                title: 'Bagian-Bagian Tanaman Pohon 🌳',
+                domain: 'BAHASA',
+                type: 'organ_tubuh',
+                desc: 'Sentuh bagian pohon untuk belajar kosa katanya!',
+                organs: [
+                    { icon: 'fa-spa', label: 'Akar 🫚', desc: 'Menyerap air di dalam tanah' },
+                    { icon: 'fa-tree', label: 'Batang 🪵', desc: 'Berdiri kokoh menopang dahan' },
+                    { icon: 'fa-leaf', label: 'Daun 🍃', desc: 'Warna hijau memasak makanan' },
+                    { icon: 'fa-apple-whole', label: 'Buah 🍎', desc: 'Manis dan sehat dikonsumsi' }
+                ]
+            },
+            {
+                id: 'act_tanaman_4',
+                themeKey: 'tanaman',
+                badge: 'TEMA: TANAMAN',
+                title: 'Gerak Menirukan Pohon Ditiup Angin 🌲',
+                domain: 'MOTORIK',
+                type: 'sains_proses',
+                desc: 'Berdiri tegak dan gerakkan badan seperti pohon rindang!',
+                steps: [
+                    { icon: 'fa-tree', label: '1. Pohon Kokoh 🌳', desc: 'Berdiri tegak dengan kedua kaki melekat kuat.' },
+                    { icon: 'fa-wind', label: '2. Angin Sepoi 🍃', desc: 'Lambaikan tangan ke atas pelan-pelan.' },
+                    { icon: 'fa-tornado', label: '3. Badai Kencang 🌪️', desc: 'Liukkan badanmu lebih cepat ke kiri dan kanan!' }
+                ]
+            },
+            {
+                id: 'act_tanaman_5',
+                themeKey: 'tanaman',
+                badge: 'TEMA: TANAMAN',
                 title: '🎮 Coding Lebah Menuju Bunga 🐝🌸',
                 domain: 'CODING',
                 type: 'game_coding',
-                badge: 'TEMA: TANAMAN',
                 desc: 'Bantu Lebah mungil menyusun panah arah agar sampai ke Bunga Matahari!',
                 gridSize: 3,
                 startPos: { r: 0, c: 0 },
@@ -1390,12 +1692,85 @@
                 obstacles: [{ r: 1, c: 1, icon: '🪨' }]
             },
             {
-                id: 'act_binatang_coding',
+                id: 'act_tanaman_6',
+                themeKey: 'tanaman',
+                badge: 'TEMA: TANAMAN',
+                title: '🎮 Game Petik Buah Segar 🍓',
+                domain: 'GAME',
+                type: 'game_tangkap_benda',
+                desc: 'Sentuh buah-buahan manis yang siap dipetik dari pohon!',
+                targetIcon: 'fa-apple-whole',
+                targetColor: 'bg-emerald-500',
+                targetCount: 6,
+                targetName: 'Buah Dipetik'
+            },
+
+            // --- TEMA: BINATANG ---
+            {
+                id: 'act_binatang_1',
                 themeKey: 'binatang',
+                badge: 'TEMA: BINATANG',
+                title: 'Suara Binatang Peliharaan 🐓',
+                domain: 'BAHASA',
+                type: 'kuis_interaktif',
+                desc: 'Tebak suara binatang peliharaan kesayangan!',
+                question: 'Hewan mana yang berkokok di pagi hari?',
+                options: [
+                    { label: '🐓 Ayam Jantan (Kukuruyuk)', correct: true, feedback: 'Benar! Ayam berkokok membangunkan kita pagi hari!' },
+                    { label: '🐱 Kucing (Meong)', correct: false, feedback: 'Kucing bersuara meong, coba tebak lagi!' }
+                ]
+            },
+            {
+                id: 'act_binatang_2',
+                themeKey: 'binatang',
+                badge: 'TEMA: BINATANG',
+                title: 'Lagu "Helly Guk Guk Guk" 🎵',
+                domain: 'SENI',
+                type: 'musik_lagu',
+                desc: 'Bernyanyi dan bertepuk tangan bersama!',
+                lyrics: [
+                    "Aku punya anjing kecil, ku beri nama Helly... 🐶",
+                    "Dia senang bermain-main, sambil berlari-lari...",
+                    "Helly guk guk guk, kemari guk guk guk! 🎶",
+                    "Ayo lari-lari! 🏃‍♂️"
+                ]
+            },
+            {
+                id: 'act_binatang_3',
+                themeKey: 'binatang',
+                badge: 'TEMA: BINATANG',
+                title: 'Gerakan Menirukan Hewan Lucu 🦘',
+                domain: 'MOTORIK',
+                type: 'sains_proses',
+                desc: 'Ayo tirukan gerakan hewan-hewan di bawah!',
+                steps: [
+                    { icon: 'fa-frog', label: '1. Melompat Katak 🐸', desc: 'Jongkok lalu melompat tinggi 3 kali!' },
+                    { icon: 'fa-kiwi-bird', label: '2. Burung Terbang 🦅', desc: 'Kepakkan kedua tanganmu ke atas dan bawah.' },
+                    { icon: 'fa-cat', label: '3. Kucing Merayap 🐱', desc: 'Jalan pelan-pelan tanpa bersuara!' }
+                ]
+            },
+            {
+                id: 'act_binatang_4',
+                themeKey: 'binatang',
+                badge: 'TEMA: BINATANG',
+                title: 'Pengelompokan Tempat Hidup Hewan 🐟🦅',
+                domain: 'KOGNITIF',
+                type: 'organ_tubuh',
+                desc: 'Sentuh hewan untuk mempelajari tempat tinggalnya!',
+                organs: [
+                    { icon: 'fa-fish', label: 'Ikan 🐟', desc: 'Berenang bebas di dalam Air' },
+                    { icon: 'fa-dove', label: 'Burung 🕊️', desc: 'Terbang tinggi di Udara' },
+                    { icon: 'fa-horse', label: 'Kuda 🐎', desc: 'Berlari kencang di Daratan' },
+                    { icon: 'fa-frog', label: 'Katak 🐸', desc: 'Bisa hidup di Darat & Air' }
+                ]
+            },
+            {
+                id: 'act_binatang_5',
+                themeKey: 'binatang',
+                badge: 'TEMA: BINATANG',
                 title: '🎮 Coding Kelinci Cari Wortel 🐰🥕',
                 domain: 'CODING',
                 type: 'game_coding',
-                badge: 'TEMA: BINATANG',
                 desc: 'Bantu Kelinci imut menyusun panah arah untuk melompat menuju Wortel!',
                 gridSize: 3,
                 startPos: { r: 2, c: 0 },
@@ -1405,12 +1780,86 @@
                 obstacles: [{ r: 1, c: 1, icon: '🦊' }]
             },
             {
-                id: 'act_tanahair_coding',
+                id: 'act_binatang_6',
+                themeKey: 'binatang',
+                badge: 'TEMA: BINATANG',
+                title: '🎮 Game Pasangkan Hewan & Makanannya 🐰🐱',
+                domain: 'GAME',
+                type: 'game_cocok_pasangan',
+                desc: 'Jodohkan hewan lucu dengan makanan kesukaannya!',
+                pairs: [
+                    { left: 'Kelinci 🐰', right: 'Wortel Segar 🥕', id: 1 },
+                    { left: 'Kucing 🐱', right: 'Ikan Lezat 🐟', id: 2 },
+                    { left: 'Monyet 🐒', right: 'Pisang Manis 🍌', id: 3 }
+                ]
+            },
+
+            // --- TEMA: CINTA TANAH AIR ---
+            {
+                id: 'act_tanahair_1',
                 themeKey: 'tanah_air',
+                badge: 'TEMA: CINTA TANAH AIR',
+                title: 'Warna Bendera Kebangsaan 🇮🇩',
+                domain: 'KOGNITIF',
+                type: 'kuis_interaktif',
+                desc: 'Kuis nasionalisme cinta Indonesia!',
+                question: 'Apa warna bendera Negara Indonesia?',
+                options: [
+                    { label: '❤️ Merah dan 🤍 Putih', correct: true, feedback: 'Merah artinya berani, Putih artinya suci!' },
+                    { label: '💚 Hijau dan 💛 Kuning', correct: false, feedback: 'Bendera Indonesia adalah Merah Putih!' }
+                ]
+            },
+            {
+                id: 'act_tanahair_2',
+                themeKey: 'tanah_air',
+                badge: 'TEMA: CINTA TANAH AIR',
+                title: 'Lagu "Garuda Pancasila" 🎵',
+                domain: 'SENI',
+                type: 'musik_lagu',
+                desc: 'Mari bernyanyi lagu nasional dengan penuh semangat!',
+                lyrics: [
+                    "Garuda Pancasila, akulah pendukungmu... 🦅",
+                    "Patriot proklamasi, sedia berkorban untukmu...",
+                    "Pancasila dasar negara, rakyat adil makmur sentosa...",
+                    "Pribadi bangsaku, ayo maju maju! 🇮🇩✨"
+                ]
+            },
+            {
+                id: 'act_tanahair_3',
+                themeKey: 'tanah_air',
+                badge: 'TEMA: CINTA TANAH AIR',
+                title: 'Latihan Baris-Berbaris & Hormat 🫡',
+                domain: 'MOTORIK',
+                type: 'sains_proses',
+                desc: 'Berdiri siap dan ikuti instruksi baris cilik!',
+                steps: [
+                    { icon: 'fa-child', label: '1. Sikap Sempurna 🧍‍♂️', desc: 'Berdiri tegak, tangan rapat di samping paha.' },
+                    { icon: 'fa-hand-back-fist', label: '2. Hormat Bendera 🫡', desc: 'Angkat tangan kanan sejajar pelipis mata!' },
+                    { icon: 'fa-person-walking-luggage', label: '3. Langkah Tegap 🚶‍♂️', desc: 'Ayunkan tangan dan berjalan tegap!' }
+                ]
+            },
+            {
+                id: 'act_tanahair_4',
+                themeKey: 'tanah_air',
+                badge: 'TEMA: CINTA TANAH AIR',
+                title: 'Simbol Lambang Garuda Pancasila 🦅',
+                domain: 'BAHASA',
+                type: 'organ_tubuh',
+                desc: 'Sentuh simbol untuk mengenal artinya!',
+                organs: [
+                    { icon: 'fa-star', label: 'Bintang ⭐', desc: 'Sila ke-1: Ketuhanan Yang Maha Esa' },
+                    { icon: 'fa-link', label: 'Rantai 🔗', desc: 'Sila ke-2: Kemanusiaan yang Adil & Beradab' },
+                    { icon: 'fa-tree', label: 'Pohon Beringin 🌳', desc: 'Sila ke-3: Persatuan Indonesia' },
+                    { icon: 'fa-wheat-awn', label: 'Padi & Kapas 🌾', desc: 'Sila ke-5: Keadilan Sosial' }
+                ]
+            },
+            {
+                id: 'act_tanahair_5',
+                themeKey: 'tanah_air',
+                badge: 'TEMA: CINTA TANAH AIR',
                 title: '🎮 Coding Burung Garuda Ke Puncak 🦅⛰️',
                 domain: 'CODING',
                 type: 'game_coding',
-                badge: 'TEMA: CINTA TANAH AIR',
                 desc: 'Arahkan Burung Garuda terbang tinggi menuju Puncak Gunung Nusantara!',
                 gridSize: 3,
                 startPos: { r: 2, c: 0 },
@@ -1420,12 +1869,85 @@
                 obstacles: [{ r: 1, c: 1, icon: '☁️' }]
             },
             {
-                id: 'act_kendaraan_coding',
+                id: 'act_tanahair_6',
+                themeKey: 'tanah_air',
+                badge: 'TEMA: CINTA TANAH AIR',
+                title: '🎮 Game Kumpulkan Bendera Merah Putih 🇮🇩',
+                domain: 'GAME',
+                type: 'game_tangkap_benda',
+                desc: 'Sentuh bendera Merah Putih untuk mengibarkannya tinggi-tinggi!',
+                targetIcon: 'fa-flag',
+                targetColor: 'bg-rose-600',
+                targetCount: 6,
+                targetName: 'Bendera Berkibar'
+            },
+
+            // --- TEMA: KENDARAAN ---
+            {
+                id: 'act_kendaraan_1',
                 themeKey: 'kendaraan',
+                badge: 'TEMA: KENDARAAN',
+                title: 'Tempat Berhenti Kendaraan 🚆',
+                domain: 'KOGNITIF',
+                type: 'sains_proses',
+                desc: 'Sentuh kartu jenis kendaraan di bawah:',
+                steps: [
+                    { icon: 'fa-plane', label: 'Pesawat ✈️', desc: 'Terbang di udara dan mendarat di Bandara.' },
+                    { icon: 'fa-train', label: 'Kereta Api 🚆', desc: 'Berjalan di atas rel dan berhenti di Stasiun.' },
+                    { icon: 'fa-ship', label: 'Kapal Laut 🚢', desc: 'Berlayar di laut dan berlabuh di Pelabuhan.' }
+                ]
+            },
+            {
+                id: 'act_kendaraan_2',
+                themeKey: 'kendaraan',
+                badge: 'TEMA: KENDARAAN',
+                title: 'Lagu "Naik Kereta Api" 🎵',
+                domain: 'SENI',
+                type: 'musik_lagu',
+                desc: 'Mari membuat barisan kereta api ceria!',
+                lyrics: [
+                    "Naik kereta api... tut... tut... tut... 🚆",
+                    "Siapa hendak turut, ke Bandung... Surabaya...",
+                    "Bolehlah naik dengan percuma...",
+                    "Ayo temanku lekas naik, keretaku tak berhenti lama! 🎶"
+                ]
+            },
+            {
+                id: 'act_kendaraan_3',
+                themeKey: 'kendaraan',
+                badge: 'TEMA: KENDARAAN',
+                title: 'Simulasi Menyetir Mobil & Rambu 🚦',
+                domain: 'MOTORIK',
+                type: 'sains_proses',
+                desc: 'Pegang kemudi imajiner dan patuhi lampu lalu lintas!',
+                steps: [
+                    { icon: 'fa-circle-stop text-rose-500', label: '1. Lampu Merah 🔴', desc: 'Berhenti total! Tangan memegang kemudi.' },
+                    { icon: 'fa-triangle-exclamation text-amber-500', label: '2. Lampu Kuning 🟡', desc: 'Bersiap-siap dan kurangi kecepatan.' },
+                    { icon: 'fa-circle-check text-emerald-500', label: '3. Lampu Hijau 🟢', desc: 'Jalan maju sambil membunyikan klakson biim-biim! 🚗' }
+                ]
+            },
+            {
+                id: 'act_kendaraan_4',
+                themeKey: 'kendaraan',
+                badge: 'TEMA: KENDARAAN',
+                title: 'Pengenalan Bunyi Kendaraan 🚚',
+                domain: 'BAHASA',
+                type: 'organ_tubuh',
+                desc: 'Sentuh kendaraan untuk mendengar suara khasnya!',
+                organs: [
+                    { icon: 'fa-car', label: 'Mobil 🚗', desc: 'Suara Klakson: Biim... Biim!' },
+                    { icon: 'fa-train', label: 'Kereta Api 🚆', desc: 'Suara Peluit: Tut... Tut... Jes... Jes!' },
+                    { icon: 'fa-plane', label: 'Pesawat ✈️', desc: 'Suara Mesin: Wuuuush terbang tinggi!' },
+                    { icon: 'fa-truck-medical', label: 'Ambulans 🚑', desc: 'Suara Sirine: Wiw-waw-wiw-waw!' }
+                ]
+            },
+            {
+                id: 'act_kendaraan_5',
+                themeKey: 'kendaraan',
+                badge: 'TEMA: KENDARAAN',
                 title: '🎮 Coding Mobil Menuju Garasi 🚗🏠',
                 domain: 'CODING',
                 type: 'game_coding',
-                badge: 'TEMA: KENDARAAN',
                 desc: 'Susun petunjuk panah agar Mobil dapat melaju aman sampai Garasi Rumah!',
                 gridSize: 3,
                 startPos: { r: 0, c: 0 },
@@ -1435,12 +1957,86 @@
                 obstacles: [{ r: 1, c: 0, icon: '🚧' }]
             },
             {
-                id: 'act_lingkungan_coding',
+                id: 'act_kendaraan_6',
+                themeKey: 'kendaraan',
+                badge: 'TEMA: KENDARAAN',
+                title: '🎮 Game Pasangkan Kendaraan & Pengemudi 🚗✈️',
+                domain: 'GAME',
+                type: 'game_cocok_pasangan',
+                desc: 'Jodohkan jenis transportasi dengan profesi pengemudinya!',
+                pairs: [
+                    { left: 'Pesawat Terbang ✈️', right: 'Pak Pilot 👨‍✈️', id: 1 },
+                    { left: 'Kapal Laut 🚢', right: 'Pak Nahkoda ⚓', id: 2 },
+                    { left: 'Kereta Api 🚆', right: 'Pak Masinis 🧢', id: 3 }
+                ]
+            },
+
+            // --- TEMA: LINGKUNGANKU ---
+            {
+                id: 'act_lingkungan_1',
                 themeKey: 'lingkungan',
+                badge: 'TEMA: LINGKUNGANKU',
+                title: 'Membuang Sampah pada Tempatnya 🗑️',
+                domain: 'KOGNITIF',
+                type: 'kuis_interaktif',
+                desc: 'Kuis kesadaran kebersihan lingkungan!',
+                question: 'Ke manakah kita harus membuang bungkus makanan?',
+                options: [
+                    { label: '🗑️ Tempat Sampah', correct: true, feedback: 'Hebat! Membuang sampah di tempatnya membuat lingkungan bersih!' },
+                    { label: '🧹 Lantai Kelas', correct: false, feedback: 'Jangan membuang sampah sembarangan ya!' }
+                ]
+            },
+            {
+                id: 'act_lingkungan_2',
+                themeKey: 'lingkungan',
+                badge: 'TEMA: LINGKUNGANKU',
+                title: 'Lagu "Lingkungan Bersih Sehat" 🎶',
+                domain: 'SENI',
+                type: 'musik_lagu',
+                desc: 'Bernyanyi menjaga kebersihan bersama teman!',
+                lyrics: [
+                    "Bersih sekolahku, bersih rumahku... 🏡",
+                    "Tidak ada sampah berserakan lagi...",
+                    "Ayo sapu-sapu, ayo buang sampah... 🧹",
+                    "Lingkungan sehat hati senang gembira! ✨"
+                ]
+            },
+            {
+                id: 'act_lingkungan_3',
+                themeKey: 'lingkungan',
+                badge: 'TEMA: LINGKUNGANKU',
+                title: 'Aksi Nyata Menyapu & Merapikan 🧹',
+                domain: 'MOTORIK',
+                type: 'sains_proses',
+                desc: 'Praktikkan gerakan membersihkan lingkungan!',
+                steps: [
+                    { icon: 'fa-broom', label: '1. Menyapu Lantai 🧹', desc: 'Genggam gagang sapu dan gerakkan maju mundur.' },
+                    { icon: 'fa-hand-holding-hand', label: '2. Memungut Sampah 🍂', desc: 'Jongkok dan masukkan sampah ke dalam serokan.' },
+                    { icon: 'fa-soap', label: '3. Cuci Tangan 🧼', desc: 'Gosok tangan dengan sabun dan air mengalir.' }
+                ]
+            },
+            {
+                id: 'act_lingkungan_4',
+                themeKey: 'lingkungan',
+                badge: 'TEMA: LINGKUNGANKU',
+                title: 'Mengenal Alat-Alat Kebersihan 🪣',
+                domain: 'BAHASA',
+                type: 'organ_tubuh',
+                desc: 'Sentuh alat kebersihan untuk mengenal namanya!',
+                organs: [
+                    { icon: 'fa-broom', label: 'Sapu Ijuk 🧹', desc: 'Membersihkan debu di lantai' },
+                    { icon: 'fa-trash', label: 'Tong Sampah 🗑️', desc: 'Wadah menampung sisa sampah' },
+                    { icon: 'fa-bucket', label: 'Ember Air 🪣', desc: 'Menampung air untuk mengepel' },
+                    { icon: 'fa-spray-can', label: 'Semprotan 🧴', desc: 'Cairan pembersih kaca & meja' }
+                ]
+            },
+            {
+                id: 'act_lingkungan_5',
+                themeKey: 'lingkungan',
+                badge: 'TEMA: LINGKUNGANKU',
                 title: '🎮 Coding Robot Bersihkan Sampah 🤖🗑️',
                 domain: 'CODING',
                 type: 'game_coding',
-                badge: 'TEMA: LINGKUNGANKU',
                 desc: 'Arahkan Robot Pembersih mengumpulkan sampah di area grid!',
                 gridSize: 3,
                 startPos: { r: 0, c: 0 },
@@ -1450,12 +2046,86 @@
                 obstacles: [{ r: 1, c: 1, icon: '📦' }]
             },
             {
-                id: 'act_profesi_coding',
+                id: 'act_lingkungan_6',
+                themeKey: 'lingkungan',
+                badge: 'TEMA: LINGKUNGANKU',
+                title: '🎮 Game Pemilah Sampah Organik & Anorganik 🗑️',
+                domain: 'GAME',
+                type: 'game_cocok_pasangan',
+                desc: 'Pasangkan jenis sampah dengan tempat sampah yang tepat!',
+                pairs: [
+                    { left: 'Daun Kering 🍂', right: 'Tong Hijau (Organik) 🍏', id: 1 },
+                    { left: 'Botol Plastik 🍾', right: 'Tong Biru (Anorganik) 🥤', id: 2 },
+                    { left: 'Kardus Bekas 📦', right: 'Tong Kertas 📄', id: 3 }
+                ]
+            },
+
+            // --- TEMA: PROFESI ---
+            {
+                id: 'act_profesi_1',
                 themeKey: 'profesi',
+                badge: 'TEMA: PROFESI',
+                title: 'Tugas-Tugas Profesi Mulia 👨‍⚕️👨‍🚒',
+                domain: 'KOGNITIF',
+                type: 'organ_tubuh',
+                desc: 'Sentuh ikon profesi untuk mengenal tugasnya!',
+                organs: [
+                    { icon: 'fa-user-doctor', label: 'Dokter 👨‍⚕️', desc: 'Membantu menyembuhkan orang sakit' },
+                    { icon: 'fa-fire-extinguisher', label: 'Pemadam 👨‍🚒', desc: 'Padamkan api & menolong bencana' },
+                    { icon: 'fa-graduation-cap', label: 'Guru 👩‍🏫', desc: 'Mendidik anak-anak menjadi pintar' },
+                    { icon: 'fa-shield-halved', label: 'Polisi 👮‍♂️', desc: 'Menjaga keamanan & ketertiban' }
+                ]
+            },
+            {
+                id: 'act_profesi_2',
+                themeKey: 'profesi',
+                badge: 'TEMA: PROFESI',
+                title: 'Lagu "Aku Seorang Kapiten" 🎵',
+                domain: 'SENI',
+                type: 'musik_lagu',
+                desc: 'Nyanyikan lagu dengan gaya gagah berani!',
+                lyrics: [
+                    "Aku seorang kapiten... 👨‍✈️",
+                    "Mempunyai pedang panjang...",
+                    "Kalau berjalan prok... prok... prok...",
+                    "Aku seorang kapiten! 🎖️✨"
+                ]
+            },
+            {
+                id: 'act_profesi_3',
+                themeKey: 'profesi',
+                badge: 'TEMA: PROFESI',
+                title: 'Latihan Hormat & Gerak Polisi Cilik 👮‍♂️',
+                domain: 'MOTORIK',
+                type: 'sains_proses',
+                desc: 'Tirukan gerakan pengatur jalan lalu lintas!',
+                steps: [
+                    { icon: 'fa-hand', label: '1. Stop Kanan ✋', desc: 'Angkat tangan kanan lurus ke depan: STOP!' },
+                    { icon: 'fa-person-walking', label: '2. Jalan Kirim 🚶‍♂️', desc: 'Lambaikan tangan kiri menyuruh jalan.' },
+                    { icon: 'fa-shield-halved', label: '3. Siap Siaga 👮‍♂️', desc: 'Tepuk dada dan berdiri tegap!' }
+                ]
+            },
+            {
+                id: 'act_profesi_4',
+                themeKey: 'profesi',
+                badge: 'TEMA: PROFESI',
+                title: 'Perlengkapan Kerja Dokter 🩺',
+                domain: 'BAHASA',
+                type: 'kuis_interaktif',
+                desc: 'Tebak alat yang dipakai Dokter saat menolong pasien!',
+                question: 'Alat apakah yang dipakai Dokter untuk memeriksa detak jantung?',
+                options: [
+                    { label: '🩺 Stetoskop', correct: true, feedback: 'Pintar! Stetoskop didengarkan di dada pasien!' },
+                    { label: '🪛 Obeng Kayu', correct: false, feedback: 'Kurang tepat, obeng digunakan oleh Tukang Kayu!' }
+                ]
+            },
+            {
+                id: 'act_profesi_5',
+                themeKey: 'profesi',
+                badge: 'TEMA: PROFESI',
                 title: '🎮 Coding Ambulans Ke Rumah Sakit 🚑🏥',
                 domain: 'CODING',
                 type: 'game_coding',
-                badge: 'TEMA: PROFESI',
                 desc: 'Bantu Ambulans menyusun panah arah agar secepatnya tiba di Rumah Sakit!',
                 gridSize: 3,
                 startPos: { r: 2, c: 0 },
@@ -1463,6 +2133,19 @@
                 startIcon: '🚑',
                 targetIcon: '🏥',
                 obstacles: [{ r: 1, c: 1, icon: '🚗' }]
+            },
+            {
+                id: 'act_profesi_6',
+                themeKey: 'profesi',
+                badge: 'TEMA: PROFESI',
+                title: '🎮 Game Tangkap Bintang Cita-Cita 🌟',
+                domain: 'GAME',
+                type: 'game_tangkap_benda',
+                desc: 'Sentuh bintang-bintang impian untuk meraih cita-citamu!',
+                targetIcon: 'fa-star',
+                targetColor: 'bg-amber-300',
+                targetCount: 6,
+                targetName: 'Cita-Cita Diraih'
             }
         ];
 
