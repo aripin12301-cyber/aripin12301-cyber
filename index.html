@@ -134,21 +134,15 @@
             
             <!-- Logo & Identitas Brand KIKA -->
             <div class="flex items-center gap-3">
-                <!-- Logo Badge KIKA Icon 3D -->
-                <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-3xl bg-gradient-to-tr from-amber-400 via-orange-400 to-rose-400 flex items-center justify-center text-amber-950 shadow-lg shadow-orange-300/50 border-2 border-white transform rotate-[-3deg] hover:rotate-6 transition shrink-0 relative overflow-hidden">
-                    <div class="absolute -top-2 -right-2 w-6 h-6 bg-yellow-200 rounded-full opacity-60"></div>
-                    <span class="font-display font-black text-2xl sm:text-3xl tracking-tighter text-amber-950 drop-shadow-xs">K</span>
+                <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-3xl bg-gradient-to-tr from-amber-400 via-orange-400 to-rose-400 flex items-center justify-center text-white shadow-lg shadow-orange-300/50 border-2 border-white transform rotate-[-3deg] hover:rotate-6 transition">
+                    <span class="font-display font-black text-2xl sm:text-3xl text-amber-950">K</span>
                 </div>
                 <div>
-                    <div class="flex items-center gap-2">
-                        <h1 class="font-display font-black text-2xl sm:text-3xl tracking-wide text-slate-800">
-                            KIKA
-                        </h1>
-                        <span class="text-[10px] sm:text-xs font-extrabold px-2.5 py-0.5 rounded-full bg-gradient-to-r from-pink-400 via-rose-400 to-amber-400 text-white shadow-sm font-sans border-2 border-white">✨ IFP Ceria</span>
-                    </div>
-                    <p class="text-xs font-black text-slate-700 tracking-tight">Kegiatan Interaktif Anak</p>
-                    <p class="text-[11px] font-extrabold text-amber-600 flex items-center gap-1">
-                        <span>🖱️ Klik</span> • <span>🎮 Main</span> • <span>📚 Belajar</span>
+                    <h1 class="font-display font-black text-xl sm:text-3xl tracking-wide text-slate-800 flex items-center gap-2">
+                        KIKA <span class="text-xs sm:text-sm font-bold px-3 py-1 rounded-full bg-gradient-to-r from-pink-400 to-rose-400 text-white shadow-sm font-sans border-2 border-white">✨ IFP Ceria</span>
+                    </h1>
+                    <p class="text-[11px] sm:text-xs font-bold text-amber-600">
+                        Kegiatan Interaktif Anak <span class="text-slate-400">|</span> <span class="text-emerald-600">Klik, Main, dan Belajar 🚀</span>
                     </p>
                 </div>
             </div>
@@ -214,7 +208,7 @@
                         <span class="tracking-wide">RANGKAIAN BAHAN AJAR</span>
                     </div>
                     <div class="flex items-center gap-2">
-                        <span id="deck-count-badge" class="w-8 h-8 rounded-full bg-slate-900 text-amber-300 font-display text-sm font-black flex items-center justify-center shadow-md border-2 border-amber-300">4</span>
+                        <span id="deck-count-badge" class="w-8 h-8 rounded-full bg-slate-900 text-amber-300 font-display text-sm font-black flex items-center justify-center shadow-md border-2 border-amber-300">6</span>
                         <i class="fa-solid fa-circle-chevron-right text-lg text-amber-900 opacity-80"></i>
                     </div>
                 </button>
@@ -275,106 +269,77 @@
 
             <!-- Grid Tema -->
             <div class="p-6 overflow-y-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                
-                <!-- Tema 1: Alam Semesta -->
                 <div onclick="selectTheme('alam_semesta')" class="ifp-btn p-5 rounded-3xl border-4 border-amber-300 bg-white hover:bg-amber-100/70 transition flex items-center gap-4 cursor-pointer shadow-sm hover:shadow-md">
-                    <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-amber-400 to-yellow-300 text-slate-950 flex items-center justify-center text-2xl shrink-0 font-bold border-2 border-amber-200 shadow-xs">
-                        🌧️
-                    </div>
+                    <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-amber-400 to-yellow-300 text-slate-950 flex items-center justify-center text-2xl shrink-0 font-bold border-2 border-amber-200 shadow-xs">🌧️</div>
                     <div>
                         <h4 class="font-display font-bold text-slate-900 text-base">Alam Semesta</h4>
                         <p class="text-xs text-slate-500 font-medium">Air, Hujan, Pelangi & Gejala Alam</p>
                     </div>
                 </div>
 
-                <!-- Tema 2: Air, Udara & Api -->
                 <div onclick="selectTheme('air_udara_api')" class="ifp-btn p-5 rounded-3xl border-4 border-cyan-300 bg-white hover:bg-cyan-50 transition flex items-center gap-4 cursor-pointer shadow-sm hover:shadow-md">
-                    <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-cyan-400 to-blue-300 text-white flex items-center justify-center text-2xl shrink-0 font-bold border-2 border-cyan-200 shadow-xs">
-                        🔥
-                    </div>
+                    <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-cyan-400 to-blue-300 text-white flex items-center justify-center text-2xl shrink-0 font-bold border-2 border-cyan-200 shadow-xs">🔥</div>
                     <div>
                         <h4 class="font-display font-bold text-slate-900 text-base">Air, Udara & Api</h4>
                         <p class="text-xs text-slate-500 font-medium">Sifat, Manfaat & Bahaya Elemen</p>
                     </div>
                 </div>
 
-                <!-- Tema 3: Diriku -->
                 <div onclick="selectTheme('diriku')" class="ifp-btn p-5 rounded-3xl border-4 border-sky-300 bg-white hover:bg-sky-50 transition flex items-center gap-4 cursor-pointer shadow-sm hover:shadow-md">
-                    <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-sky-400 to-indigo-300 text-white flex items-center justify-center text-2xl shrink-0 font-bold border-2 border-sky-200 shadow-xs">
-                        🧒
-                    </div>
+                    <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-sky-400 to-indigo-300 text-white flex items-center justify-center text-2xl shrink-0 font-bold border-2 border-sky-200 shadow-xs">🧒</div>
                     <div>
                         <h4 class="font-display font-bold text-slate-900 text-base">Diriku</h4>
                         <p class="text-xs text-slate-500 font-medium">Anggota Tubuh & Panca Indera</p>
                     </div>
                 </div>
 
-                <!-- Tema 4: Tanaman -->
                 <div onclick="selectTheme('tanaman')" class="ifp-btn p-5 rounded-3xl border-4 border-emerald-300 bg-white hover:bg-emerald-50 transition flex items-center gap-4 cursor-pointer shadow-sm hover:shadow-md">
-                    <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-emerald-400 to-teal-300 text-white flex items-center justify-center text-2xl shrink-0 font-bold border-2 border-emerald-200 shadow-xs">
-                        🌱
-                    </div>
+                    <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-emerald-400 to-teal-300 text-white flex items-center justify-center text-2xl shrink-0 font-bold border-2 border-emerald-200 shadow-xs">🌱</div>
                     <div>
                         <h4 class="font-display font-bold text-slate-900 text-base">Tanaman</h4>
                         <p class="text-xs text-slate-500 font-medium">Pohon, Buah & Bunga Indah</p>
                     </div>
                 </div>
 
-                <!-- Tema 5: Binatang -->
                 <div onclick="selectTheme('binatang')" class="ifp-btn p-5 rounded-3xl border-4 border-orange-300 bg-white hover:bg-orange-50 transition flex items-center gap-4 cursor-pointer shadow-sm hover:shadow-md">
-                    <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-orange-400 to-amber-300 text-white flex items-center justify-center text-2xl shrink-0 font-bold border-2 border-orange-200 shadow-xs">
-                        🦁
-                    </div>
+                    <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-orange-400 to-amber-300 text-white flex items-center justify-center text-2xl shrink-0 font-bold border-2 border-orange-200 shadow-xs">🦁</div>
                     <div>
                         <h4 class="font-display font-bold text-slate-900 text-base">Binatang</h4>
                         <p class="text-xs text-slate-500 font-medium">Dunia Hewan Peliharaan & Hutan</p>
                     </div>
                 </div>
 
-                <!-- Tema 6: Cinta Tanah Air -->
                 <div onclick="selectTheme('tanah_air')" class="ifp-btn p-5 rounded-3xl border-4 border-rose-300 bg-white hover:bg-rose-50 transition flex items-center gap-4 cursor-pointer shadow-sm hover:shadow-md">
-                    <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-rose-500 to-pink-400 text-white flex items-center justify-center text-2xl shrink-0 font-bold border-2 border-rose-200 shadow-xs">
-                        🇮🇩
-                    </div>
+                    <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-rose-500 to-pink-400 text-white flex items-center justify-center text-2xl shrink-0 font-bold border-2 border-rose-200 shadow-xs">🇮🇩</div>
                     <div>
                         <h4 class="font-display font-bold text-slate-900 text-base">Cinta Tanah Air</h4>
                         <p class="text-xs text-slate-500 font-medium">Bendera Merah Putih & Budaya</p>
                     </div>
                 </div>
 
-                <!-- Tema 7: Kendaraan -->
                 <div onclick="selectTheme('kendaraan')" class="ifp-btn p-5 rounded-3xl border-4 border-indigo-300 bg-white hover:bg-indigo-50 transition flex items-center gap-4 cursor-pointer shadow-sm hover:shadow-md">
-                    <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-indigo-500 to-purple-400 text-white flex items-center justify-center text-2xl shrink-0 font-bold border-2 border-indigo-200 shadow-xs">
-                        🚗
-                    </div>
+                    <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-indigo-500 to-purple-400 text-white flex items-center justify-center text-2xl shrink-0 font-bold border-2 border-indigo-200 shadow-xs">🚗</div>
                     <div>
                         <h4 class="font-display font-bold text-slate-900 text-base">Kendaraan</h4>
                         <p class="text-xs text-slate-500 font-medium">Transportasi Darat, Laut & Udara</p>
                     </div>
                 </div>
 
-                <!-- Tema 8: Lingkunganku -->
                 <div onclick="selectTheme('lingkungan')" class="ifp-btn p-5 rounded-3xl border-4 border-teal-300 bg-white hover:bg-teal-50 transition flex items-center gap-4 cursor-pointer shadow-sm hover:shadow-md">
-                    <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-teal-500 to-emerald-400 text-white flex items-center justify-center text-2xl shrink-0 font-bold border-2 border-teal-200 shadow-xs">
-                        🏡
-                    </div>
+                    <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-teal-500 to-emerald-400 text-white flex items-center justify-center text-2xl shrink-0 font-bold border-2 border-teal-200 shadow-xs">🏡</div>
                     <div>
                         <h4 class="font-display font-bold text-slate-900 text-base">Lingkunganku</h4>
                         <p class="text-xs text-slate-500 font-medium">Kebersihan Rumah & Sekolah</p>
                     </div>
                 </div>
 
-                <!-- Tema 9: Profesi -->
                 <div onclick="selectTheme('profesi')" class="ifp-btn p-5 rounded-3xl border-4 border-purple-300 bg-white hover:bg-purple-50 transition flex items-center gap-4 cursor-pointer shadow-sm hover:shadow-md">
-                    <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-purple-500 to-pink-400 text-white flex items-center justify-center text-2xl shrink-0 font-bold border-2 border-purple-200 shadow-xs">
-                        👨‍🚒
-                    </div>
+                    <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-purple-500 to-pink-400 text-white flex items-center justify-center text-2xl shrink-0 font-bold border-2 border-purple-200 shadow-xs">👨‍🚒</div>
                     <div>
                         <h4 class="font-display font-bold text-slate-900 text-base">Profesi</h4>
                         <p class="text-xs text-slate-500 font-medium">Cita-Citaku & Ragam Pekerjaan</p>
                     </div>
                 </div>
-
             </div>
 
             <!-- Footer Modal -->
@@ -386,13 +351,10 @@
         </div>
     </div>
 
-    <!-- ================================================================= -->
     <!-- MODAL POPUP: BANK REFERENSI KEGIATAN -->
-    <!-- ================================================================= -->
     <div id="bank-referensi-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/60 backdrop-blur-sm hidden p-4 overflow-y-auto">
         <div class="bg-amber-50 rounded-[2.5rem] border-4 border-amber-300 shadow-2xl w-full max-w-5xl max-h-[90vh] flex flex-col overflow-hidden animate-in fade-in zoom-in-95 duration-200">
             
-            <!-- Header Modal -->
             <div class="px-6 py-5 border-b-4 border-amber-200 flex items-center justify-between bg-gradient-to-r from-amber-200 via-orange-200 to-yellow-200">
                 <div class="flex items-center gap-3">
                     <div class="w-12 h-12 rounded-2xl bg-amber-400 text-slate-950 flex items-center justify-center font-black border-2 border-white shadow-md">
@@ -408,7 +370,6 @@
                 </button>
             </div>
 
-            <!-- Sub-Bar Indikator & Toggle Tema Aktif -->
             <div class="px-6 py-2.5 bg-gradient-to-r from-amber-100 via-orange-100 to-amber-100 border-b-2 border-amber-200 flex flex-wrap items-center justify-between gap-3 text-xs">
                 <div class="flex items-center gap-2">
                     <span class="px-3 py-1 rounded-full bg-amber-400 text-slate-950 font-display font-black shadow-xs">📍 Tema Terpilih:</span>
@@ -424,9 +385,7 @@
                 </div>
             </div>
 
-            <!-- Kontrol Filter Domain & Pencarian -->
             <div class="p-4 bg-amber-100/60 border-b-2 border-amber-200 flex flex-wrap items-center justify-between gap-3">
-                
                 <div class="flex flex-wrap items-center gap-2" id="domain-filters">
                     <button onclick="filterDomain('ALL')" class="domain-btn ifp-btn px-4 py-2 rounded-2xl bg-amber-500 text-slate-950 font-display font-black text-xs border-2 border-amber-600 shadow-xs">Semua Domain</button>
                     <button onclick="filterDomain('KOGNITIF')" class="domain-btn ifp-btn px-4 py-2 rounded-2xl bg-white border-2 border-amber-200 text-slate-700 font-display font-bold text-xs hover:bg-amber-50">Kognitif</button>
@@ -436,19 +395,16 @@
                     <button onclick="filterDomain('GAME')" class="domain-btn ifp-btn px-4 py-2 rounded-2xl bg-white border-2 border-amber-200 text-slate-700 font-display font-bold text-xs hover:bg-amber-50">🎮 Game Interaktif</button>
                 </div>
 
-                <!-- Input Pencarian -->
                 <div class="relative w-full sm:w-64">
                     <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-amber-600 text-sm"></i>
-                    <input type="text" id="bank-search-input" onkeyup="searchBankActivities()" placeholder="Cari kegiatan PAUD..." class="w-full pl-10 pr-4 py-2 rounded-2xl border-2 border-amber-300 text-xs font-semibold focus:outline-none focus:ring-4 focus:ring-amber-300 bg-white">
+                    <input type="text" id="bank-search-input" onkeyup="searchBankActivities()" placeholder="Cari kegiatan KIKA..." class="w-full pl-10 pr-4 py-2 rounded-2xl border-2 border-amber-300 text-xs font-semibold focus:outline-none focus:ring-4 focus:ring-amber-300 bg-white">
                 </div>
             </div>
 
-            <!-- Grid Kegiatan -->
             <div id="bank-activities-grid" class="p-6 overflow-y-auto grid grid-cols-1 md:grid-cols-2 gap-4">
-                <!-- Kegiatan dihasilkan secara dinamis oleh JavaScript -->
+                <!-- Activities generated dynamically by JS -->
             </div>
 
-            <!-- Footer Modal -->
             <div class="px-6 py-4 bg-amber-100/60 border-t-2 border-amber-200 flex items-center justify-between">
                 <p class="text-xs font-medium text-slate-600">Klik <strong>+ Tambah ke Bahan Ajar</strong> untuk menyusun materi ke Rangkaian Slide.</p>
                 <button onclick="closeBankReferensiModal()" class="ifp-btn px-6 py-2.5 rounded-2xl bg-amber-400 hover:bg-amber-300 text-slate-950 font-display font-black text-xs border-2 border-amber-500 shadow-sm">
@@ -458,13 +414,10 @@
         </div>
     </div>
 
-    <!-- ================================================================= -->
     <!-- MODAL POPUP: RANGKAIAN BAHAN AJAR -->
-    <!-- ================================================================= -->
     <div id="rangkaian-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/60 backdrop-blur-sm hidden p-4 overflow-y-auto">
         <div class="bg-amber-50 rounded-[2.5rem] border-4 border-amber-300 shadow-2xl w-full max-w-4xl max-h-[90vh] flex flex-col overflow-hidden animate-in fade-in zoom-in-95 duration-200">
             
-            <!-- Header Modal -->
             <div class="px-6 py-5 border-b-4 border-amber-200 flex items-center justify-between bg-gradient-to-r from-amber-200 via-orange-200 to-yellow-200">
                 <div class="flex items-center gap-3">
                     <div class="w-12 h-12 rounded-2xl bg-amber-400 text-slate-950 flex items-center justify-center font-black border-2 border-white shadow-md">
@@ -480,12 +433,10 @@
                 </button>
             </div>
 
-            <!-- Daftar Slide Deck -->
             <div class="p-6 overflow-y-auto space-y-3" id="deck-slide-list">
                 <!-- Slide cards generated by JS -->
             </div>
 
-            <!-- Footer Modal -->
             <div class="px-6 py-4 bg-amber-100/60 border-t-2 border-amber-200 flex items-center justify-between">
                 <button onclick="clearActiveDeck()" class="text-xs font-display font-black text-rose-600 hover:underline flex items-center gap-1">
                     <i class="fa-solid fa-trash-can"></i> Kosongkan Rangkaian
@@ -502,31 +453,26 @@
         </div>
     </div>
 
-    <!-- ================================================================= -->
     <!-- MODAL PRESENTASI IFP (FULLSCREEN INTERACTIVE BOARD) -->
-    <!-- ================================================================= -->
     <div id="ifp-presentation-modal" class="fixed inset-0 z-50 bg-slate-950 flex flex-col hidden select-none">
         
         <!-- Toolbar Atas Presentasi -->
         <div class="h-20 px-6 bg-slate-900/95 border-b-4 border-amber-400/40 flex items-center justify-between shrink-0">
             <div class="flex items-center gap-4">
-                <span id="ifp-slide-badge" class="px-4 py-1.5 rounded-full bg-amber-400 text-slate-950 font-display font-black text-xs sm:text-sm border-2 border-amber-300 shadow-md">SLIDE 1 / 4</span>
+                <span id="ifp-slide-badge" class="px-4 py-1.5 rounded-full bg-amber-400 text-slate-950 font-display font-black text-xs sm:text-sm border-2 border-amber-300 shadow-md">SLIDE 1 / 6</span>
                 <h3 id="ifp-current-title" class="font-display font-black text-white text-lg sm:text-2xl text-amber-300">Petualangan Air, Hujan & Pelangi</h3>
             </div>
             
             <div class="flex items-center gap-3">
-                <!-- Tombol Recall Papan Tulis Interaktif -->
                 <button onclick="openWhiteboardModal()" class="ifp-btn px-4 py-2.5 rounded-2xl bg-gradient-to-r from-amber-400 to-yellow-400 hover:from-amber-300 hover:to-yellow-300 text-slate-950 font-display font-black text-xs sm:text-sm flex items-center gap-2 border-2 border-amber-200 shadow-md" title="Buka Papan Tulis Digital">
                     <i class="fa-solid fa-pen-nib text-base"></i>
                     <span class="hidden sm:inline">Papan Tulis ✏️</span>
                 </button>
 
-                <!-- Tombol Audio Toggle -->
                 <button onclick="toggleAudioMute()" id="btn-sound-toggle" class="w-12 h-12 rounded-2xl bg-slate-800 hover:bg-slate-700 text-amber-400 flex items-center justify-center transition border-2 border-slate-700" title="Efek Suara">
                     <i class="fa-solid fa-volume-high text-xl"></i>
                 </button>
 
-                <!-- Tombol Tutup Presentasi -->
                 <button onclick="closeIFPPresentation()" class="px-5 py-2.5 rounded-2xl bg-rose-600 hover:bg-rose-700 text-white font-display font-black text-xs sm:text-sm flex items-center gap-2 transition border-2 border-rose-400 shadow-lg">
                     <i class="fa-solid fa-xmark text-base"></i>
                     <span>Tutup IFP</span>
@@ -541,19 +487,15 @@
 
         <!-- Toolbar Kontrol Bawah Slide -->
         <div class="h-24 px-6 bg-slate-900/95 border-t-4 border-amber-400/40 flex items-center justify-between shrink-0">
-            
-            <!-- Tombol Slide Sebelumnya -->
             <button onclick="prevSlide()" class="ifp-btn px-7 py-3.5 rounded-3xl bg-slate-800 hover:bg-slate-700 text-white font-display font-black text-base flex items-center gap-2 border-2 border-slate-600">
                 <i class="fa-solid fa-chevron-left"></i>
                 <span>Sebelumnya</span>
             </button>
 
-            <!-- Indikator Titik Navigasi Slide -->
             <div id="ifp-slide-dots" class="flex items-center gap-3">
                 <!-- Dots rendered dynamically -->
             </div>
 
-            <!-- Tombol Slide Berikutnya -->
             <button onclick="nextSlide()" class="ifp-btn px-7 py-3.5 rounded-3xl bg-gradient-to-r from-amber-400 to-orange-400 text-slate-950 font-display font-black text-base flex items-center gap-2 border-2 border-amber-300 shadow-lg">
                 <span>Berikutnya</span>
                 <i class="fa-solid fa-chevron-right"></i>
@@ -561,58 +503,22 @@
         </div>
     </div>
 
-    <!-- ================================================================= -->
-    <!-- MODAL POPUP: PEMUTAR VIDEO THUMBNAIL (POPUP PLAYER) -->
-    <!-- ================================================================= -->
-    <div id="video-popup-modal" class="fixed inset-0 z-[70] bg-slate-950/85 backdrop-blur-md flex items-center justify-center hidden p-4 animate-in fade-in zoom-in-95 duration-200">
-        <div class="bg-slate-900 w-full max-w-4xl rounded-[2.5rem] border-4 border-amber-400 shadow-2xl flex flex-col overflow-hidden">
-            <div class="px-6 py-4 bg-gradient-to-r from-amber-300 via-orange-300 to-yellow-300 flex items-center justify-between border-b-4 border-amber-400">
-                <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 rounded-2xl bg-amber-500 text-slate-950 flex items-center justify-center font-black border-2 border-white shadow-md">
-                        <i class="fa-solid fa-play text-lg"></i>
-                    </div>
-                    <h3 id="video-popup-title" class="font-display font-black text-slate-950 text-base sm:text-xl">Pemutar Video Pembelajaran 🎥</h3>
-                </div>
-                <button onclick="closeVideoPopup()" class="w-10 h-10 rounded-2xl bg-white hover:bg-slate-100 border-2 border-amber-500 flex items-center justify-center text-slate-900 font-bold shadow-sm transition">
-                    <i class="fa-solid fa-xmark text-xl"></i>
-                </button>
-            </div>
-            <div class="p-4 sm:p-6 bg-slate-950 flex items-center justify-center">
-                <div id="video-popup-content-wrapper" class="w-full">
-                    <!-- Embedded Video Here -->
-                </div>
-            </div>
-            <div class="px-6 py-3 bg-slate-900 border-t-2 border-slate-800 flex items-center justify-end">
-                <button onclick="closeVideoPopup()" class="ifp-btn px-6 py-2.5 rounded-2xl bg-amber-400 hover:bg-amber-300 text-slate-950 font-display font-black text-xs border-2 border-amber-500 shadow-sm">
-                    Tutup Video ✕
-                </button>
-            </div>
-        </div>
-    </div>
-
-    <!-- ================================================================= -->
     <!-- POPUP RECALL: PAPAN TULIS DIGITAL INTERAKTIF (WHITEBOARD MODAL) -->
-    <!-- ================================================================= -->
     <div id="whiteboard-modal" class="fixed inset-0 z-[60] bg-slate-950/80 backdrop-blur-md flex items-center justify-center hidden p-3 sm:p-6 select-none animate-in fade-in zoom-in-95 duration-200">
         <div class="bg-amber-50 w-full max-w-6xl h-[92vh] rounded-[2.5rem] border-4 border-amber-400 shadow-2xl flex flex-col overflow-hidden">
             
-            <!-- Toolbar Papan Tulis -->
             <div class="px-5 py-3.5 bg-gradient-to-r from-amber-200 via-orange-200 to-yellow-200 border-b-4 border-amber-300 flex flex-wrap items-center justify-between gap-3 shrink-0">
-                
                 <div class="flex items-center gap-3">
                     <div class="w-11 h-11 rounded-2xl bg-amber-400 text-slate-950 flex items-center justify-center font-black border-2 border-white shadow-md">
                         <i class="fa-solid fa-chalkboard-user text-xl"></i>
                     </div>
                     <div>
-                        <h3 class="font-display font-black text-base sm:text-lg text-slate-900 leading-tight">Papan Tulis KIKA Ceria ✏️🎨</h3>
+                        <h3 class="font-display font-black text-base sm:text-lg text-slate-900 leading-tight">Papan Tulis Guru Ceria ✏️🎨</h3>
                         <p class="text-[11px] font-bold text-amber-900">Gunakan jari / stylus layar sentuh IFP untuk menggambar bebas</p>
                     </div>
                 </div>
 
-                <!-- Palette Warna Spidol & Alat -->
                 <div class="flex flex-wrap items-center gap-2 bg-white/80 p-1.5 rounded-2xl border-2 border-amber-300 shadow-xs">
-                    
-                    <!-- Pilihan Warna -->
                     <div class="flex items-center gap-1.5 px-2 border-r-2 border-amber-200">
                         <button onclick="setWhiteboardColor('#1E293B', this)" class="wb-color-btn w-7 h-7 rounded-full bg-slate-900 border-2 border-white ring-2 ring-slate-900 shadow-xs transition transform hover:scale-110" title="Hitam"></button>
                         <button onclick="setWhiteboardColor('#EF4444', this)" class="wb-color-btn w-7 h-7 rounded-full bg-red-500 border-2 border-white shadow-xs transition transform hover:scale-110" title="Merah"></button>
@@ -622,7 +528,6 @@
                         <button onclick="setWhiteboardColor('#EC4899', this)" class="wb-color-btn w-7 h-7 rounded-full bg-pink-500 border-2 border-white shadow-xs transition transform hover:scale-110" title="Pink"></button>
                     </div>
 
-                    <!-- Pilihan Mode: Spidol vs Penghapus -->
                     <div class="flex items-center gap-1">
                         <button id="btn-wb-pen" onclick="setWhiteboardMode('pen')" class="px-3 py-1.5 rounded-xl bg-amber-400 text-slate-950 font-display font-black text-xs flex items-center gap-1.5 border border-amber-500 shadow-xs">
                             <i class="fa-solid fa-pen"></i>
@@ -634,7 +539,6 @@
                         </button>
                     </div>
 
-                    <!-- Ukuran Goresan -->
                     <div class="flex items-center gap-1 px-2 border-l-2 border-amber-200">
                         <button onclick="setWhiteboardSize(3, this)" class="wb-size-btn w-6 h-6 rounded-lg bg-amber-100 text-slate-800 font-bold text-xs flex items-center justify-center hover:bg-amber-300" title="Goresan Tipis">●</button>
                         <button onclick="setWhiteboardSize(8, this)" class="wb-size-btn w-7 h-7 rounded-lg bg-amber-400 text-slate-950 font-black text-sm flex items-center justify-center shadow-xs" title="Goresan Sedang">●</button>
@@ -642,7 +546,6 @@
                     </div>
                 </div>
 
-                <!-- Tombol Bersihkan & Sembunyikan -->
                 <div class="flex items-center gap-2">
                     <button onclick="clearWhiteboardCanvas()" class="ifp-btn px-3.5 py-2 rounded-2xl bg-rose-100 hover:bg-rose-200 text-rose-700 font-display font-black text-xs flex items-center gap-1.5 border border-rose-300">
                         <i class="fa-solid fa-trash-can"></i>
@@ -654,12 +557,10 @@
                 </div>
             </div>
 
-            <!-- Area Canvas Papan Tulis -->
             <div class="flex-1 p-3 sm:p-4 bg-amber-100/50 relative overflow-hidden flex items-center justify-center" id="whiteboard-canvas-wrapper">
                 <canvas id="whiteboard-canvas" class="whiteboard-surface w-full h-full rounded-2xl border-4 border-amber-300 shadow-inner cursor-crosshair"></canvas>
             </div>
             
-            <!-- Footer Ringkas Papan Tulis -->
             <div class="px-6 py-2 bg-amber-200/60 border-t-2 border-amber-300 flex items-center justify-between text-[11px] font-bold text-amber-950">
                 <span class="flex items-center gap-1.5">
                     <i class="fa-solid fa-lightbulb text-amber-600"></i>
@@ -669,7 +570,26 @@
                     Sembunyikan Papan Tulis & Lanjutkan Presentasi ➡️
                 </button>
             </div>
+        </div>
+    </div>
 
+    <!-- MODAL POPUP: PEMUTAR VIDEO FULLSCREEN THEATER -->
+    <div id="video-popup-modal" class="fixed inset-0 z-[70] bg-slate-950/90 backdrop-blur-lg flex flex-col hidden items-center justify-center p-4 sm:p-8 animate-in fade-in zoom-in-95 duration-200">
+        <div class="w-full max-w-5xl bg-slate-900 rounded-[2.5rem] border-4 border-amber-400 overflow-hidden shadow-2xl flex flex-col">
+            <div class="px-6 py-4 bg-slate-950 border-b-2 border-slate-800 flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-2xl bg-amber-400 text-slate-950 flex items-center justify-center font-black">
+                        <i class="fa-solid fa-play"></i>
+                    </div>
+                    <h3 id="video-popup-title" class="font-display font-black text-lg sm:text-xl text-amber-300">Pemutar Video IFP</h3>
+                </div>
+                <button onclick="closeVideoPopup()" class="w-10 h-10 rounded-2xl bg-rose-600 hover:bg-rose-700 text-white font-bold flex items-center justify-center shadow-md transition">
+                    <i class="fa-solid fa-xmark text-xl"></i>
+                </button>
+            </div>
+            <div class="relative w-full aspect-video bg-black flex items-center justify-center" id="video-popup-frame-container">
+                <!-- Video iframe injected here -->
+            </div>
         </div>
     </div>
 
@@ -686,40 +606,36 @@
         let currentDomainFilter = 'ALL';
         let currentSearchQuery = '';
 
-        // DATASET TEMA PAUD LENGKAP
+        // DATASET TEMA PAUD LENGKAP DENGAN MULTI-ASPEK
         const PAUD_THEMES = {
             alam_semesta: {
                 title: 'Petualangan Air, Hujan & Pelangi 🌧️🌈',
                 badgeText: 'TEMA AKTIF: ALAM SEMESTA',
                 deck: [
                     {
-                        type: 'sains_proses',
+                        type: 'video_embed',
                         title: 'Tahapan Siklus Terjadinya Hujan 🌧️',
                         domain: 'SAINS & KOGNITIF',
-                        desc: 'Klik tombol di bawah untuk memutar video pembelajaran interaktif!',
-                        isYouTube: true,
-                        embedHtml: '<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%;"><iframe src="https://drive.google.com/file/d/16adoVKV808Gy3TRi8KToaB0XD7VikZZ0/preview" width="640" height="480" allow="autoplay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" class="rounded-2xl shadow-lg"></iframe></div>',
-                        steps: []
+                        desc: 'Saksikan video interaktif proses terjadinya air hujan!',
+                        videoUrl: 'https://drive.google.com/file/d/16adoVKV808Gy3TRi8KToaB0XD7VikZZ0/preview'
                     },
                     {
                         type: 'kuis_interaktif',
-                        title: 'Eksplorasi Pembentukan Warna Pelangi 🌈',
+                        title: 'Eksplorasi Warna Pelangi Indah 🌈',
                         domain: 'SENI & KOGNITIF',
                         desc: 'Pilih warna yang muncul saat cahaya matahari menyinari titik-titik air hujan!',
-                        question: 'Apa saja warna yang membentuk Pelangi indah?',
+                        question: 'Apa saja warna utama yang membentuk Pelangi?',
                         options: [
-                            { label: '🔴 Merah, 🟡 Kuning, 🟢 Hijau, 🔵 Biru', correct: true, feedback: 'Hebat sekali! Pelangi terdiri dari spektrum warna indahnya!' },
+                            { label: '🔴 Merah, 🟡 Kuning, 🟢 Hijau, 🔵 Biru', correct: true, feedback: 'Hebat sekali! Pelangi terdiri dari spektrum warna-warni yang indah!' },
                             { label: '⬛ Hitam, 🩶 Abu-abu, 🤎 Cokelat', correct: false, feedback: 'Kurang tepat. Pelangi berisi warna-warni cerah!' }
                         ]
                     },
                     {
-                        type: 'sains_proses',
+                        type: 'video_embed',
                         title: 'Gerak & Lagu "Tik Tik Bunyi Hujan" 🎵',
                         domain: 'SENI & MOTORIK',
-                        desc: 'Klik tombol di bawah untuk memutar video lagu ceria!',
-                        isYouTube: true,
-                        embedHtml: '<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%;"><iframe src="https://drive.google.com/file/d/1Z8Wv6wD5P76VTvR4gAXtWs1-9AM1t6BC/preview" width="640" height="480" allow="autoplay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" class="rounded-2xl shadow-lg"></iframe></div>',
-                        steps: []
+                        desc: 'Bernyanyi dan bergerak bersama mendengarkan lagu hujan!',
+                        videoUrl: 'https://drive.google.com/file/d/1Z8Wv6wD5P76VTvR4gAXtWs1-9AM1t6BC/preview'
                     },
                     {
                         type: 'hitung_titik',
@@ -727,6 +643,27 @@
                         domain: 'KOGNITIF MATEMATIKA',
                         desc: 'Sentuh setiap tetes air hujan di bawah ini untuk menghitung totalnya!',
                         countTarget: 5
+                    },
+                    {
+                        type: 'game_cocok_pasangan',
+                        title: '🎮 Game Cocokkan Benda Langit & Waktunya ☀️🌙',
+                        domain: 'GAME INTERAKTIF',
+                        desc: 'Sentuh benda langit lalu sentuh waktu yang tepat di sebelah kanan!',
+                        pairs: [
+                            { left: 'Matahari ☀️', right: 'Siang Hari 🌅', id: 1 },
+                            { left: 'Bulan 🌙', right: 'Malam Hari 🌌', id: 2 },
+                            { left: 'Awan Hujan 🌧️', right: 'Saat Mendung ☁️', id: 3 }
+                        ]
+                    },
+                    {
+                        type: 'game_tangkap_benda',
+                        title: '🎮 Game Tangkap Tetes Air Hujan 💧',
+                        domain: 'GAME INTERAKTIF',
+                        desc: 'Sentuh setiap tetes air hujan yang muncul untuk mengumpulkan poin!',
+                        targetIcon: 'fa-droplet',
+                        targetColor: 'bg-sky-400',
+                        targetCount: 6,
+                        targetName: 'Tetes Hujan'
                     }
                 ]
             },
@@ -743,6 +680,27 @@
                             { icon: 'fa-droplet', label: '1. Air 💧', desc: 'Digunakan untuk minum, membersihkan diri, dan menyiram tanaman.' },
                             { icon: 'fa-wind', label: '2. Udara 💨', desc: 'Dibutuhkan untuk bernapas, menerbangkan layang-layang & menggelembungkan balon.' },
                             { icon: 'fa-fire-flame-curved', label: '3. Api 🔥', desc: 'Memberikan kehangatan dan memasak makanan, tetapi jangan dimainkan!' }
+                        ]
+                    },
+                    {
+                        type: 'kuis_interaktif',
+                        title: 'Aturan Keselamatan Bermain Api 🛑',
+                        domain: 'SOSIAL EMOSIONAL & KOGNITIF',
+                        question: 'Apa yang harus dilakukan jika melihat api membara atau korek api?',
+                        options: [
+                            { label: '✅ Tidak Menyentuhnya & Lapor Orang Tua/Guru', correct: true, feedback: 'Pintar! Api sangat panas dan berbahaya jika dimainkan.' },
+                            { label: '❌ Mendekat dan Bermain Api', correct: false, feedback: 'Bahaya! Api bisa membakar dan melukai jari.' }
+                        ]
+                    },
+                    {
+                        type: 'game_cocok_pasangan',
+                        title: '🎮 Game Pasangkan Elemen & Fungsinya 💧💨🔥',
+                        domain: 'GAME INTERAKTIF',
+                        desc: 'Pasangkan elemen alam dengan benda atau fungsinya yang sesuai!',
+                        pairs: [
+                            { left: 'Air 💧', right: 'Gelas Minum 🥛', id: 1 },
+                            { left: 'Udara 💨', right: 'Balon Terbang 🎈', id: 2 },
+                            { left: 'Api 🔥', right: 'Korek Kayu 🪵', id: 3 }
                         ]
                     }
                 ]
@@ -762,6 +720,16 @@
                             { icon: 'fa-nose', label: 'Hidung 👃', desc: 'Untuk Mencium aroma harum' },
                             { icon: 'fa-hands', label: 'Tangan ✋', desc: 'Untuk Memegang & Berkreasi' }
                         ]
+                    },
+                    {
+                        type: 'game_tangkap_benda',
+                        title: '🎮 Game Basmi Kuman di Tangan 🧼',
+                        domain: 'GAME INTERAKTIF',
+                        desc: 'Sentuh kuman-kuman jahat dengan sabun pembersih!',
+                        targetIcon: 'fa-bacteria',
+                        targetColor: 'bg-rose-500',
+                        targetCount: 6,
+                        targetName: 'Kuman Bersih'
                     }
                 ]
             },
@@ -779,6 +747,16 @@
                             { icon: 'fa-faucet-drip', label: '2. Menyiram Air 💧', desc: 'Disiram air dan disinari matahari pagi.' },
                             { icon: 'fa-tree', label: '3. Tumbuh Pohon 🌳', desc: 'Biji tumbuh menjadi pohon berbuah manis!' }
                         ]
+                    },
+                    {
+                        type: 'game_tangkap_benda',
+                        title: '🎮 Game Petik Buah Segar 🍓',
+                        domain: 'GAME INTERAKTIF',
+                        desc: 'Sentuh buah-buahan manis yang siap dipetik dari pohon!',
+                        targetIcon: 'fa-apple-whole',
+                        targetColor: 'bg-emerald-500',
+                        targetCount: 6,
+                        targetName: 'Buah Dipetik'
                     }
                 ]
             },
@@ -788,12 +766,23 @@
                 deck: [
                     {
                         type: 'kuis_interaktif',
-                        title: 'Suara Binatang 🐓',
+                        title: 'Suara Binatang Peliharaan 🐓',
                         domain: 'BAHASA & SAINS',
                         question: 'Hewan mana yang berkokok di pagi hari?',
                         options: [
                             { label: '🐓 Ayam Jantan (Kukuruyuk)', correct: true, feedback: 'Benar! Ayam berkokok membangunkan kita pagi hari!' },
                             { label: '🐱 Kucing (Meong)', correct: false, feedback: 'Kucing bersuara meong, coba tebak lagi!' }
+                        ]
+                    },
+                    {
+                        type: 'game_cocok_pasangan',
+                        title: '🎮 Game Pasangkan Hewan & Makanannya 🐰🐱',
+                        domain: 'GAME INTERAKTIF',
+                        desc: 'Jodohkan hewan lucu dengan makanan kesukaannya!',
+                        pairs: [
+                            { left: 'Kelinci 🐰', right: 'Wortel Segar 🥕', id: 1 },
+                            { left: 'Kucing 🐱', right: 'Ikan Lezat 🐟', id: 2 },
+                            { left: 'Monyet 🐒', right: 'Pisang Manis 🍌', id: 3 }
                         ]
                     }
                 ]
@@ -804,13 +793,23 @@
                 deck: [
                     {
                         type: 'kuis_interaktif',
-                        title: 'Warna Bendera Kita 🇮🇩',
+                        title: 'Warna Bendera Kebangsaan 🇮🇩',
                         domain: 'JATI DIRI & PANCASILA',
                         question: 'Apa warna bendera Negara Indonesia?',
                         options: [
-                            { label: '❤️ Merah, 🤍 Putih', correct: true, feedback: 'Merah artinya berani, Putih artinya suci!' },
-                            { label: '💚 Hijau, 💛 Kuning', correct: false, feedback: 'Bendera Indonesia adalah Merah Putih!' }
+                            { label: '❤️ Merah dan 🤍 Putih', correct: true, feedback: 'Merah artinya berani, Putih artinya suci!' },
+                            { label: '💚 Hijau dan 💛 Kuning', correct: false, feedback: 'Bendera Indonesia adalah Merah Putih!' }
                         ]
+                    },
+                    {
+                        type: 'game_tangkap_benda',
+                        title: '🎮 Game Kumpulkan Bendera Merah Putih 🇮🇩',
+                        domain: 'GAME INTERAKTIF',
+                        desc: 'Sentuh bendera Merah Putih untuk mengibarkannya tinggi-tinggi!',
+                        targetIcon: 'fa-flag',
+                        targetColor: 'bg-rose-600',
+                        targetCount: 6,
+                        targetName: 'Bendera Berkibar'
                     }
                 ]
             },
@@ -820,13 +819,24 @@
                 deck: [
                     {
                         type: 'sains_proses',
-                        title: 'Jenis-Jenis Tempat Berhenti Kendaraan 🚆',
+                        title: 'Tempat Berhenti Kendaraan 🚆',
                         domain: 'KOGNITIF SOSHUM',
                         desc: 'Sentuh kartu jenis kendaraan di bawah:',
                         steps: [
                             { icon: 'fa-plane', label: 'Pesawat ✈️', desc: 'Terbang di udara dan mendarat di Bandara.' },
                             { icon: 'fa-train', label: 'Kereta Api 🚆', desc: 'Berjalan di atas rel dan berhenti di Stasiun.' },
                             { icon: 'fa-ship', label: 'Kapal Laut 🚢', desc: 'Berlayar di laut dan berlabuh di Pelabuhan.' }
+                        ]
+                    },
+                    {
+                        type: 'game_cocok_pasangan',
+                        title: '🎮 Game Pasangkan Kendaraan & Pengemudi 🚗✈️',
+                        domain: 'GAME INTERAKTIF',
+                        desc: 'Jodohkan jenis transportasi dengan profesi pengemudinya!',
+                        pairs: [
+                            { left: 'Pesawat Terbang ✈️', right: 'Pak Pilot 👨‍✈️', id: 1 },
+                            { left: 'Kapal Laut 🚢', right: 'Pak Nahkoda ⚓', id: 2 },
+                            { left: 'Kereta Api 🚆', right: 'Pak Masinis 🧢', id: 3 }
                         ]
                     }
                 ]
@@ -843,6 +853,17 @@
                         options: [
                             { label: '🗑️ Tempat Sampah', correct: true, feedback: 'Hebat! Membuang sampah di tempatnya membuat lingkungan bersih!' },
                             { label: '🧹 Lantai Kelas', correct: false, feedback: 'Jangan membuang sampah sembarangan ya!' }
+                        ]
+                    },
+                    {
+                        type: 'game_cocok_pasangan',
+                        title: '🎮 Game Pemilah Sampah Organik & Anorganik 🗑️',
+                        domain: 'GAME INTERAKTIF',
+                        desc: 'Pasangkan jenis sampah dengan tempat sampah yang tepat!',
+                        pairs: [
+                            { left: 'Daun Kering 🍂', right: 'Tong Hijau (Organik) 🍏', id: 1 },
+                            { left: 'Botol Plastik 🍾', right: 'Tong Biru (Anorganik) 🥤', id: 2 },
+                            { left: 'Kardus Bekas 📦', right: 'Tong Kertas 📄', id: 3 }
                         ]
                     }
                 ]
@@ -862,6 +883,16 @@
                             { icon: 'fa-graduation-cap', label: 'Guru 👩‍🏫', desc: 'Mendidik anak-anak menjadi pintar' },
                             { icon: 'fa-shield-halved', label: 'Polisi 👮‍♂️', desc: 'Menjaga keamanan & ketertiban' }
                         ]
+                    },
+                    {
+                        type: 'game_tangkap_benda',
+                        title: '🎮 Game Tangkap Bintang Cita-Cita 🌟',
+                        domain: 'GAME INTERAKTIF',
+                        desc: 'Sentuh bintang-bintang impian untuk meraih cita-citamu!',
+                        targetIcon: 'fa-star',
+                        targetColor: 'bg-amber-300',
+                        targetCount: 6,
+                        targetName: 'Cita-Cita Diraih'
                     }
                 ]
             }
@@ -870,28 +901,51 @@
         // BANK DATA SEMUA REFERENSI KEGIATAN
         const BANK_ACTIVITIES = [
             {
-                id: 'act_alam_kog',
+                id: 'act_alam_vid1',
                 themeKey: 'alam_semesta',
                 title: 'Tahapan Siklus Terjadinya Hujan 🌧️',
                 domain: 'KOGNITIF',
-                type: 'sains_proses',
+                type: 'video_embed',
                 badge: 'TEMA: ALAM SEMESTA',
-                desc: 'Tonton video pembelajaran interaktif di bawah ini bersama anak-anak.',
-                isYouTube: true,
-                embedHtml: '<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%;"><iframe src="https://drive.google.com/file/d/16adoVKV808Gy3TRi8KToaB0XD7VikZZ0/preview" width="640" height="480" allow="autoplay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" class="rounded-2xl shadow-lg"></iframe></div>',
-                steps: []
+                desc: 'Saksikan video interaktif proses terjadinya air hujan!',
+                videoUrl: 'https://drive.google.com/file/d/16adoVKV808Gy3TRi8KToaB0XD7VikZZ0/preview'
             },
             {
-                id: 'act_alam_sen',
+                id: 'act_alam_vid2',
                 themeKey: 'alam_semesta',
                 title: 'Gerak & Lagu "Tik Tik Bunyi Hujan" 🎵',
                 domain: 'SENI',
-                type: 'sains_proses',
+                type: 'video_embed',
                 badge: 'TEMA: ALAM SEMESTA',
-                desc: 'Tonton dan ikuti gerakan lagu ceria bersama anak-anak di kelas.',
-                isYouTube: true,
-                embedHtml: '<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%;"><iframe src="https://drive.google.com/file/d/1Z8Wv6wD5P76VTvR4gAXtWs1-9AM1t6BC/preview" width="640" height="480" allow="autoplay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" class="rounded-2xl shadow-lg"></iframe></div>',
-                steps: []
+                desc: 'Bernyanyi dan bergerak bersama mendengarkan lagu hujan!',
+                videoUrl: 'https://drive.google.com/file/d/1Z8Wv6wD5P76VTvR4gAXtWs1-9AM1t6BC/preview'
+            },
+            {
+                id: 'act_alam_game1',
+                themeKey: 'alam_semesta',
+                title: '🎮 Game Cocokkan Benda Langit & Waktunya ☀️🌙',
+                domain: 'GAME',
+                type: 'game_cocok_pasangan',
+                badge: 'TEMA: ALAM SEMESTA',
+                desc: 'Sentuh benda langit lalu sentuh waktu yang tepat di sebelah kanan!',
+                pairs: [
+                    { left: 'Matahari ☀️', right: 'Siang Hari 🌅', id: 1 },
+                    { left: 'Bulan 🌙', right: 'Malam Hari 🌌', id: 2 },
+                    { left: 'Awan Hujan 🌧️', right: 'Saat Mendung ☁️', id: 3 }
+                ]
+            },
+            {
+                id: 'act_alam_game2',
+                themeKey: 'alam_semesta',
+                title: '🎮 Game Tangkap Tetes Air Hujan 💧',
+                domain: 'GAME',
+                type: 'game_tangkap_benda',
+                badge: 'TEMA: ALAM SEMESTA',
+                desc: 'Sentuh setiap tetes air hujan yang muncul untuk mengumpulkan poin!',
+                targetIcon: 'fa-droplet',
+                targetColor: 'bg-sky-400',
+                targetCount: 6,
+                targetName: 'Tetes Hujan'
             }
         ];
 
@@ -931,12 +985,10 @@
                     osc.start(now);
                     osc.stop(now + 0.06);
                 }
-            } catch (e) {
-                // Ignore audio init restriction safely
-            }
+            } catch (e) {}
         }
 
-        // HANDLER MODAL POPUP
+        // HANDLER MODAL POPUP & DASHBOARD
         function openThemeQuestionnaireModal() {
             playSFX('click');
             document.getElementById('theme-questionnaire-modal').classList.remove('hidden');
@@ -1009,6 +1061,7 @@
             currentSearchQuery = searchQuery;
 
             const grid = document.getElementById('bank-activities-grid');
+            if (!grid) return;
             grid.innerHTML = '';
 
             const filtered = BANK_ACTIVITIES.filter(act => {
@@ -1071,7 +1124,7 @@
 
         function searchBankActivities() {
             const searchVal = document.getElementById('bank-search-input').value;
-            renderBankActivities('ALL', searchVal);
+            renderBankActivities(currentDomainFilter, searchVal);
         }
 
         function addActivityToDeck(activityId) {
@@ -1085,6 +1138,7 @@
 
         function renderDeckSlideList() {
             const list = document.getElementById('deck-slide-list');
+            if (!list) return;
             list.innerHTML = '';
             const deck = PAUD_THEMES[currentThemeKey].deck;
 
@@ -1128,28 +1182,7 @@
             playSFX('pop');
         }
 
-        // FUNGSI LAYAR PENUH (FULLSCREEN)
-        function enterFullscreen() {
-            const elem = document.documentElement;
-            if (elem.requestFullscreen) {
-                elem.requestFullscreen().catch(() => {});
-            } else if (elem.webkitRequestFullscreen) {
-                elem.webkitRequestFullscreen();
-            } else if (elem.msRequestFullscreen) {
-                elem.msRequestFullscreen();
-            }
-        }
-
-        function exitFullscreen() {
-            if (document.exitFullscreen) {
-                document.exitFullscreen().catch(() => {});
-            } else if (document.webkitExitFullscreen) {
-                document.webkitExitFullscreen();
-            } else if (document.msExitFullscreen) {
-                document.msExitFullscreen();
-            }
-        }
-
+        // FULLSCREEN PRESENTATION MODE
         function startIFPPresentation() {
             const deck = PAUD_THEMES[currentThemeKey].deck;
             if (deck.length === 0) {
@@ -1158,16 +1191,33 @@
             }
             currentSlideIndex = 0;
             playSFX('success');
-            enterFullscreen();
+
+            const elem = document.documentElement;
+            if (elem.requestFullscreen) {
+                elem.requestFullscreen().catch(() => {});
+            } else if (elem.webkitRequestFullscreen) {
+                elem.webkitRequestFullscreen();
+            } else if (elem.msRequestFullscreen) {
+                elem.msRequestFullscreen();
+            }
+
             document.getElementById('ifp-presentation-modal').classList.remove('hidden');
             renderIFPSlide();
         }
 
         function closeIFPPresentation() {
             playSFX('click');
-            exitFullscreen();
+            if (document.exitFullscreen) {
+                document.exitFullscreen().catch(() => {});
+            } else if (document.webkitExitFullscreen) {
+                document.webkitExitFullscreen();
+            } else if (document.msExitFullscreen) {
+                document.msExitFullscreen();
+            }
+
             document.getElementById('ifp-presentation-modal').classList.add('hidden');
             closeWhiteboardModal();
+            closeVideoPopup();
         }
 
         function toggleAudioMute() {
@@ -1181,6 +1231,7 @@
             }
         }
 
+        // RENDER SLIDE IFP INTERAKTIF
         function renderIFPSlide() {
             const deck = PAUD_THEMES[currentThemeKey].deck;
             const slide = deck[currentSlideIndex];
@@ -1205,37 +1256,41 @@
             const container = document.createElement('div');
             container.className = "w-full max-w-5xl bg-slate-900/90 border-4 border-amber-400/50 rounded-[2.5rem] p-6 sm:p-10 shadow-2xl flex flex-col gap-6 text-white max-h-full overflow-y-auto backdrop-blur-md";
 
-            if (slide.type === 'sains_proses') {
+            if (slide.type === 'video_embed') {
+                container.innerHTML = `
+                    <div class="text-center space-y-2">
+                        <span class="px-4 py-1.5 rounded-full bg-sky-400/20 text-sky-300 font-display font-black text-xs tracking-wider uppercase border border-sky-400/30">${slide.domain}</span>
+                        <h2 class="font-display font-black text-2xl sm:text-4xl text-amber-300">${slide.title}</h2>
+                        <p class="text-xs sm:text-sm text-slate-300 font-medium">${slide.desc}</p>
+                    </div>
+
+                    <div class="relative w-full aspect-video rounded-3xl overflow-hidden border-4 border-amber-400 shadow-2xl bg-black">
+                        <iframe src="${slide.videoUrl}" class="w-full h-full border-0" allow="autoplay" allowfullscreen></iframe>
+                    </div>
+
+                    <div class="flex items-center justify-center gap-4">
+                        <button onclick="openVideoPopup('${slide.title.replace(/'/g, "\\'")}', '${slide.videoUrl}')" class="ifp-btn px-6 py-3 rounded-2xl bg-amber-400 hover:bg-amber-300 text-slate-950 font-display font-black text-sm flex items-center gap-2 border-2 border-white shadow-lg">
+                            <i class="fa-solid fa-expand text-lg"></i> Putar Pop-up Layar Penuh 🎬
+                        </button>
+                    </div>
+                `;
+            } else if (slide.type === 'sains_proses') {
                 container.innerHTML = `
                     <div class="text-center space-y-2">
                         <span class="px-4 py-1.5 rounded-full bg-amber-400/20 text-amber-300 font-display font-black text-xs tracking-wider uppercase border border-amber-400/30">${slide.domain}</span>
                         <h2 class="font-display font-black text-2xl sm:text-4xl text-amber-300">${slide.title}</h2>
                         <p class="text-xs sm:text-sm text-slate-300 font-medium">${slide.desc}</p>
                     </div>
-                    ${slide.isYouTube ? `
-                        <div class="w-full max-w-xl mx-auto my-4">
-                            <div onclick="openVideoPopup('${slide.title.replace(/'/g, "\\'")}', '${encodeURIComponent(slide.embedHtml)}')" class="ifp-btn group relative w-full aspect-video rounded-3xl bg-gradient-to-tr from-amber-500 via-orange-500 to-yellow-400 p-2 shadow-xl border-4 border-amber-300 flex items-center justify-center overflow-hidden cursor-pointer">
-                                <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition"></div>
-                                <div class="w-20 h-20 rounded-full bg-white text-slate-950 flex items-center justify-center text-3xl font-black shadow-2xl group-hover:scale-110 transition border-4 border-amber-200 z-10 pl-1.5">
-                                    <i class="fa-solid fa-play text-amber-600"></i>
-                                </div>
-                                <div class="absolute bottom-4 left-4 right-4 bg-slate-950/80 backdrop-blur-md px-4 py-2.5 rounded-2xl border border-amber-400/40 flex items-center justify-between z-10">
-                                    <span class="font-display font-black text-amber-300 text-xs sm:text-sm truncate">▶ Putar Video: ${slide.title}</span>
-                                    <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-amber-400 text-slate-950 shrink-0">HD Video</span>
-                                </div>
-                            </div>
-                        </div>
-                    ` : ''}
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-2">
-                        ${slide.steps && slide.steps.length > 0 ? slide.steps.map((st, i) => `
-                            <div onclick="playSFX('pop')" class="ifp-btn bg-slate-800/90 border-2 border-slate-700 p-5 rounded-3xl hover:border-amber-400 transition flex flex-col items-center text-center group shadow-md">
-                                <div class="w-14 h-14 rounded-2xl bg-amber-400 text-slate-950 flex items-center justify-center text-2xl font-black mb-3 group-hover:scale-110 transition border-2 border-white shadow-lg">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
+                        ${slide.steps.map((st, i) => `
+                            <div onclick="playSFX('pop')" class="ifp-btn bg-slate-800/90 border-2 border-slate-700 p-6 rounded-3xl hover:border-amber-400 transition flex flex-col items-center text-center group shadow-md">
+                                <div class="w-18 h-18 rounded-3xl bg-amber-400 text-slate-950 flex items-center justify-center text-3xl font-black mb-4 group-hover:scale-110 transition border-2 border-white shadow-lg">
                                     <i class="fa-solid ${st.icon}"></i>
                                 </div>
-                                <h4 class="font-display font-black text-amber-300 text-sm sm:text-base mb-1">${st.label}</h4>
-                                <p class="text-[11px] text-slate-300 leading-relaxed font-medium">${st.desc}</p>
+                                <h4 class="font-display font-black text-amber-300 text-base sm:text-lg mb-2">${st.label}</h4>
+                                <p class="text-xs text-slate-300 leading-relaxed font-medium">${st.desc}</p>
                             </div>
-                        `).join('') : ''}
+                        `).join('')}
                     </div>
                 `;
             } else if (slide.type === 'kuis_interaktif') {
@@ -1254,21 +1309,20 @@
                     </div>
                     <div id="quiz-feedback-box" class="hidden p-4 rounded-3xl bg-amber-400/10 border-2 border-amber-400/40 text-amber-300 text-center font-display font-black text-base"></div>
                 `;
-            } else if (slide.type === 'hitung_titik') {
+            } else if (slide.type === 'musik_lagu') {
                 container.innerHTML = `
                     <div class="text-center space-y-2">
-                        <span class="px-4 py-1.5 rounded-full bg-purple-400/20 text-purple-300 font-display font-black text-xs tracking-wider uppercase border border-purple-400/30">${slide.domain}</span>
+                        <span class="px-4 py-1.5 rounded-full bg-rose-400/20 text-rose-300 font-display font-black text-xs tracking-wider uppercase border border-rose-400/30">${slide.domain}</span>
                         <h2 class="font-display font-black text-2xl sm:text-4xl text-amber-300">${slide.title}</h2>
                         <p class="text-xs sm:text-sm text-slate-300 font-medium">${slide.desc}</p>
                     </div>
-                    <div class="flex flex-wrap items-center justify-center gap-6 py-8" id="droplet-container">
-                        ${[1,2,3,4,5].map(n => `
-                            <button onclick="countDroplet(this, ${n})" class="ifp-btn w-20 h-20 rounded-full bg-sky-500 hover:bg-amber-400 text-white hover:text-slate-950 flex items-center justify-center text-3xl font-black shadow-lg shadow-sky-500/30 border-4 border-white transition">
-                                <i class="fa-solid fa-droplet"></i>
-                            </button>
+                    <div class="space-y-3 mt-4">
+                        ${slide.lyrics.map((line, i) => `
+                            <div onclick="playSFX('pop')" class="ifp-btn p-5 rounded-3xl bg-slate-800/80 border-2 border-slate-700 text-center font-display font-black text-lg sm:text-2xl text-amber-200 hover:bg-amber-400 hover:text-slate-950 transition shadow-md">
+                                "${line}"
+                            </div>
                         `).join('')}
                     </div>
-                    <div id="count-score" class="text-center font-display font-black text-2xl text-amber-300">Tersentuh: 0 / 5</div>
                 `;
             } else if (slide.type === 'organ_tubuh') {
                 container.innerHTML = `
@@ -1291,24 +1345,149 @@
                         `).join('')}
                     </div>
                 `;
+            } else if (slide.type === 'hitung_titik') {
+                container.innerHTML = `
+                    <div class="text-center space-y-2">
+                        <span class="px-4 py-1.5 rounded-full bg-purple-400/20 text-purple-300 font-display font-black text-xs tracking-wider uppercase border border-purple-400/30">${slide.domain}</span>
+                        <h2 class="font-display font-black text-2xl sm:text-4xl text-amber-300">${slide.title}</h2>
+                        <p class="text-xs sm:text-sm text-slate-300 font-medium">${slide.desc}</p>
+                    </div>
+                    <div class="flex flex-wrap items-center justify-center gap-6 py-8" id="droplet-container">
+                        ${[1,2,3,4,5].map(n => `
+                            <button onclick="countDroplet(this, ${n})" class="ifp-btn w-20 h-20 rounded-full bg-sky-500 hover:bg-amber-400 text-white hover:text-slate-950 flex items-center justify-center text-3xl font-black shadow-lg shadow-sky-500/30 border-4 border-white transition">
+                                <i class="fa-solid fa-droplet"></i>
+                            </button>
+                        `).join('')}
+                    </div>
+                    <div id="count-score" class="text-center font-display font-black text-2xl text-amber-300">Tersentuh: 0 / 5</div>
+                `;
+            } else if (slide.type === 'game_cocok_pasangan') {
+                container.innerHTML = `
+                    <div class="text-center space-y-2">
+                        <span class="px-4 py-1.5 rounded-full bg-amber-400/20 text-amber-300 font-display font-black text-xs tracking-wider uppercase border border-amber-400/30">🎮 GAME MATCHING PAIR</span>
+                        <h2 class="font-display font-black text-2xl sm:text-4xl text-amber-300">${slide.title}</h2>
+                        <p class="text-xs sm:text-sm text-slate-300 font-medium">${slide.desc}</p>
+                    </div>
+                    <div class="grid grid-cols-2 gap-6 mt-4 max-w-2xl mx-auto w-full">
+                        <div class="space-y-3" id="pair-left-col">
+                            ${slide.pairs.map(p => `
+                                <button onclick="selectPairItem('left', ${p.id}, this)" class="pair-item pair-left-btn ifp-btn w-full p-4 rounded-3xl bg-slate-800 border-4 border-slate-700 text-amber-200 font-display font-black text-base text-left transition shadow-md hover:border-amber-400" data-id="${p.id}">
+                                    ${p.left}
+                                </button>
+                            `).join('')}
+                        </div>
+                        <div class="space-y-3" id="pair-right-col">
+                            ${slide.pairs.slice().sort(() => 0.5 - Math.random()).map(p => `
+                                <button onclick="selectPairItem('right', ${p.id}, this)" class="pair-item pair-right-btn ifp-btn w-full p-4 rounded-3xl bg-slate-800 border-4 border-slate-700 text-sky-200 font-display font-black text-base text-left transition shadow-md hover:border-sky-400" data-id="${p.id}">
+                                    ${p.right}
+                                </button>
+                            `).join('')}
+                        </div>
+                    </div>
+                    <div id="pair-status-box" class="text-center font-display font-black text-xl text-amber-300 py-2">Pilih item di sebelah kiri lalu sentuh pasangannya di sebelah kanan! ✨</div>
+                `;
+            } else if (slide.type === 'game_tangkap_benda') {
+                container.innerHTML = `
+                    <div class="text-center space-y-2">
+                        <span class="px-4 py-1.5 rounded-full bg-emerald-400/20 text-emerald-300 font-display font-black text-xs tracking-wider uppercase border border-emerald-400/30">🎮 GAME TANGKAP INTERAKTIF</span>
+                        <h2 class="font-display font-black text-2xl sm:text-4xl text-amber-300">${slide.title}</h2>
+                        <p class="text-xs sm:text-sm text-slate-300 font-medium">${slide.desc}</p>
+                    </div>
+                    <div class="flex flex-wrap items-center justify-center gap-6 py-6" id="catch-game-container">
+                        ${Array.from({length: slide.targetCount}).map((_, i) => `
+                            <button onclick="catchTargetItem(this, '${slide.targetName}', ${slide.targetCount})" class="ifp-btn w-20 h-20 sm:w-24 sm:h-24 rounded-3xl ${slide.targetColor} text-white flex items-center justify-center text-3xl sm:text-4xl font-black shadow-xl border-4 border-white transition transform hover:scale-110">
+                                <i class="fa-solid ${slide.targetIcon}"></i>
+                            </button>
+                        `).join('')}
+                    </div>
+                    <div id="catch-score" class="text-center font-display font-black text-2xl text-amber-300">Skor: 0 / ${slide.targetCount} ${slide.targetName}</div>
+                `;
             }
 
             stage.appendChild(container);
         }
 
-        function openVideoPopup(title, encodedHtml) {
-            playSFX('click');
-            document.getElementById('video-popup-title').innerText = `▶ ${title}`;
-            document.getElementById('video-popup-content-wrapper').innerHTML = decodeURIComponent(encodedHtml);
+        // HANDLER PEMUTAR VIDEO POPUP
+        function openVideoPopup(title, videoUrl) {
+            playSFX('pop');
+            document.getElementById('video-popup-title').innerText = title;
+            const container = document.getElementById('video-popup-frame-container');
+            container.innerHTML = `<iframe src="${videoUrl}" class="w-full h-full border-0" allow="autoplay" allowfullscreen></iframe>`;
             document.getElementById('video-popup-modal').classList.remove('hidden');
         }
 
         function closeVideoPopup() {
             playSFX('click');
-            document.getElementById('video-popup-modal').classList.add('hidden');
-            document.getElementById('video-popup-content-wrapper').innerHTML = '';
+            const container = document.getElementById('video-popup-frame-container');
+            if (container) container.innerHTML = '';
+            const modal = document.getElementById('video-popup-modal');
+            if (modal) modal.classList.add('hidden');
         }
 
+        // HANDLER GAME INTERAKTIF
+        let activeLeftPairId = null;
+        let activeLeftBtn = null;
+        let matchedPairCount = 0;
+
+        function selectPairItem(side, id, btn) {
+            playSFX('click');
+            const statusBox = document.getElementById('pair-status-box');
+
+            if (side === 'left') {
+                document.querySelectorAll('.pair-left-btn').forEach(b => b.classList.remove('border-amber-400', 'bg-amber-500/30'));
+                activeLeftPairId = id;
+                activeLeftBtn = btn;
+                btn.classList.add('border-amber-400', 'bg-amber-500/30');
+                if (statusBox) statusBox.innerText = `Bagus! Sekarang pilih pasangannya di sebelah kanan.`;
+            } else if (side === 'right') {
+                if (!activeLeftPairId) {
+                    if (statusBox) statusBox.innerText = `Pilih item sebelah kiri terlebih dahulu!`;
+                    playSFX('pop');
+                    return;
+                }
+
+                if (activeLeftPairId === id) {
+                    playSFX('success');
+                    activeLeftBtn.classList.remove('bg-slate-800', 'border-slate-700', 'bg-amber-500/30');
+                    activeLeftBtn.classList.add('bg-emerald-600', 'border-emerald-300', 'text-white', 'pointer-events-none');
+                    btn.classList.remove('bg-slate-800', 'border-slate-700');
+                    btn.classList.add('bg-emerald-600', 'border-emerald-300', 'text-white', 'pointer-events-none');
+                    
+                    matchedPairCount++;
+                    activeLeftPairId = null;
+                    activeLeftBtn = null;
+
+                    if (statusBox) statusBox.innerText = `Pasangan Benar! 🎉 (Selesai ${matchedPairCount} / 3)`;
+
+                    if (matchedPairCount >= 3) {
+                        playSFX('success');
+                        matchedPairCount = 0;
+                        showToast('Luar biasa! Kamu berhasil mencocokkan semua pasangan!', 'success');
+                    }
+                } else {
+                    playSFX('pop');
+                    if (statusBox) statusBox.innerText = `Kurang tepat, coba pilih pasangan lainnya! ❌`;
+                }
+            }
+        }
+
+        let caughtItemsCount = 0;
+        function catchTargetItem(btn, name, targetTotal) {
+            playSFX('pop');
+            btn.classList.add('opacity-30', 'scale-75', 'pointer-events-none');
+            caughtItemsCount++;
+
+            const scoreEl = document.getElementById('catch-score');
+            if (scoreEl) scoreEl.innerText = `Skor: ${caughtItemsCount} / ${targetTotal} ${name}`;
+
+            if (caughtItemsCount >= targetTotal) {
+                playSFX('success');
+                caughtItemsCount = 0;
+                showToast(`Hebat sekali! Kamu berhasil mengumpulkan semua ${name}!`, 'success');
+            }
+        }
+
+        let touchedCount = 0;
         function countDroplet(btn, num) {
             playSFX('pop');
             btn.classList.remove('bg-sky-500');
@@ -1321,7 +1500,6 @@
                 showToast('Hebat! Kamu berhasil menghitung semua titik hujan!', 'success');
             }
         }
-        let touchedCount = 0;
 
         function handleQuizAnswer(isCorrect, feedback) {
             const box = document.getElementById('quiz-feedback-box');
@@ -1359,6 +1537,7 @@
 
         function showToast(message, type = 'info') {
             const container = document.getElementById('toast-container');
+            if (!container) return;
             const toast = document.createElement('div');
             
             let bg = 'bg-slate-900 border-amber-400 text-white';
@@ -1549,6 +1728,7 @@
             modal.classList.add('hidden');
         }
 
+        // INISIALISASI HALAMAN
         window.onload = function() {
             renderBankActivities();
             document.getElementById('deck-count-badge').innerText = PAUD_THEMES[currentThemeKey].deck.length;
