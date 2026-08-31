@@ -743,6 +743,7 @@
                         type: 'kuis_interaktif',
                         title: 'Mengenal Ragam Emosi Wajah 😊😢',
                         domain: 'KOGNITIF & SOSIAL',
+                        imageUrl: 'https://lh3.googleusercontent.com/d/1aK8_5VQSZRmnls-rfTaDOjLE-kvBUY-P',
                         question: 'Gambar ekspresi manakah yang menunjukkan perasaan gembira?',
                         options: [
                             { label: '😊 Tersenyum Ceria & Tertawa', correct: true, feedback: 'Benar! Senyum ceria menandakan hati bersuka cita!' },
@@ -804,13 +805,9 @@
                         type: 'organ_tubuh',
                         title: 'Bagian-Bagian Tanaman Pohon 🌳',
                         domain: 'BAHASA & VOCAB',
-                        desc: 'Sentuh bagian pohon untuk belajar kosa katanya!',
-                        organs: [
-                            { icon: 'fa-spa', label: 'Akar 🫚', desc: 'Menyerap air di dalam tanah' },
-                            { icon: 'fa-tree', label: 'Batang 🪵', desc: 'Berdiri kokoh menopang dahan' },
-                            { icon: 'fa-leaf', label: 'Daun 🍃', desc: 'Warna hijau memasak makanan' },
-                            { icon: 'fa-apple-whole', label: 'Buah 🍎', desc: 'Manis dan sehat dikonsumsi' }
-                        ]
+                        imageUrl: 'https://lh3.googleusercontent.com/d/1xLgCLwh9gZtCe7khEyHYS8XcCSGNtwnh',
+                        desc: 'Amatilah gambar bagian-bagian tanaman pohon di bawah ini!',
+                        organs: []
                     },
                     {
                         type: 'sains_proses',
@@ -1492,6 +1489,7 @@
                 title: 'Mengenal Ragam Emosi Wajah 😊😢',
                 domain: 'KOGNITIF',
                 type: 'kuis_interaktif',
+                imageUrl: 'https://lh3.googleusercontent.com/d/1aK8_5VQSZRmnls-rfTaDOjLE-kvBUY-P',
                 desc: 'Pilihlah raut muka gembira pada kuis di bawah!',
                 question: 'Gambar ekspresi manakah yang menunjukkan perasaan gembira?',
                 options: [
@@ -1565,13 +1563,9 @@
                 title: 'Bagian-Bagian Tanaman Pohon 🌳',
                 domain: 'BAHASA',
                 type: 'organ_tubuh',
-                desc: 'Sentuh bagian pohon untuk belajar kosa katanya!',
-                organs: [
-                    { icon: 'fa-spa', label: 'Akar 🫚', desc: 'Menyerap air di dalam tanah' },
-                    { icon: 'fa-tree', label: 'Batang 🪵', desc: 'Berdiri kokoh menopang dahan' },
-                    { icon: 'fa-leaf', label: 'Daun 🍃', desc: 'Warna hijau memasak makanan' },
-                    { icon: 'fa-apple-whole', label: 'Buah 🍎', desc: 'Manis dan sehat dikonsumsi' }
-                ]
+                imageUrl: 'https://lh3.googleusercontent.com/d/1xLgCLwh9gZtCe7khEyHYS8XcCSGNtwnh',
+                desc: 'Amatilah gambar bagian-bagian tanaman pohon di bawah ini!',
+                organs: []
             },
             {
                 id: 'act_tanaman_4',
@@ -2415,7 +2409,12 @@
                         <span class="px-4 py-1.5 rounded-full bg-emerald-400/20 text-emerald-300 font-display font-black text-xs tracking-wider uppercase border border-emerald-400/30">${slide.domain}</span>
                         <h2 class="font-display font-black text-2xl sm:text-3xl text-white">${slide.question}</h2>
                     </div>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
+                    ${slide.imageUrl ? `
+                        <div class="flex justify-center my-3">
+                            <img src="${slide.imageUrl}" alt="Mengenal Ragam Emosi Wajah" class="max-h-60 sm:max-h-72 object-contain rounded-3xl border-4 border-amber-300 shadow-xl bg-slate-950" onerror="this.onerror=null; this.src='https://drive.google.com/uc?export=view&id=1aK8_5VQSZRmnls-rfTaDOjLE-kvBUY-P';">
+                        </div>
+                    ` : ''}
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
                         ${slide.options.map((opt, i) => `
                             <button onclick="handleQuizAnswer(${opt.correct}, '${opt.feedback.replace(/'/g, "\\'")}')" class="ifp-btn p-6 rounded-3xl bg-slate-800 border-4 border-slate-700 hover:border-amber-400 text-left transition flex items-center gap-4 shadow-md">
                                 <div class="w-12 h-12 rounded-2xl bg-amber-400 text-slate-950 flex items-center justify-center font-display font-black text-xl shrink-0 border-2 border-white">${String.fromCharCode(65 + i)}</div>
@@ -2447,19 +2446,26 @@
                         <h2 class="font-display font-black text-2xl sm:text-4xl text-amber-300">${slide.title}</h2>
                         <p class="text-xs sm:text-sm text-slate-300 font-medium">${slide.desc}</p>
                     </div>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
-                        ${slide.organs.map((og, i) => `
-                            <div onclick="playSFX('pop')" class="ifp-btn p-5 rounded-3xl bg-slate-800 border-2 border-slate-700 hover:border-amber-400 flex items-center gap-4 transition shadow-md">
-                                <div class="w-16 h-16 rounded-2xl bg-amber-400 text-slate-950 flex items-center justify-center text-3xl font-black shrink-0 border-2 border-white shadow-sm">
-                                    <i class="fa-solid ${og.icon}"></i>
+                    ${slide.imageUrl ? `
+                        <div class="flex justify-center my-3">
+                            <img src="${slide.imageUrl}" alt="${slide.title}" class="max-h-60 sm:max-h-72 object-contain rounded-3xl border-4 border-amber-300 shadow-xl bg-slate-950" onerror="this.onerror=null; this.src='https://drive.google.com/uc?export=view&id=1xLgCLwh9gZtCe7khEyHYS8XcCSGNtwnh';">
+                        </div>
+                    ` : ''}
+                    ${slide.organs && slide.organs.length > 0 ? `
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
+                            ${slide.organs.map((og, i) => `
+                                <div onclick="playSFX('pop')" class="ifp-btn p-5 rounded-3xl bg-slate-800 border-2 border-slate-700 hover:border-amber-400 flex items-center gap-4 transition shadow-md">
+                                    <div class="w-16 h-16 rounded-2xl bg-amber-400 text-slate-950 flex items-center justify-center text-3xl font-black shrink-0 border-2 border-white shadow-sm">
+                                        <i class="fa-solid ${og.icon}"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-display font-black text-xl text-white">${og.label}</h4>
+                                        <p class="text-xs text-slate-300 font-medium">${og.desc}</p>
+                                    </div>
                                 </div>
-                                <div>
-                                    <h4 class="font-display font-black text-xl text-white">${og.label}</h4>
-                                    <p class="text-xs text-slate-300 font-medium">${og.desc}</p>
-                                </div>
-                            </div>
-                        `).join('')}
-                    </div>
+                            `).join('')}
+                        </div>
+                    ` : ''}
                 `;
             } else if (slide.type === 'hitung_titik') {
                 container.innerHTML = `
