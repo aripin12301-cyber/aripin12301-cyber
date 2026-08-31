@@ -208,7 +208,7 @@
                         <span class="tracking-wide">RANGKAIAN BAHAN AJAR</span>
                     </div>
                     <div class="flex items-center gap-2">
-                        <span id="deck-count-badge" class="w-8 h-8 rounded-full bg-slate-900 text-amber-300 font-display text-sm font-black flex items-center justify-center shadow-md border-2 border-amber-300">6</span>
+                        <span id="deck-count-badge" class="w-8 h-8 rounded-full bg-slate-900 text-amber-300 font-display text-sm font-black flex items-center justify-center shadow-md border-2 border-amber-300">9</span>
                         <i class="fa-solid fa-circle-chevron-right text-lg text-amber-900 opacity-80"></i>
                     </div>
                 </button>
@@ -245,13 +245,10 @@
 
     </main>
 
-    <!-- ================================================================= -->
     <!-- MODAL POPUP: PILIHAN TEMA PEMBELAJARAN -->
-    <!-- ================================================================= -->
     <div id="theme-questionnaire-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/60 backdrop-blur-sm hidden p-4 overflow-y-auto">
         <div class="bg-amber-50 rounded-[2.5rem] border-4 border-amber-300 shadow-2xl w-full max-w-4xl max-h-[90vh] flex flex-col overflow-hidden animate-in fade-in zoom-in-95 duration-200">
             
-            <!-- Header Modal -->
             <div class="px-6 py-5 border-b-4 border-amber-200 flex items-center justify-between bg-gradient-to-r from-amber-200 via-orange-200 to-yellow-200">
                 <div class="flex items-center gap-3">
                     <div class="w-12 h-12 rounded-2xl bg-amber-400 text-slate-950 flex items-center justify-center font-black border-2 border-white shadow-md">
@@ -267,7 +264,6 @@
                 </button>
             </div>
 
-            <!-- Grid Tema -->
             <div class="p-6 overflow-y-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 <div onclick="selectTheme('alam_semesta')" class="ifp-btn p-5 rounded-3xl border-4 border-amber-300 bg-white hover:bg-amber-100/70 transition flex items-center gap-4 cursor-pointer shadow-sm hover:shadow-md">
                     <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-amber-400 to-yellow-300 text-slate-950 flex items-center justify-center text-2xl shrink-0 font-bold border-2 border-amber-200 shadow-xs">🌧️</div>
@@ -342,7 +338,6 @@
                 </div>
             </div>
 
-            <!-- Footer Modal -->
             <div class="px-6 py-4 bg-amber-100/60 border-t-2 border-amber-200 flex items-center justify-end">
                 <button onclick="closeThemeQuestionnaireModal()" class="ifp-btn px-6 py-2.5 rounded-2xl bg-white hover:bg-slate-100 text-slate-800 font-display font-bold text-xs border-2 border-amber-300 shadow-xs">
                     Tutup
@@ -393,6 +388,7 @@
                     <button onclick="filterDomain('BAHASA')" class="domain-btn ifp-btn px-4 py-2 rounded-2xl bg-white border-2 border-amber-200 text-slate-700 font-display font-bold text-xs hover:bg-amber-50">Bahasa</button>
                     <button onclick="filterDomain('SENI')" class="domain-btn ifp-btn px-4 py-2 rounded-2xl bg-white border-2 border-amber-200 text-slate-700 font-display font-bold text-xs hover:bg-amber-50">Seni</button>
                     <button onclick="filterDomain('GAME')" class="domain-btn ifp-btn px-4 py-2 rounded-2xl bg-white border-2 border-amber-200 text-slate-700 font-display font-bold text-xs hover:bg-amber-50">🎮 Game Interaktif</button>
+                    <button onclick="filterDomain('CODING')" class="domain-btn ifp-btn px-4 py-2 rounded-2xl bg-white border-2 border-amber-200 text-slate-700 font-display font-bold text-xs hover:bg-amber-50">🚀 Game Coding</button>
                 </div>
 
                 <div class="relative w-full sm:w-64">
@@ -459,7 +455,7 @@
         <!-- Toolbar Atas Presentasi -->
         <div class="h-20 px-6 bg-slate-900/95 border-b-4 border-amber-400/40 flex items-center justify-between shrink-0">
             <div class="flex items-center gap-4">
-                <span id="ifp-slide-badge" class="px-4 py-1.5 rounded-full bg-amber-400 text-slate-950 font-display font-black text-xs sm:text-sm border-2 border-amber-300 shadow-md">SLIDE 1 / 6</span>
+                <span id="ifp-slide-badge" class="px-4 py-1.5 rounded-full bg-amber-400 text-slate-950 font-display font-black text-xs sm:text-sm border-2 border-amber-300 shadow-md">SLIDE 1 / 9</span>
                 <h3 id="ifp-current-title" class="font-display font-black text-white text-lg sm:text-2xl text-amber-300">Petualangan Air, Hujan & Pelangi</h3>
             </div>
             
@@ -583,9 +579,15 @@
                     </div>
                     <h3 id="video-popup-title" class="font-display font-black text-lg sm:text-xl text-amber-300">Pemutar Video IFP</h3>
                 </div>
-                <button onclick="closeVideoPopup()" class="w-10 h-10 rounded-2xl bg-rose-600 hover:bg-rose-700 text-white font-bold flex items-center justify-center shadow-md transition">
-                    <i class="fa-solid fa-xmark text-xl"></i>
-                </button>
+                <div class="flex items-center gap-3">
+                    <a id="video-popup-direct-link" href="#" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-2xl bg-amber-400 hover:bg-amber-300 text-slate-950 font-display font-black text-xs flex items-center gap-1.5 transition border border-amber-300">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        <span>Buka Tab Drive</span>
+                    </a>
+                    <button onclick="closeVideoPopup()" class="w-10 h-10 rounded-2xl bg-rose-600 hover:bg-rose-700 text-white font-bold flex items-center justify-center shadow-md transition">
+                        <i class="fa-solid fa-xmark text-xl"></i>
+                    </button>
+                </div>
             </div>
             <div class="relative w-full aspect-video bg-black flex items-center justify-center" id="video-popup-frame-container">
                 <!-- Video iframe injected here -->
@@ -606,7 +608,7 @@
         let currentDomainFilter = 'ALL';
         let currentSearchQuery = '';
 
-        // DATASET TEMA PAUD LENGKAP DENGAN MULTI-ASPEK
+        // DATASET TEMA PAUD LENGKAP DENGAN MULTI-ASPEK (KOGNITIF, MOTORIK, BAHASA, SENI & GAME CODING)
         const PAUD_THEMES = {
             alam_semesta: {
                 title: 'Petualangan Air, Hujan & Pelangi 🌧️🌈',
@@ -643,6 +645,41 @@
                         domain: 'KOGNITIF MATEMATIKA',
                         desc: 'Sentuh setiap tetes air hujan di bawah ini untuk menghitung totalnya!',
                         countTarget: 5
+                    },
+                    {
+                        type: 'organ_tubuh',
+                        title: 'Mengenal Benda Langit Siang & Malam 🌤️🌙',
+                        domain: 'BAHASA & KOGNITIF',
+                        desc: 'Sentuh benda langit di bawah ini untuk mengenal namanya!',
+                        organs: [
+                            { icon: 'fa-sun', label: 'Matahari ☀️', desc: 'Bersinar terang di siang hari' },
+                            { icon: 'fa-moon', label: 'Bulan 🌙', desc: 'Menerangi malam hari' },
+                            { icon: 'fa-cloud-rain', label: 'Awan ☁️', desc: 'Tempat berkumpulnya tetes air hujan' },
+                            { icon: 'fa-star', label: 'Bintang ✨', desc: 'Hiasi langit malam yang indah' }
+                        ]
+                    },
+                    {
+                        type: 'sains_proses',
+                        title: 'Senam Gerak Angin & Hujan 🌬️',
+                        domain: 'MOTORIK KASAR',
+                        desc: 'Mari ikuti gerakan alami bersama-sama di kelas!',
+                        steps: [
+                            { icon: 'fa-wind', label: '1. Angin Sepoi 🍃', desc: 'Lambaikan kedua tangan meliuk-liuk pelan ke kiri dan kanan.' },
+                            { icon: 'fa-cloud-showers-heavy', label: '2. Hujan Rintik 🌧️', desc: 'Jentikkan jari-jari tanganmu dari atas ke bawah!' },
+                            { icon: 'fa-bolt-lightning', label: '3. Petir Menggelegar ⚡', desc: 'Tepuk tangan keras 1 kali lalu berdiri tegak!' }
+                        ]
+                    },
+                    {
+                        type: 'game_coding',
+                        title: '🎮 Coding Roket Ke Bintang 🚀⭐',
+                        domain: 'GAME CODING',
+                        desc: 'Susun urutan panah petunjuk jalan agar Roket dapat mencapai Bintang!',
+                        gridSize: 3,
+                        startPos: { r: 2, c: 0 },
+                        targetPos: { r: 0, c: 2 },
+                        startIcon: '🚀',
+                        targetIcon: '⭐',
+                        obstacles: [{ r: 1, c: 1, icon: '🪐' }]
                     },
                     {
                         type: 'game_cocok_pasangan',
@@ -693,6 +730,53 @@
                         ]
                     },
                     {
+                        type: 'musik_lagu',
+                        title: 'Lagu "Air Untuk Minum" 🎵',
+                        domain: 'SENI & MUSIK',
+                        desc: 'Mari bernyanyi bersama tentang pentingnya air bagi kehidupan!',
+                        lyrics: [
+                            "Mengalir mengalir air mengalir...",
+                            "Ke sungai ke laut dan ke tanaman...",
+                            "Kalau kita haus kita minum air 🥛",
+                            "Air ciptaan Tuhan yang sangat berguna! ✨"
+                        ]
+                    },
+                    {
+                        type: 'organ_tubuh',
+                        title: 'Mengenal Benda Berisi Udara 🎈',
+                        domain: 'BAHASA & VOCAB',
+                        desc: 'Sentuh benda-benda yang memerlukan udara di bawah ini!',
+                        organs: [
+                            { icon: 'fa-balloon', label: 'Balon Terbang 🎈', desc: 'Mengembang besar bila diisi udara' },
+                            { icon: 'fa-futbol', label: 'Bola Sepak ⚽', desc: 'Membal tinggi bila ada udaranya' },
+                            { icon: 'fa-ring', label: 'Ban Pelampung 🛟', desc: 'Membantu kita berenang aman' },
+                            { icon: 'fa-paper-plane', label: 'Layang-Layang 🪁', desc: 'Terbang tinggi tertiup angin' }
+                        ]
+                    },
+                    {
+                        type: 'sains_proses',
+                        title: 'Gerak Nafas & Tiuptan Balon 💨',
+                        domain: 'MOTORIK HALUS & PERNAPASAN',
+                        desc: 'Mari berlatih olah pernapasan sehat bersama!',
+                        steps: [
+                            { icon: 'fa-lungs', label: '1. Tarik Napas 🌬️', desc: 'Tarik napas dalam-dalam lewat hidungmu.' },
+                            { icon: 'fa-wind', label: '2. Tahan 2 Detik ⏱️', desc: 'Tahan napas sebentar di dalam dada.' },
+                            { icon: 'fa-face-smile', label: '3. Hembuskan Pelan 💨', desc: 'Tiuplah keluar seperti meniup balon sampai kempis!' }
+                        ]
+                    },
+                    {
+                        type: 'game_coding',
+                        title: '🎮 Coding Pemadam Padamkan Api 🚒🔥',
+                        domain: 'GAME CODING',
+                        desc: 'Bantu Mobil Pemadam menyusun jalur panah menuju lokasi Api!',
+                        gridSize: 3,
+                        startPos: { r: 2, c: 0 },
+                        targetPos: { r: 0, c: 2 },
+                        startIcon: '🚒',
+                        targetIcon: '🔥',
+                        obstacles: [{ r: 1, c: 0, icon: '🚧' }]
+                    },
+                    {
                         type: 'game_cocok_pasangan',
                         title: '🎮 Game Pasangkan Elemen & Fungsinya 💧💨🔥',
                         domain: 'GAME INTERAKTIF',
@@ -722,6 +806,51 @@
                         ]
                     },
                     {
+                        type: 'musik_lagu',
+                        title: 'Lagu "Dua Mata Saya" 🎵',
+                        domain: 'SENI & MUSIK',
+                        desc: 'Bernyanyi dan tunjuk anggota tubuhmu!',
+                        lyrics: [
+                            "Dua mata saya, hidung saya satu... 👀👃",
+                            "Dua kaki saya pakai sepatu baru... 👟",
+                            "Dua telinga saya yang kiri dan kanan... 👂👂",
+                            "Satu mulut saya tidak berhenti makan! 👄"
+                        ]
+                    },
+                    {
+                        type: 'sains_proses',
+                        title: 'Gerak Senam Olahraga Pagi 🏃‍♂️',
+                        domain: 'MOTORIK KASAR',
+                        desc: 'Gerakkan tubuhmu agar sehat dan kuat!',
+                        steps: [
+                            { icon: 'fa-person-walking', label: '1. Jalan di Tempat 🚶‍♂️', desc: 'Angkat paha bergantian 10 kali.' },
+                            { icon: 'fa-child-reaching', label: '2. Rentangkan Tangan 👐', desc: 'Rentangkan tangan lebar-lebar ke samping.' },
+                            { icon: 'fa-hands-clapping', label: '3. Tepuk Semangat 👏', desc: 'Tepuk tangan gembira di atas kepala!' }
+                        ]
+                    },
+                    {
+                        type: 'kuis_interaktif',
+                        title: 'Mengenal Ragam Emosi Wajah 😊😢',
+                        domain: 'KOGNITIF & SOSIAL',
+                        question: 'Gambar ekspresi manakah yang menunjukkan perasaan gembira?',
+                        options: [
+                            { label: '😊 Tersenyum Ceria & Tertawa', correct: true, feedback: 'Benar! Senyum ceria menandakan hati bersuka cita!' },
+                            { label: '😢 Menangis Cemberut', correct: false, feedback: 'Kurang tepat. Coba perhatikan lagi senyuman di wajah!' }
+                        ]
+                    },
+                    {
+                        type: 'game_coding',
+                        title: '🎮 Coding Tangan Ambil Buah Apel ✋🍎',
+                        domain: 'GAME CODING',
+                        desc: 'Arahkan Tangan menuju Buah Apel Merah melalui papan petunjuk panah!',
+                        gridSize: 3,
+                        startPos: { r: 0, c: 0 },
+                        targetPos: { r: 2, c: 2 },
+                        startIcon: '✋',
+                        targetIcon: '🍎',
+                        obstacles: [{ r: 1, c: 1, icon: '🪨' }]
+                    },
+                    {
                         type: 'game_tangkap_benda',
                         title: '🎮 Game Basmi Kuman di Tangan 🧼',
                         domain: 'GAME INTERAKTIF',
@@ -749,6 +878,53 @@
                         ]
                     },
                     {
+                        type: 'musik_lagu',
+                        title: 'Lagu "Lihat Kebunku" 🎵',
+                        domain: 'SENI & MUSIK',
+                        desc: 'Nyanyikan lagu kebun bunga indah!',
+                        lyrics: [
+                            "Lihat kebunku penuh dengan bunga... 🌸🌻",
+                            "Ada yang putih dan ada yang merah... 🤍❤️",
+                            "Setiap hari kusiram semua... 💧",
+                            "Mawar melati semuanya indah! 🌹✨"
+                        ]
+                    },
+                    {
+                        type: 'organ_tubuh',
+                        title: 'Bagian-Bagian Tanaman Pohon 🌳',
+                        domain: 'BAHASA & VOCAB',
+                        desc: 'Sentuh bagian pohon untuk belajar kosa katanya!',
+                        organs: [
+                            { icon: 'fa-spa', label: 'Akar 🫚', desc: 'Menyerap air di dalam tanah' },
+                            { icon: 'fa-tree', label: 'Batang 🪵', desc: 'Berdiri kokoh menopang dahan' },
+                            { icon: 'fa-leaf', label: 'Daun 🍃', desc: 'Warna hijau memasak makanan' },
+                            { icon: 'fa-apple-whole', label: 'Buah 🍎', desc: 'Manis dan sehat dikonsumsi' }
+                        ]
+                    },
+                    {
+                        type: 'sains_proses',
+                        title: 'Gerak Menirukan Pohon Ditiup Angin 🌲',
+                        domain: 'MOTORIK KASAR',
+                        desc: 'Berdiri tegak dan gerakkan badan seperti pohon rindang!',
+                        steps: [
+                            { icon: 'fa-tree', label: '1. Pohon Kokoh 🌳', desc: 'Berdiri tegak dengan kedua kaki melekat kuat.' },
+                            { icon: 'fa-wind', label: '2. Angin Sepoi 🍃', desc: 'Lambaikan tangan ke atas pelan-pelan.' },
+                            { icon: 'fa-tornado', label: '3. Badai Kencang 🌪️', desc: 'Liukkan badanmu lebih cepat ke kiri dan kanan!' }
+                        ]
+                    },
+                    {
+                        type: 'game_coding',
+                        title: '🎮 Coding Lebah Menuju Bunga 🐝🌸',
+                        domain: 'GAME CODING',
+                        desc: 'Bantu Lebah mungil menyusun panah arah agar sampai ke Bunga Matahari!',
+                        gridSize: 3,
+                        startPos: { r: 0, c: 0 },
+                        targetPos: { r: 2, c: 2 },
+                        startIcon: '🐝',
+                        targetIcon: '🌻',
+                        obstacles: [{ r: 1, c: 1, icon: '🪨' }]
+                    },
+                    {
                         type: 'game_tangkap_benda',
                         title: '🎮 Game Petik Buah Segar 🍓',
                         domain: 'GAME INTERAKTIF',
@@ -773,6 +949,53 @@
                             { label: '🐓 Ayam Jantan (Kukuruyuk)', correct: true, feedback: 'Benar! Ayam berkokok membangunkan kita pagi hari!' },
                             { label: '🐱 Kucing (Meong)', correct: false, feedback: 'Kucing bersuara meong, coba tebak lagi!' }
                         ]
+                    },
+                    {
+                        type: 'musik_lagu',
+                        title: 'Lagu "Helly Guk Guk Guk" 🎵',
+                        domain: 'SENI & MUSIK',
+                        desc: 'Bernyanyi dan bertepuk tangan bersama!',
+                        lyrics: [
+                            "Aku punya anjing kecil, ku beri nama Helly... 🐶",
+                            "Dia senang bermain-main, sambil berlari-lari...",
+                            "Helly guk guk guk, kemari guk guk guk! 🎶",
+                            "Ayo lari-lari! 🏃‍♂️"
+                        ]
+                    },
+                    {
+                        type: 'sains_proses',
+                        title: 'Gerakan Menirukan Hewan Lucu 🦘',
+                        domain: 'MOTORIK KASAR',
+                        desc: 'Ayo tirukan gerakan hewan-hewan di bawah!',
+                        steps: [
+                            { icon: 'fa-frog', label: '1. Melompat Katak 🐸', desc: 'Jongkok lalu melompat tinggi 3 kali!' },
+                            { icon: 'fa-kiwi-bird', label: '2. Burung Terbang 🦅', desc: 'Kepakkan kedua tanganmu ke atas dan bawah.' },
+                            { icon: 'fa-cat', label: '3. Kucing Merayap 🐱', desc: 'Jalan pelan-pelan tanpa bersuara!' }
+                        ]
+                    },
+                    {
+                        type: 'organ_tubuh',
+                        title: 'Pengelompokan Tempat Hidup Hewan 🐟🦅',
+                        domain: 'KOGNITIF & SAINS',
+                        desc: 'Sentuh hewan untuk mempelajari tempat tinggalnya!',
+                        organs: [
+                            { icon: 'fa-fish', label: 'Ikan 🐟', desc: 'Berenang bebas di dalam Air' },
+                            { icon: 'fa-dove', label: 'Burung 🕊️', desc: 'Terbang tinggi di Udara' },
+                            { icon: 'fa-horse', label: 'Kuda 🐎', desc: 'Berlari kencang di Daratan' },
+                            { icon: 'fa-frog', label: 'Katak 🐸', desc: 'Bisa hidup di Darat & Air' }
+                        ]
+                    },
+                    {
+                        type: 'game_coding',
+                        title: '🎮 Coding Kelinci Cari Wortel 🐰🥕',
+                        domain: 'GAME CODING',
+                        desc: 'Bantu Kelinci imut menyusun panah arah untuk melompat menuju Wortel!',
+                        gridSize: 3,
+                        startPos: { r: 2, c: 0 },
+                        targetPos: { r: 0, c: 2 },
+                        startIcon: '🐰',
+                        targetIcon: '🥕',
+                        obstacles: [{ r: 1, c: 1, icon: '🦊' }]
                     },
                     {
                         type: 'game_cocok_pasangan',
@@ -802,6 +1025,53 @@
                         ]
                     },
                     {
+                        type: 'musik_lagu',
+                        title: 'Lagu "Garuda Pancasila" 🎵',
+                        domain: 'SENI & MUSIK',
+                        desc: 'Mari bernyanyi lagu nasional dengan penuh semangat!',
+                        lyrics: [
+                            "Garuda Pancasila, akulah pendukungmu... 🦅",
+                            "Patriot proklamasi, sedia berkorban untukmu...",
+                            "Pancasila dasar negara, rakyat adil makmur sentosa...",
+                            "Pribadi bangsaku, ayo maju maju! 🇮🇩✨"
+                        ]
+                    },
+                    {
+                        type: 'sains_proses',
+                        title: 'Latihan Baris-Berbaris & Hormat 🫡',
+                        domain: 'MOTORIK KASAR',
+                        desc: 'Berdiri siap dan ikuti instruksi baris cilik!',
+                        steps: [
+                            { icon: 'fa-child', label: '1. Sikap Sempurna 🧍‍♂️', desc: 'Berdiri tegak, tangan rapat di samping paha.' },
+                            { icon: 'fa-hand-back-fist', label: '2. Hormat Bendera 🫡', desc: 'Angkat tangan kanan sejajar pelipis mata!' },
+                            { icon: 'fa-person-walking-luggage', label: '3. Langkah Tegap 🚶‍♂️', desc: 'Ayunkan tangan dan berjalan tegap!' }
+                        ]
+                    },
+                    {
+                        type: 'organ_tubuh',
+                        title: 'Simbol Lambang Garuda Pancasila 🦅',
+                        domain: 'BAHASA & JATI DIRI',
+                        desc: 'Sentuh simbol untuk mengenal artinya!',
+                        organs: [
+                            { icon: 'fa-star', label: 'Bintang ⭐', desc: 'Sila ke-1: Ketuhanan Yang Maha Esa' },
+                            { icon: 'fa-link', label: 'Rantai 🔗', desc: 'Sila ke-2: Kemanusiaan yang Adil & Beradab' },
+                            { icon: 'fa-tree', label: 'Pohon Beringin 🌳', desc: 'Sila ke-3: Persatuan Indonesia' },
+                            { icon: 'fa-wheat-awn', label: 'Padi & Kapas 🌾', desc: 'Sila ke-5: Keadilan Sosial' }
+                        ]
+                    },
+                    {
+                        type: 'game_coding',
+                        title: '🎮 Coding Burung Garuda Ke Puncak 🦅⛰️',
+                        domain: 'GAME CODING',
+                        desc: 'Arahkan Burung Garuda terbang tinggi menuju Puncak Gunung Nusantara!',
+                        gridSize: 3,
+                        startPos: { r: 2, c: 0 },
+                        targetPos: { r: 0, c: 2 },
+                        startIcon: '🦅',
+                        targetIcon: '⛰️',
+                        obstacles: [{ r: 1, c: 1, icon: '☁️' }]
+                    },
+                    {
                         type: 'game_tangkap_benda',
                         title: '🎮 Game Kumpulkan Bendera Merah Putih 🇮🇩',
                         domain: 'GAME INTERAKTIF',
@@ -827,6 +1097,53 @@
                             { icon: 'fa-train', label: 'Kereta Api 🚆', desc: 'Berjalan di atas rel dan berhenti di Stasiun.' },
                             { icon: 'fa-ship', label: 'Kapal Laut 🚢', desc: 'Berlayar di laut dan berlabuh di Pelabuhan.' }
                         ]
+                    },
+                    {
+                        type: 'musik_lagu',
+                        title: 'Lagu "Naik Kereta Api" 🎵',
+                        domain: 'SENI & MUSIK',
+                        desc: 'Mari membuat barisan kereta api ceria!',
+                        lyrics: [
+                            "Naik kereta api... tut... tut... tut... 🚆",
+                            "Siapa hendak turut, ke Bandung... Surabaya...",
+                            "Bolehlah naik dengan percuma...",
+                            "Ayo temanku lekas naik, keretaku tak berhenti lama! 🎶"
+                        ]
+                    },
+                    {
+                        type: 'sains_proses',
+                        title: 'Simulasi Menyetir Mobil & Rambu 🚦',
+                        domain: 'MOTORIK KASAR & PERILAKU',
+                        desc: 'Pegang kemudi imajiner dan patuhi lampu lalu lintas!',
+                        steps: [
+                            { icon: 'fa-circle-stop text-rose-500', label: '1. Lampu Merah 🔴', desc: 'Berhenti total! Tangan memegang kemudi.' },
+                            { icon: 'fa-triangle-exclamation text-amber-500', label: '2. Lampu Kuning 🟡', desc: 'Bersiap-siap dan kurangi kecepatan.' },
+                            { icon: 'fa-circle-check text-emerald-500', label: '3. Lampu Hijau 🟢', desc: 'Jalan maju sambil membunyikan klakson biim-biim! 🚗' }
+                        ]
+                    },
+                    {
+                        type: 'organ_tubuh',
+                        title: 'Pengenalan Bunyi Kendaraan 🚚',
+                        domain: 'BAHASA & AUDITORI',
+                        desc: 'Sentuh kendaraan untuk mendengar suara khasnya!',
+                        organs: [
+                            { icon: 'fa-car', label: 'Mobil 🚗', desc: 'Suara Klakson: Biim... Biim!' },
+                            { icon: 'fa-train', label: 'Kereta Api 🚆', desc: 'Suara Peluit: Tut... Tut... Jes... Jes!' },
+                            { icon: 'fa-plane', label: 'Pesawat ✈️', desc: 'Suara Mesin: Wuuuush terbang tinggi!' },
+                            { icon: 'fa-truck-medical', label: 'Ambulans 🚑', desc: 'Suara Sirine: Wiw-waw-wiw-waw!' }
+                        ]
+                    },
+                    {
+                        type: 'game_coding',
+                        title: '🎮 Coding Mobil Menuju Garasi 🚗🏠',
+                        domain: 'GAME CODING',
+                        desc: 'Susun petunjuk panah agar Mobil dapat melaju aman sampai Garasi Rumah!',
+                        gridSize: 3,
+                        startPos: { r: 0, c: 0 },
+                        targetPos: { r: 2, c: 2 },
+                        startIcon: '🚗',
+                        targetIcon: '🏠',
+                        obstacles: [{ r: 1, c: 0, icon: '🚧' }]
                     },
                     {
                         type: 'game_cocok_pasangan',
@@ -856,6 +1173,53 @@
                         ]
                     },
                     {
+                        type: 'musik_lagu',
+                        title: 'Lagu "Lingkungan Bersih Sehat" 🎶',
+                        domain: 'SENI & MUSIK',
+                        desc: 'Bernyanyi menjaga kebersihan bersama teman!',
+                        lyrics: [
+                            "Bersih sekolahku, bersih rumahku... 🏡",
+                            "Tidak ada sampah berserakan lagi...",
+                            "Ayo sapu-sapu, ayo buang sampah... 🧹",
+                            "Lingkungan sehat hati senang gembira! ✨"
+                        ]
+                    },
+                    {
+                        type: 'sains_proses',
+                        title: 'Aksi Nyata Menyapu & Merapikan 🧹',
+                        domain: 'MOTORIK HALUS & KASAR',
+                        desc: 'Praktikkan gerakan membersihkan lingkungan!',
+                        steps: [
+                            { icon: 'fa-broom', label: '1. Menyapu Lantai 🧹', desc: 'Genggam gagang sapu dan gerakkan maju mundur.' },
+                            { icon: 'fa-hand-holding-hand', label: '2. Memungut Sampah 🍂', desc: 'Jongkok dan masukkan sampah ke dalam serokan.' },
+                            { icon: 'fa-soap', label: '3. Cuci Tangan 🧼', desc: 'Gosok tangan dengan sabun dan air mengalir.' }
+                        ]
+                    },
+                    {
+                        type: 'organ_tubuh',
+                        title: 'Mengenal Alat-Alat Kebersihan 🪣',
+                        domain: 'BAHASA & VOCAB',
+                        desc: 'Sentuh alat kebersihan untuk mengenal namanya!',
+                        organs: [
+                            { icon: 'fa-broom', label: 'Sapu Ijuk 🧹', desc: 'Membersihkan debu di lantai' },
+                            { icon: 'fa-trash', label: 'Tong Sampah 🗑️', desc: 'Wadah menampung sisa sampah' },
+                            { icon: 'fa-bucket', label: 'Ember Air 🪣', desc: 'Menampung air untuk mengepel' },
+                            { icon: 'fa-spray-can', label: 'Semprotan 🧴', desc: 'Cairan pembersih kaca & meja' }
+                        ]
+                    },
+                    {
+                        type: 'game_coding',
+                        title: '🎮 Coding Robot Bersihkan Sampah 🤖🗑️',
+                        domain: 'GAME CODING',
+                        desc: 'Arahkan Robot Pembersih mengumpulkan sampah di area grid!',
+                        gridSize: 3,
+                        startPos: { r: 0, c: 0 },
+                        targetPos: { r: 2, c: 2 },
+                        startIcon: '🤖',
+                        targetIcon: '🗑️',
+                        obstacles: [{ r: 1, c: 1, icon: '📦' }]
+                    },
+                    {
                         type: 'game_cocok_pasangan',
                         title: '🎮 Game Pemilah Sampah Organik & Anorganik 🗑️',
                         domain: 'GAME INTERAKTIF',
@@ -879,10 +1243,55 @@
                         desc: 'Sentuh ikon profesi untuk mengenal tugasnya!',
                         organs: [
                             { icon: 'fa-user-doctor', label: 'Dokter 👨‍⚕️', desc: 'Membantu menyembuhkan orang sakit' },
-                            { icon: 'fa-fire-extinguisher', label: 'Pemadam 👨‍🚒', desc: 'Padamkan api & menolong bencana' },
+                            { icon: 'fa-fire-extinguisher', label: me='Pemadam 👨‍🚒', desc: 'Padamkan api & menolong bencana' },
                             { icon: 'fa-graduation-cap', label: 'Guru 👩‍🏫', desc: 'Mendidik anak-anak menjadi pintar' },
                             { icon: 'fa-shield-halved', label: 'Polisi 👮‍♂️', desc: 'Menjaga keamanan & ketertiban' }
                         ]
+                    },
+                    {
+                        type: 'musik_lagu',
+                        title: 'Lagu "Aku Seorang Kapiten" 🎵',
+                        domain: 'SENI & MUSIK',
+                        desc: 'Nyanyikan lagu dengan gaya gagah berani!',
+                        lyrics: [
+                            "Aku seorang kapiten... 👨‍✈️",
+                            "Mempunyai pedang panjang...",
+                            "Kalau berjalan prok... prok... prok...",
+                            "Aku seorang kapiten! 🎖️✨"
+                        ]
+                    },
+                    {
+                        type: 'sains_proses',
+                        title: 'Latihan Hormat & Gerak Polisi Cilik 👮‍♂️',
+                        domain: 'MOTORIK KASAR',
+                        desc: 'Tirukan gerakan pengatur jalan lalu lintas!',
+                        steps: [
+                            { icon: 'fa-hand', label: '1. Stop Kanan ✋', desc: 'Angkat tangan kanan lurus ke depan: STOP!' },
+                            { icon: 'fa-person-walking', label: '2. Jalan Kirim 🚶‍♂️', desc: 'Lambaikan tangan kiri menyuruh jalan.' },
+                            { icon: 'fa-shield-halved', label: '3. Siap Siaga 👮‍♂️', desc: 'Tepuk dada dan berdiri tegap!' }
+                        ]
+                    },
+                    {
+                        type: 'kuis_interaktif',
+                        title: 'Perlengkapan Kerja Dokter 🩺',
+                        domain: 'BAHASA & VOCAB',
+                        question: 'Alat apakah yang dipakai Dokter untuk memeriksa detak jantung?',
+                        options: [
+                            { label: '🩺 Stetoskop', correct: true, feedback: 'Pintar! Stetoskop didengarkan di dada pasien!' },
+                            { label: '🪛 Obeng Kayu', correct: false, feedback: 'Kurang tepat, obeng digunakan oleh Tukang Kayu!' }
+                        ]
+                    },
+                    {
+                        type: 'game_coding',
+                        title: '🎮 Coding Ambulans Ke Rumah Sakit 🚑🏥',
+                        domain: 'GAME CODING',
+                        desc: 'Bantu Ambulans menyusun panah arah agar secepatnya tiba di Rumah Sakit!',
+                        gridSize: 3,
+                        startPos: { r: 2, c: 0 },
+                        targetPos: { r: 0, c: 2 },
+                        startIcon: '🚑',
+                        targetIcon: '🏥',
+                        obstacles: [{ r: 1, c: 1, icon: '🚗' }]
                     },
                     {
                         type: 'game_tangkap_benda',
@@ -898,7 +1307,7 @@
             }
         };
 
-        // BANK DATA SEMUA REFERENSI KEGIATAN
+        // BANK DATA SEMUA REFERENSI KEGIATAN LENGKAP
         const BANK_ACTIVITIES = [
             {
                 id: 'act_alam_vid1',
@@ -921,35 +1330,143 @@
                 videoUrl: 'https://drive.google.com/file/d/1Z8Wv6wD5P76VTvR4gAXtWs1-9AM1t6BC/preview'
             },
             {
-                id: 'act_alam_game1',
+                id: 'act_alam_coding',
                 themeKey: 'alam_semesta',
-                title: '🎮 Game Cocokkan Benda Langit & Waktunya ☀️🌙',
-                domain: 'GAME',
-                type: 'game_cocok_pasangan',
+                title: '🎮 Coding Roket Ke Bintang 🚀⭐',
+                domain: 'CODING',
+                type: 'game_coding',
                 badge: 'TEMA: ALAM SEMESTA',
-                desc: 'Sentuh benda langit lalu sentuh waktu yang tepat di sebelah kanan!',
-                pairs: [
-                    { left: 'Matahari ☀️', right: 'Siang Hari 🌅', id: 1 },
-                    { left: 'Bulan 🌙', right: 'Malam Hari 🌌', id: 2 },
-                    { left: 'Awan Hujan 🌧️', right: 'Saat Mendung ☁️', id: 3 }
-                ]
+                desc: 'Susun urutan panah petunjuk jalan agar Roket dapat mencapai Bintang!',
+                gridSize: 3,
+                startPos: { r: 2, c: 0 },
+                targetPos: { r: 0, c: 2 },
+                startIcon: '🚀',
+                targetIcon: '⭐',
+                obstacles: [{ r: 1, c: 1, icon: '🪐' }]
             },
             {
-                id: 'act_alam_game2',
-                themeKey: 'alam_semesta',
-                title: '🎮 Game Tangkap Tetes Air Hujan 💧',
-                domain: 'GAME',
-                type: 'game_tangkap_benda',
-                badge: 'TEMA: ALAM SEMESTA',
-                desc: 'Sentuh setiap tetes air hujan yang muncul untuk mengumpulkan poin!',
-                targetIcon: 'fa-droplet',
-                targetColor: 'bg-sky-400',
-                targetCount: 6,
-                targetName: 'Tetes Hujan'
+                id: 'act_air_coding',
+                themeKey: 'air_udara_api',
+                title: '🎮 Coding Pemadam Padamkan Api 🚒🔥',
+                domain: 'CODING',
+                type: 'game_coding',
+                badge: 'TEMA: AIR, UDARA & API',
+                desc: 'Bantu Mobil Pemadam menyusun jalur panah menuju lokasi Api!',
+                gridSize: 3,
+                startPos: { r: 2, c: 0 },
+                targetPos: { r: 0, c: 2 },
+                startIcon: '🚒',
+                targetIcon: '🔥',
+                obstacles: [{ r: 1, c: 0, icon: '🚧' }]
+            },
+            {
+                id: 'act_diriku_coding',
+                themeKey: 'diriku',
+                title: '🎮 Coding Tangan Ambil Buah Apel ✋🍎',
+                domain: 'CODING',
+                type: 'game_coding',
+                badge: 'TEMA: DIRIKU',
+                desc: 'Arahkan Tangan menuju Buah Apel Merah melalui papan petunjuk panah!',
+                gridSize: 3,
+                startPos: { r: 0, c: 0 },
+                targetPos: { r: 2, c: 2 },
+                startIcon: '✋',
+                targetIcon: '🍎',
+                obstacles: [{ r: 1, c: 1, icon: '🪨' }]
+            },
+            {
+                id: 'act_tanaman_coding',
+                themeKey: 'tanaman',
+                title: '🎮 Coding Lebah Menuju Bunga 🐝🌸',
+                domain: 'CODING',
+                type: 'game_coding',
+                badge: 'TEMA: TANAMAN',
+                desc: 'Bantu Lebah mungil menyusun panah arah agar sampai ke Bunga Matahari!',
+                gridSize: 3,
+                startPos: { r: 0, c: 0 },
+                targetPos: { r: 2, c: 2 },
+                startIcon: '🐝',
+                targetIcon: '🌻',
+                obstacles: [{ r: 1, c: 1, icon: '🪨' }]
+            },
+            {
+                id: 'act_binatang_coding',
+                themeKey: 'binatang',
+                title: '🎮 Coding Kelinci Cari Wortel 🐰🥕',
+                domain: 'CODING',
+                type: 'game_coding',
+                badge: 'TEMA: BINATANG',
+                desc: 'Bantu Kelinci imut menyusun panah arah untuk melompat menuju Wortel!',
+                gridSize: 3,
+                startPos: { r: 2, c: 0 },
+                targetPos: { r: 0, c: 2 },
+                startIcon: '🐰',
+                targetIcon: '🥕',
+                obstacles: [{ r: 1, c: 1, icon: '🦊' }]
+            },
+            {
+                id: 'act_tanahair_coding',
+                themeKey: 'tanah_air',
+                title: '🎮 Coding Burung Garuda Ke Puncak 🦅⛰️',
+                domain: 'CODING',
+                type: 'game_coding',
+                badge: 'TEMA: CINTA TANAH AIR',
+                desc: 'Arahkan Burung Garuda terbang tinggi menuju Puncak Gunung Nusantara!',
+                gridSize: 3,
+                startPos: { r: 2, c: 0 },
+                targetPos: { r: 0, c: 2 },
+                startIcon: '🦅',
+                targetIcon: '⛰️',
+                obstacles: [{ r: 1, c: 1, icon: '☁️' }]
+            },
+            {
+                id: 'act_kendaraan_coding',
+                themeKey: 'kendaraan',
+                title: '🎮 Coding Mobil Menuju Garasi 🚗🏠',
+                domain: 'CODING',
+                type: 'game_coding',
+                badge: 'TEMA: KENDARAAN',
+                desc: 'Susun petunjuk panah agar Mobil dapat melaju aman sampai Garasi Rumah!',
+                gridSize: 3,
+                startPos: { r: 0, c: 0 },
+                targetPos: { r: 2, c: 2 },
+                startIcon: '🚗',
+                targetIcon: '🏠',
+                obstacles: [{ r: 1, c: 0, icon: '🚧' }]
+            },
+            {
+                id: 'act_lingkungan_coding',
+                themeKey: 'lingkungan',
+                title: '🎮 Coding Robot Bersihkan Sampah 🤖🗑️',
+                domain: 'CODING',
+                type: 'game_coding',
+                badge: 'TEMA: LINGKUNGANKU',
+                desc: 'Arahkan Robot Pembersih mengumpulkan sampah di area grid!',
+                gridSize: 3,
+                startPos: { r: 0, c: 0 },
+                targetPos: { r: 2, c: 2 },
+                startIcon: '🤖',
+                targetIcon: '🗑️',
+                obstacles: [{ r: 1, c: 1, icon: '📦' }]
+            },
+            {
+                id: 'act_profesi_coding',
+                themeKey: 'profesi',
+                title: '🎮 Coding Ambulans Ke Rumah Sakit 🚑🏥',
+                domain: 'CODING',
+                type: 'game_coding',
+                badge: 'TEMA: PROFESI',
+                desc: 'Bantu Ambulans menyusun panah arah agar secepatnya tiba di Rumah Sakit!',
+                gridSize: 3,
+                startPos: { r: 2, c: 0 },
+                targetPos: { r: 0, c: 2 },
+                startIcon: '🚑',
+                targetIcon: '🏥',
+                obstacles: [{ r: 1, c: 1, icon: '🚗' }]
             }
         ];
 
-        // EFEK SUARA SYNTHESIZER
+        // EFEK SUARA SYNTHESIZER WEB AUDIO API
         function playSFX(type) {
             if (isAudioMuted) return;
             try {
@@ -1404,9 +1921,173 @@
                     </div>
                     <div id="catch-score" class="text-center font-display font-black text-2xl text-amber-300">Skor: 0 / ${slide.targetCount} ${slide.targetName}</div>
                 `;
+            } else if (slide.type === 'game_coding') {
+                window.currentCodingGame = {
+                    gridSize: slide.gridSize || 3,
+                    startPos: { ...slide.startPos },
+                    currentPos: { ...slide.startPos },
+                    targetPos: { ...slide.targetPos },
+                    obstacles: slide.obstacles || [],
+                    commands: [],
+                    isRunning: false
+                };
+                
+                container.innerHTML = `
+                    <div class="text-center space-y-2">
+                        <span class="px-4 py-1.5 rounded-full bg-indigo-400/20 text-indigo-300 font-display font-black text-xs tracking-wider uppercase border border-indigo-400/30">🚀 GAME CODING RINGAN</span>
+                        <h2 class="font-display font-black text-2xl sm:text-3xl text-amber-300">${slide.title}</h2>
+                        <p class="text-xs sm:text-sm text-slate-300 font-medium">${slide.desc}</p>
+                    </div>
+
+                    <div class="flex flex-col md:flex-row items-center justify-center gap-6 mt-2">
+                        <div class="bg-slate-950 p-4 rounded-3xl border-4 border-amber-400/60 shadow-inner">
+                            <div id="coding-grid" class="grid gap-3 w-64 h-64 sm:w-72 sm:h-72">
+                                <!-- Grid cells rendered by JS -->
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col items-center gap-3 w-full md:w-auto">
+                            <div class="text-xs font-bold text-amber-300">Panah Petunjuk Jalan:</div>
+                            <div class="grid grid-cols-3 gap-2">
+                                <div></div>
+                                <button onclick="addCodingCommand('UP')" class="ifp-btn w-11 h-11 rounded-2xl bg-amber-400 text-slate-950 font-black text-lg flex items-center justify-center shadow-md border-2 border-white">⬆️</button>
+                                <div></div>
+                                <button onclick="addCodingCommand('LEFT')" class="ifp-btn w-11 h-11 rounded-2xl bg-amber-400 text-slate-950 font-black text-lg flex items-center justify-center shadow-md border-2 border-white">⬅️</button>
+                                <button onclick="addCodingCommand('DOWN')" class="ifp-btn w-11 h-11 rounded-2xl bg-amber-400 text-slate-950 font-black text-lg flex items-center justify-center shadow-md border-2 border-white">⬇️</button>
+                                <button onclick="addCodingCommand('RIGHT')" class="ifp-btn w-11 h-11 rounded-2xl bg-amber-400 text-slate-950 font-black text-lg flex items-center justify-center shadow-md border-2 border-white">➡️</button>
+                            </div>
+
+                            <div class="w-full min-h-[44px] p-2 bg-slate-800 rounded-2xl border-2 border-slate-700 flex flex-wrap items-center justify-center gap-1.5" id="command-queue-box">
+                                <span class="text-xs text-slate-400 font-medium">Panah perintah akan muncul di sini...</span>
+                            </div>
+
+                            <div class="flex items-center gap-2">
+                                <button onclick="clearCodingCommands()" class="ifp-btn px-3 py-2 rounded-2xl bg-rose-600 hover:bg-rose-500 text-white font-display font-black text-xs border border-rose-300">
+                                    <i class="fa-solid fa-rotate-left"></i> Reset
+                                </button>
+                                <button onclick="runCodingGame('${slide.startIcon}', '${slide.targetIcon}')" class="ifp-btn px-5 py-2.5 rounded-2xl bg-emerald-500 hover:bg-emerald-400 text-white font-display font-black text-xs border-2 border-emerald-300 shadow-lg flex items-center gap-2">
+                                    <i class="fa-solid fa-play"></i> Jalankan Kode! 🚀
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="coding-status-box" class="text-center font-display font-black text-base text-amber-300 min-h-[24px]"></div>
+                `;
+
+                setTimeout(() => { renderCodingGrid(slide.startIcon, slide.targetIcon); }, 60);
             }
 
             stage.appendChild(container);
+        }
+
+        // HANDLER KONTROL GAME CODING RINGAN
+        function renderCodingGrid(startIcon, targetIcon) {
+            const gridEl = document.getElementById('coding-grid');
+            if (!gridEl || !window.currentCodingGame) return;
+            const { gridSize, currentPos, targetPos, obstacles } = window.currentCodingGame;
+
+            gridEl.style.gridTemplateColumns = `repeat(${gridSize}, minmax(0, 1fr))`;
+            gridEl.innerHTML = '';
+
+            for (let r = 0; r < gridSize; r++) {
+                for (let c = 0; c < gridSize; c++) {
+                    const cell = document.createElement('div');
+                    cell.className = "rounded-2xl bg-slate-800/90 border-2 border-slate-700 flex items-center justify-center text-3xl sm:text-4xl shadow-inner transition-all duration-300";
+
+                    if (r === currentPos.r && c === currentPos.c) {
+                        cell.innerText = startIcon;
+                        cell.classList.add('bg-amber-400/30', 'border-amber-400', 'scale-105');
+                    } else if (r === targetPos.r && c === targetPos.c) {
+                        cell.innerText = targetIcon;
+                        cell.classList.add('bg-emerald-500/20', 'border-emerald-400', 'animate-pulse');
+                    } else {
+                        const obs = obstacles.find(o => o.r === r && o.c === c);
+                        if (obs) {
+                            cell.innerText = obs.icon || '🧱';
+                            cell.classList.add('bg-rose-950/40', 'border-rose-800/50');
+                        }
+                    }
+                    gridEl.appendChild(cell);
+                }
+            }
+        }
+
+        function addCodingCommand(dir) {
+            if (!window.currentCodingGame || window.currentCodingGame.isRunning) return;
+            if (window.currentCodingGame.commands.length >= 8) {
+                showToast('Maksimal 8 langkah petunjuk panah!', 'info');
+                return;
+            }
+            playSFX('click');
+            window.currentCodingGame.commands.push(dir);
+            updateCommandQueueUI();
+        }
+
+        function clearCodingCommands() {
+            if (!window.currentCodingGame || window.currentCodingGame.isRunning) return;
+            playSFX('pop');
+            window.currentCodingGame.commands = [];
+            window.currentCodingGame.currentPos = { ...window.currentCodingGame.startPos };
+            const statusBox = document.getElementById('coding-status-box');
+            if (statusBox) statusBox.innerText = '';
+            updateCommandQueueUI();
+            const slide = PAUD_THEMES[currentThemeKey].deck[currentSlideIndex];
+            renderCodingGrid(slide.startIcon, slide.targetIcon);
+        }
+
+        function updateCommandQueueUI() {
+            const box = document.getElementById('command-queue-box');
+            if (!box || !window.currentCodingGame) return;
+            const { commands } = window.currentCodingGame;
+
+            if (commands.length === 0) {
+                box.innerHTML = `<span class="text-xs text-slate-400 font-medium">Panah perintah akan muncul di sini...</span>`;
+                return;
+            }
+
+            const icons = { UP: '⬆️', DOWN: '⬇️', LEFT: '⬅️', RIGHT: '➡️' };
+            box.innerHTML = commands.map((c, i) => `
+                <span class="w-8 h-8 rounded-xl bg-amber-400 text-slate-950 font-black text-sm flex items-center justify-center border border-white shadow-xs animate-in zoom-in-50 duration-150">${icons[c]}</span>
+            `).join('');
+        }
+
+        async function runCodingGame(startIcon, targetIcon) {
+            if (!window.currentCodingGame || window.currentCodingGame.isRunning) return;
+            const game = window.currentCodingGame;
+            if (game.commands.length === 0) {
+                showToast('Pilih beberapa panah petunjuk dahulu!', 'info');
+                return;
+            }
+
+            game.isRunning = true;
+            game.currentPos = { ...game.startPos };
+            renderCodingGrid(startIcon, targetIcon);
+
+            const statusBox = document.getElementById('coding-status-box');
+            if (statusBox) statusBox.innerText = 'Menjalankan petunjuk kode... 🚀';
+
+            for (let i = 0; i < game.commands.length; i++) {
+                const cmd = game.commands[i];
+                playSFX('pop');
+
+                if (cmd === 'UP' && game.currentPos.r > 0) game.currentPos.r--;
+                else if (cmd === 'DOWN' && game.currentPos.r < game.gridSize - 1) game.currentPos.r++;
+                else if (cmd === 'LEFT' && game.currentPos.c > 0) game.currentPos.c--;
+                else if (cmd === 'RIGHT' && game.currentPos.c < game.gridSize - 1) game.currentPos.c++;
+
+                renderCodingGrid(startIcon, targetIcon);
+                await new Promise(r => setTimeout(r, 420));
+            }
+
+            if (game.currentPos.r === game.targetPos.r && game.currentPos.c === game.targetPos.c) {
+                playSFX('success');
+                if (statusBox) statusBox.innerText = 'HORE! Berhasil mencapai tujuan! 🎉✨';
+                showToast('Luar biasa! Petunjuk koding kamu berhasil!', 'success');
+            } else {
+                playSFX('pop');
+                if (statusBox) statusBox.innerText = 'Hampir sampai! Coba sesuaikan arah panahmu ya 😊';
+            }
+            game.isRunning = false;
         }
 
         // HANDLER PEMUTAR VIDEO POPUP
@@ -1418,6 +2099,9 @@
             } catch(e) {}
 
             document.getElementById('video-popup-title').innerText = title;
+            const directLink = document.getElementById('video-popup-direct-link');
+            if (directLink) directLink.href = videoUrl;
+
             const container = document.getElementById('video-popup-frame-container');
             container.innerHTML = `<iframe src="${videoUrl}" class="w-full h-full border-0" allow="autoplay" allowfullscreen></iframe>`;
             document.getElementById('video-popup-modal').classList.remove('hidden');
