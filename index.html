@@ -208,7 +208,7 @@
                         <span class="tracking-wide">RANGKAIAN BAHAN AJAR</span>
                     </div>
                     <div class="flex items-center gap-2">
-                        <span id="deck-count-badge" class="w-8 h-8 rounded-full bg-slate-900 text-amber-300 font-display text-sm font-black flex items-center justify-center shadow-md border-2 border-amber-300">9</span>
+                        <span id="deck-count-badge" class="w-8 h-8 rounded-full bg-slate-900 text-amber-300 font-display text-sm font-black flex items-center justify-center shadow-md border-2 border-amber-300">0</span>
                         <i class="fa-solid fa-circle-chevron-right text-lg text-amber-900 opacity-80"></i>
                     </div>
                 </button>
@@ -613,96 +613,7 @@
             alam_semesta: {
                 title: 'Petualangan Air, Hujan & Pelangi 🌧️🌈',
                 badgeText: 'TEMA AKTIF: ALAM SEMESTA',
-                deck: [
-                    {
-                        type: 'video_embed',
-                        title: 'Tahapan Siklus Terjadinya Hujan 🌧️',
-                        domain: 'SAINS & KOGNITIF',
-                        desc: 'Saksikan video interaktif proses terjadinya air hujan!',
-                        videoUrl: 'https://drive.google.com/file/d/16adoVKV808Gy3TRi8KToaB0XD7VikZZ0/preview'
-                    },
-                    {
-                        type: 'kuis_interaktif',
-                        title: 'Eksplorasi Warna Pelangi Indah 🌈',
-                        domain: 'SENI & KOGNITIF',
-                        desc: 'Pilih warna yang muncul saat cahaya matahari menyinari titik-titik air hujan!',
-                        question: 'Apa saja warna utama yang membentuk Pelangi?',
-                        options: [
-                            { label: '🔴 Merah, 🟡 Kuning, 🟢 Hijau, 🔵 Biru', correct: true, feedback: 'Hebat sekali! Pelangi terdiri dari spektrum warna-warni yang indah!' },
-                            { label: '⬛ Hitam, 🩶 Abu-abu, 🤎 Cokelat', correct: false, feedback: 'Kurang tepat. Pelangi berisi warna-warni cerah!' }
-                        ]
-                    },
-                    {
-                        type: 'video_embed',
-                        title: 'Gerak & Lagu "Tik Tik Bunyi Hujan" 🎵',
-                        domain: 'SENI & MOTORIK',
-                        desc: 'Bernyanyi dan bergerak bersama mendengarkan lagu hujan!',
-                        videoUrl: 'https://drive.google.com/file/d/1Z8Wv6wD5P76VTvR4gAXtWs1-9AM1t6BC/preview'
-                    },
-                    {
-                        type: 'hitung_titik',
-                        title: 'Menghitung Titik Air Hujan 💧',
-                        domain: 'KOGNITIF MATEMATIKA',
-                        desc: 'Sentuh setiap tetes air hujan di bawah ini untuk menghitung totalnya!',
-                        countTarget: 5
-                    },
-                    {
-                        type: 'organ_tubuh',
-                        title: 'Mengenal Benda Langit Siang & Malam 🌤️🌙',
-                        domain: 'BAHASA & KOGNITIF',
-                        desc: 'Sentuh benda langit di bawah ini untuk mengenal namanya!',
-                        organs: [
-                            { icon: 'fa-sun', label: 'Matahari ☀️', desc: 'Bersinar terang di siang hari' },
-                            { icon: 'fa-moon', label: 'Bulan 🌙', desc: 'Menerangi malam hari' },
-                            { icon: 'fa-cloud-rain', label: 'Awan ☁️', desc: 'Tempat berkumpulnya tetes air hujan' },
-                            { icon: 'fa-star', label: 'Bintang ✨', desc: 'Hiasi langit malam yang indah' }
-                        ]
-                    },
-                    {
-                        type: 'sains_proses',
-                        title: 'Senam Gerak Angin & Hujan 🌬️',
-                        domain: 'MOTORIK KASAR',
-                        desc: 'Mari ikuti gerakan alami bersama-sama di kelas!',
-                        steps: [
-                            { icon: 'fa-wind', label: '1. Angin Sepoi 🍃', desc: 'Lambaikan kedua tangan meliuk-liuk pelan ke kiri dan kanan.' },
-                            { icon: 'fa-cloud-showers-heavy', label: '2. Hujan Rintik 🌧️', desc: 'Jentikkan jari-jari tanganmu dari atas ke bawah!' },
-                            { icon: 'fa-bolt-lightning', label: '3. Petir Menggelegar ⚡', desc: 'Tepuk tangan keras 1 kali lalu berdiri tegak!' }
-                        ]
-                    },
-                    {
-                        type: 'game_coding',
-                        title: '🎮 Coding Roket Ke Bintang 🚀⭐',
-                        domain: 'GAME CODING',
-                        desc: 'Susun urutan panah petunjuk jalan agar Roket dapat mencapai Bintang!',
-                        gridSize: 3,
-                        startPos: { r: 2, c: 0 },
-                        targetPos: { r: 0, c: 2 },
-                        startIcon: '🚀',
-                        targetIcon: '⭐',
-                        obstacles: [{ r: 1, c: 1, icon: '🪐' }]
-                    },
-                    {
-                        type: 'game_cocok_pasangan',
-                        title: '🎮 Game Cocokkan Benda Langit & Waktunya ☀️🌙',
-                        domain: 'GAME INTERAKTIF',
-                        desc: 'Sentuh benda langit lalu sentuh waktu yang tepat di sebelah kanan!',
-                        pairs: [
-                            { left: 'Matahari ☀️', right: 'Siang Hari 🌅', id: 1 },
-                            { left: 'Bulan 🌙', right: 'Malam Hari 🌌', id: 2 },
-                            { left: 'Awan Hujan 🌧️', right: 'Saat Mendung ☁️', id: 3 }
-                        ]
-                    },
-                    {
-                        type: 'game_tangkap_benda',
-                        title: '🎮 Game Tangkap Tetes Air Hujan 💧',
-                        domain: 'GAME INTERAKTIF',
-                        desc: 'Sentuh setiap tetes air hujan yang muncul untuk mengumpulkan poin!',
-                        targetIcon: 'fa-droplet',
-                        targetColor: 'bg-sky-400',
-                        targetCount: 6,
-                        targetName: 'Tetes Hujan'
-                    }
-                ]
+                deck: []
             },
             air_udara_api: {
                 title: 'Mengenal Sifat Air, Udara & Api 💧💨🔥',
@@ -2244,12 +2155,12 @@
             currentThemeKey = themeKey;
             const theme = PAUD_THEMES[themeKey];
             
-            // Kosongkan rangkaian bahan ajar ketika tema dipilih
+            // Pengosongan Rangkaian Bahan Ajar untuk semua tema yang dipilih (termasuk Alam Semesta)
             theme.deck = [];
             
             document.getElementById('dashboard-lesson-title').innerText = theme.title;
             document.getElementById('dashboard-theme-badge').innerText = theme.badgeText;
-            document.getElementById('deck-count-badge').innerText = 0;
+            document.getElementById('deck-count-badge').innerText = theme.deck.length;
 
             const bankLabel = document.getElementById('bank-active-theme-label');
             if (bankLabel) bankLabel.innerText = theme.title;
