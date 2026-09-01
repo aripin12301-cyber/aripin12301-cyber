@@ -2391,18 +2391,224 @@
                     </div>
                     ${slide.imageUrl ? `
                         <div class="flex justify-center my-3">
-                            <img src="${slide.imageUrl}" alt="${slide.title}" class="max-h-60 sm:max-h-72 object-contain rounded-3xl border-4 border-amber-300 shadow-xl bg-slate-950" onerror="this.onerror=null; this.src='https://drive.google.com/uc?export=view&id=' + (this.src.includes('/d/') ? this.src.split('/d/')[1] : '18wqxzjHZEIWMDJfxoAPjmcs5A4637pZW');">
+                            <img src="${slide.imageUrl}" alt="${slide.title}" class="max-h-60 sm:max-h-72 object-contain rounded-3xl border-4 border-amber-300 shadow-xl bg-slate-950" onerror="this.onerror=null; this.src='https://placehold.co/400x300/1e293b/f59e0b?text=KIKA+IFP';">
                         </div>
                     ` : ''}
+                    ${slide.steps && slide.steps.length > 0 ? `
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-2">
+                            ${slide.steps.map((st) => `
+                                <div onclick="playSFX('pop')" class="ifp-btn p-4 rounded-3xl bg-slate-800 border-2 border-slate-700 hover:border-amber-400 flex flex-col items-center text-center gap-2 transition shadow-md">
+                                    <div class="w-12 h-12 rounded-2xl bg-amber-400 text-slate-950 flex items-center justify-center text-xl font-black shrink-0 border border-white shadow-sm">
+                                        <i class="fa-solid ${st.icon}"></i>
+                                    </div>
+                                    <h4 class="font-display font-black text-base text-white">${st.label}</h4>
+                                    <p class="text-xs text-slate-300 font-medium leading-relaxed">${st.desc}</p>
+                                </div>
+                            `).join('')}
+                        </div>
+                    ` : ''}
+                `;
+            } else if (slide.type === 'game_coding') {
+                window.currentCodingGame = {
+                    gridSize: slide.gridSize || 3,
+                    startPos: { ...slide.startPos },
+                    currentPos: { ...slide.startPos },
+                    targetPos: { ...slide.targetPos },
+                    obstacles: slide.obstacles || [],
+                    commands: [],
+                    isRunning: false
+                };
+
+                container.innerHTML = `
+                    <div class="text-center space-y-1">
+                        <span class="px-4 py-1.5 rounded-full bg-purple-400/20 text-purple-300 font-display font-black text-xs tracking-wider uppercase border border-purple-400/30">${slide.domain || 'GAME CODING'}</span>
+                        <h2 class="font-display font-black text-2xl sm:text-3xl text-amber-300">${slide.title}</h2>
+                        <p class="text-xs sm:text-sm text-slate-300 font-medium">${slide.desc}</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center my-2">
+                        <div class="flex flex-col items-center justify-center">
+                            <div id="coding-grid" class="grid gap-2 w-64 h-64 sm:w-72 sm:h-72 p-3 bg-slate-950 rounded-3xl border-4 border-amber-400/60 shadow-xl"></div>
+                            <div id="coding-status-box" class="h-8 mt-2 font-display font-black text-xs sm:text-sm text-amber-300 text-center"></div>
+                        </div>
+
+                        <div class="flex flex-col gap-4 bg-slate-950/80 p-5 rounded-3xl border-2 border-slate-800">
+                            <div>
+                                <label class="text-xs font-bold text-slate-400 uppercase tracking-wider block mb-2">Urutan Petunjuk Arah:</label>
+                                <div id="command-queue-box" class="min-h-[48px] p-2.5 rounded-2xl bg-slate-900 border-2 border-slate-700 flex flex-wrap items-center gap-1.5 overflow-x-auto">
+                                    <span class="text-xs text-slate-400 font-medium">Panah perintah akan muncul di sini...</span>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="text-xs font-bold text-slate-400 uppercase tracking-wider block mb-2">Pilih Arah Panah:</label>
+                                <div class="grid grid-cols-4 gap-2">
+                                    <button onclick="addCodingCommand('UP')" class="ifp-btn py-3 rounded-2xl bg-amber-400 hover:bg-amber-300 text-slate-950 font-black text-xl flex items-center justify-center shadow-md">⬆️</button>
+                                    <button onclick="addCodingCommand('DOWN')" class="ifp-btn py-3 rounded-2xl bg-amber-400 hover:bg-amber-300 text-slate-950 font-black text-xl flex items-center justify-center shadow-md">⬇️</button>
+                                    <button onclick="addCodingCommand('LEFT')" class="ifp-btn py-3 rounded-2xl bg-amber-400 hover:bg-amber-300 text-slate-950 font-black text-xl flex items-center justify-center shadow-md">⬅️</button>
+                                    <button onclick="addCodingCommand('RIGHT')" class="ifp-btn py-3 rounded-2xl bg-amber-400 hover:bg-amber-300 text-slate-950 font-black text-xl flex items-center justify-center shadow-md">➡️</button>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center gap-2 pt-2 border-t border-slate-800">
+                                <button onclick="clearCodingCommands()" class="ifp-btn flex-1 py-3 rounded-2xl bg-rose-900/60 hover:bg-rose-800 text-rose-200 font-display font-black text-xs border border-rose-700">
+                                    <i class="fa-solid fa-rotate-left mr-1"></i> Reset
+                                </button>
+                                <button onclick="runCodingGame('${slide.startIcon}', '${slide.targetIcon}')" class="ifp-btn flex-[2] py-3 rounded-2xl bg-gradient-to-r from-emerald-500 to-teal-400 text-slate-950 font-display font-black text-sm border-2 border-emerald-300 shadow-lg">
+                                    <i class="fa-solid fa-play mr-1"></i> Jalankan Kode 🚀
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+
+                setTimeout(() => {
+                    renderCodingGrid(slide.startIcon, slide.targetIcon);
+                }, 50);
+            } else if (slide.type === 'game_cocok_pasangan') {
+                activeLeftPairId = null;
+                activeLeftBtn = null;
+                matchedPairCount = 0;
+
+                const shuffledRight = [...(slide.pairs || [])].sort(() => Math.random() - 0.5);
+
+                container.innerHTML = `
+                    <div class="text-center space-y-1">
+                        <span class="px-4 py-1.5 rounded-full bg-emerald-400/20 text-emerald-300 font-display font-black text-xs tracking-wider uppercase border border-emerald-400/30">${slide.domain || 'GAME INTERAKTIF'}</span>
+                        <h2 class="font-display font-black text-2xl sm:text-3xl text-amber-300">${slide.title}</h2>
+                        <p class="text-xs sm:text-sm text-slate-300 font-medium">${slide.desc}</p>
+                    </div>
+
+                    <div id="pair-status-box" class="p-3 rounded-2xl bg-slate-950 border border-amber-400/40 text-amber-300 font-display font-black text-xs sm:text-sm text-center">
+                        Pilih satu item di sebelah kiri, lalu sentuh pasangannya di sebelah kanan! 🎯
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 my-2">
+                        <div class="flex flex-col gap-3">
+                            <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider text-center">Kategori Kiri</h4>
+                            ${(slide.pairs || []).map(p => `
+                                <button onclick="selectPairItem('left', ${p.id}, this)" class="pair-left-btn ifp-btn p-4 rounded-2xl bg-slate-800 border-2 border-slate-700 hover:border-amber-400 font-display font-bold text-sm sm:text-base text-left text-white shadow-md transition flex items-center justify-between">
+                                    <span>${p.left}</span>
+                                    <i class="fa-solid fa-hand-pointer text-xs text-amber-400/60"></i>
+                                </button>
+                            `).join('')}
+                        </div>
+
+                        <div class="flex flex-col gap-3">
+                            <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider text-center">Kategori Kanan</h4>
+                            ${shuffledRight.map(p => `
+                                <button onclick="selectPairItem('right', ${p.id}, this)" class="pair-right-btn ifp-btn p-4 rounded-2xl bg-slate-800 border-2 border-slate-700 hover:border-amber-400 font-display font-bold text-sm sm:text-base text-left text-white shadow-md transition flex items-center justify-between">
+                                    <span>${p.right}</span>
+                                    <i class="fa-solid fa-link text-xs text-amber-400/60"></i>
+                                </button>
+                            `).join('')}
+                        </div>
+                    </div>
+                `;
+            } else if (slide.type === 'game_tangkap_benda') {
+                caughtItemsCount = 0;
+                const targetCount = slide.targetCount || 6;
+                const targetName = slide.targetName || 'Item';
+
+                container.innerHTML = `
+                    <div class="text-center space-y-1">
+                        <span class="px-4 py-1.5 rounded-full bg-rose-400/20 text-rose-300 font-display font-black text-xs tracking-wider uppercase border border-rose-400/30">${slide.domain || 'GAME INTERAKTIF'}</span>
+                        <h2 class="font-display font-black text-2xl sm:text-3xl text-amber-300">${slide.title}</h2>
+                        <p class="text-xs sm:text-sm text-slate-300 font-medium">${slide.desc}</p>
+                    </div>
+
+                    <div class="flex items-center justify-between px-6 py-3 rounded-2xl bg-slate-950 border border-amber-400/40">
+                        <span id="catch-score" class="font-display font-black text-sm sm:text-base text-amber-300">Skor: 0 / ${targetCount} ${targetName}</span>
+                        <button onclick="renderIFPSlide()" class="px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-xs font-bold text-slate-300 border border-slate-600">
+                            <i class="fa-solid fa-rotate-right mr-1"></i> Main Lagi
+                        </button>
+                    </div>
+
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 p-4 bg-slate-950/60 rounded-3xl border-2 border-slate-800 min-h-[260px] items-center justify-items-center">
+                        ${Array.from({ length: targetCount }).map((_, i) => `
+                            <button onclick="catchTargetItem(this, '${targetName}', ${targetCount})" class="ifp-btn w-20 h-20 sm:w-24 sm:h-24 rounded-3xl ${slide.targetColor || 'bg-amber-400'} text-slate-950 flex items-center justify-center text-3xl sm:text-4xl shadow-lg border-4 border-white transition transform hover:scale-110 active:scale-95 animate-bounce-gentle" style="animation-delay: ${i * 0.2}s">
+                                <i class="fa-solid ${slide.targetIcon || 'fa-star'}"></i>
+                            </button>
+                        `).join('')}
+                    </div>
+                `;
+            } else if (slide.type === 'kuis_interaktif') {
+                container.innerHTML = `
+                    <div class="text-center space-y-1">
+                        <span class="px-4 py-1.5 rounded-full bg-cyan-400/20 text-cyan-300 font-display font-black text-xs tracking-wider uppercase border border-cyan-400/30">${slide.domain || 'KUIS INTERAKTIF'}</span>
+                        <h2 class="font-display font-black text-2xl sm:text-3xl text-amber-300">${slide.title}</h2>
+                        <p class="text-xs sm:text-sm text-slate-300 font-medium">${slide.desc || 'Jawablah pertanyaan berikut dengan menyentuh pilihan yang benar!'}</p>
+                    </div>
+
+                    ${slide.imageUrl ? `
+                        <div class="flex justify-center my-2">
+                            <img src="${slide.imageUrl}" alt="${slide.title}" class="max-h-52 sm:max-h-60 object-contain rounded-3xl border-4 border-amber-300 shadow-xl bg-slate-950" onerror="this.onerror=null; this.src='https://placehold.co/400x300/1e293b/f59e0b?text=KIKA+IFP';">
+                        </div>
+                    ` : ''}
+
+                    <div class="p-5 bg-slate-950 rounded-3xl border-2 border-amber-400/40 text-center space-y-4">
+                        <h3 class="font-display font-black text-lg sm:text-xl text-white">${slide.question}</h3>
+                        
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            ${(slide.options || []).map(opt => `
+                                <button onclick="handleQuizAnswer(${opt.correct}, '${opt.feedback.replace(/'/g, "\\'")}')" class="ifp-btn p-4 rounded-2xl bg-slate-800 hover:bg-amber-500 hover:text-slate-950 border-2 border-slate-700 font-display font-black text-sm sm:text-base text-white shadow-md transition">
+                                    ${opt.label}
+                                </button>
+                            `).join('')}
+                        </div>
+
+                        <div id="quiz-feedback-box" class="hidden p-4 rounded-3xl text-center font-display font-black text-base"></div>
+                    </div>
+                `;
+            } else if (slide.type === 'hitung_titik') {
+                touchedCount = 0;
+                const countTarget = slide.countTarget || 5;
+
+                container.innerHTML = `
+                    <div class="text-center space-y-1">
+                        <span class="px-4 py-1.5 rounded-full bg-sky-400/20 text-sky-300 font-display font-black text-xs tracking-wider uppercase border border-sky-400/30">${slide.domain || 'KOGNITIF'}</span>
+                        <h2 class="font-display font-black text-2xl sm:text-3xl text-amber-300">${slide.title}</h2>
+                        <p class="text-xs sm:text-sm text-slate-300 font-medium">${slide.desc}</p>
+                    </div>
+
+                    <div class="flex items-center justify-between px-6 py-3 rounded-2xl bg-slate-950 border border-amber-400/40">
+                        <span id="count-score" class="font-display font-black text-sm sm:text-base text-amber-300">Tersentuh: 0 / ${countTarget}</span>
+                        <button onclick="renderIFPSlide()" class="px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-xs font-bold text-slate-300 border border-slate-600">
+                            <i class="fa-solid fa-rotate-right mr-1"></i> Hitung Ulang
+                        </button>
+                    </div>
+
+                    <div class="flex flex-wrap items-center justify-center gap-6 p-8 bg-slate-950/60 rounded-3xl border-2 border-slate-800 min-h-[220px]">
+                        ${Array.from({ length: countTarget }).map((_, i) => `
+                            <button onclick="countDroplet(this, ${i + 1})" class="ifp-btn w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-sky-500 text-white font-display font-black text-2xl flex items-center justify-center border-4 border-white shadow-xl transition transform hover:scale-110 animate-bounce-gentle" style="animation-delay: ${i * 0.15}s">
+                                💧 ${i + 1}
+                            </button>
+                        `).join('')}
+                    </div>
+                `;
+            } else if (slide.type === 'organ_tubuh') {
+                container.innerHTML = `
+                    <div class="text-center space-y-1">
+                        <span class="px-4 py-1.5 rounded-full bg-indigo-400/20 text-indigo-300 font-display font-black text-xs tracking-wider uppercase border border-indigo-400/30">${slide.domain || 'BAHASA & VOCAB'}</span>
+                        <h2 class="font-display font-black text-2xl sm:text-3xl text-amber-300">${slide.title}</h2>
+                        <p class="text-xs sm:text-sm text-slate-300 font-medium">${slide.desc}</p>
+                    </div>
+
+                    ${slide.imageUrl ? `
+                        <div class="flex justify-center my-2">
+                            <img src="${slide.imageUrl}" alt="${slide.title}" class="max-h-56 sm:max-h-64 object-contain rounded-3xl border-4 border-amber-300 shadow-xl bg-slate-950" onerror="this.onerror=null; this.src='https://placehold.co/400x300/1e293b/f59e0b?text=KIKA+IFP';">
+                        </div>
+                    ` : ''}
+
                     ${slide.organs && slide.organs.length > 0 ? `
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
-                            ${slide.organs.map((og, i) => `
-                                <div onclick="playSFX('pop')" class="ifp-btn p-5 rounded-3xl bg-slate-800 border-2 border-slate-700 hover:border-amber-400 flex items-center gap-4 transition shadow-md">
-                                    <div class="w-16 h-16 rounded-2xl bg-amber-400 text-slate-950 flex items-center justify-center text-3xl font-black shrink-0 border-2 border-white shadow-sm">
-                                        <i class="fa-solid ${og.icon}"></i>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 my-2">
+                            ${slide.organs.map((og) => `
+                                <div onclick="playSFX('pop')" class="ifp-btn p-4 rounded-3xl bg-slate-800 border-2 border-slate-700 hover:border-amber-400 flex items-center gap-4 transition shadow-md">
+                                    <div class="w-14 h-14 rounded-2xl bg-amber-400 text-slate-950 flex items-center justify-center text-2xl font-black shrink-0 border-2 border-white shadow-sm">
+                                        <i class="fa-solid ${og.icon || 'fa-star'}"></i>
                                     </div>
                                     <div>
-                                        <h4 class="font-display font-black text-xl text-white">${og.label}</h4>
+                                        <h4 class="font-display font-black text-lg text-white">${og.label}</h4>
                                         <p class="text-xs text-slate-300 font-medium">${og.desc}</p>
                                     </div>
                                 </div>
